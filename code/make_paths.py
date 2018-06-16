@@ -31,11 +31,9 @@ def make_paths(a):
     # ==========================================================================
     signal_directory_path = '{}/{}'.format(directory_path, a.SELECT_CONTEXT)
 
-    if a.ALL_FEATURES:
+    signal_directory_path += '__feature'
 
-        signal_directory_path += '__all'
-
-    elif a.FEATURES is not None:
+    if a.FEATURES is not None:
 
         signal_directory_path += '__{}'.format(len(a.FEATURES))
 
@@ -47,18 +45,14 @@ def make_paths(a):
 
         signal_directory_path += '__auto'
 
-    signal_directory_path += '_feature'
-
     if a.FEATURE_CONTEXT_NORMALIZATION_METHOD is not None:
 
         signal_directory_path += '__{}'.format(
             a.FEATURE_CONTEXT_NORMALIZATION_METHOD)
 
-    if a.ALL_SAMPLES:
+    signal_directory_path += '__sample'
 
-        signal_directory_path += '__all'
-
-    elif a.SAMPLES is not None:
+    if a.SAMPLES is not None:
 
         signal_directory_path += '__{}'.format(len(a.SAMPLES))
 
@@ -69,8 +63,6 @@ def make_paths(a):
     elif a.SELECT_SAMPLE_AUTOMATICALLY:
 
         signal_directory_path += '__auto'
-
-    signal_directory_path += '_sample'
 
     if a.SAMPLE_CONTEXT_NORMALIZATION_METHOD is not None:
 
