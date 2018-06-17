@@ -3,17 +3,13 @@ from ccal import establish_path
 
 def make_paths(a):
 
-    # ==========================================================================
     paths = {}
 
-    # ==========================================================================
     directory_path = '../output/{}'.format(a.NAME)
 
-    # ==========================================================================
     paths['feature_x_sample_file_path'] = '{}/feature_x_sample.tsv'.format(
         directory_path)
 
-    # ==========================================================================
     for element in ('feature', 'sample'):
 
         element_directory_path = '{}/{}'.format(directory_path, element)
@@ -28,58 +24,16 @@ def make_paths(a):
             element)] = '{}/1d_context_matrix.tsv'.format(
                 element_directory_path)
 
-    # ==========================================================================
-    signal_directory_path = '{}/{}'.format(directory_path, a.SELECT_CONTEXT)
-
-    signal_directory_path += '__feature'
-
-    if a.FEATURES is not None:
-
-        signal_directory_path += '__{}'.format(len(a.FEATURES))
-
-    elif a.N_TOP_FEATURE is not None:
-
-        signal_directory_path += '__top_{}'.format(a.N_TOP_FEATURE)
-
-    elif a.SELECT_FEATURE_AUTOMATICALLY:
-
-        signal_directory_path += '__auto'
-
-    if a.FEATURE_CONTEXT_NORMALIZATION_METHOD is not None:
-
-        signal_directory_path += '__{}'.format(
-            a.FEATURE_CONTEXT_NORMALIZATION_METHOD)
-
-    signal_directory_path += '__sample'
-
-    if a.SAMPLES is not None:
-
-        signal_directory_path += '__{}'.format(len(a.SAMPLES))
-
-    elif a.N_TOP_SAMPLE is not None:
-
-        signal_directory_path += '__top_{}'.format(a.N_TOP_SAMPLE)
-
-    elif a.SELECT_SAMPLE_AUTOMATICALLY:
-
-        signal_directory_path += '__auto'
-
-    if a.SAMPLE_CONTEXT_NORMALIZATION_METHOD is not None:
-
-        signal_directory_path += '__{}'.format(
-            a.SAMPLE_CONTEXT_NORMALIZATION_METHOD)
-
-    signal_directory_path += '__{}'.format(a.COMBINING_FUNCTION.__name__)
+    signal_directory_path = '{}/selected_feature_and_sample'.format(
+        directory_path)
 
     paths['signal_matrix_file_path'] = '{}/signal_matrix.tsv'.format(
         signal_directory_path)
 
-    # ==========================================================================
     nmf_directory_path = '{}/nmf'.format(signal_directory_path)
 
     paths['nmf_directory_path'] = nmf_directory_path
 
-    # ==========================================================================
     for w_or_h in ('w', 'h'):
 
         paths['{}_file_path'.format(w_or_h)] = '{}/nmf_k{}_{}.tsv'.format(
@@ -117,7 +71,6 @@ def make_paths(a):
         paths['{}_hcc_match_directory_path'.format(
             wt_or_h)] = '{}/hcc/{}/match'.format(wt_or_h_directory_path, hcc_k)
 
-    # ==========================================================================
     for name, path in paths.items():
 
         if 'file_path' in name:
@@ -128,10 +81,8 @@ def make_paths(a):
 
             establish_path(path, 'directory')
 
-    # ==========================================================================
     plotly_directory_path = 'Cellular Context/{}'.format(a.NAME)
 
-    # ==========================================================================
     for wt_or_h, element in (('wt', 'Feature'), ('h', 'Sample')):
 
         paths['{}_map_plotly_file_path'.format(
