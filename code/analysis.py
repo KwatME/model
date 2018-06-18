@@ -1,8 +1,8 @@
-from numpy import multiply as combining_function
+from numpy import add as combining_function
 
-NAME = 'CRISPR (Achilles 17Q2)'
+NAME = 'Data Type Data Source Name'
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/viability_after_knockout__achilles_vavana_17q2_v2__gene_x_cell_line.tsv'
+FEATURE_X_SAMPLE_FILE_PATH = '../data/feature_x_sample.tsv'
 
 FEATURES_TO_DROP = None
 
@@ -10,7 +10,7 @@ SAMPLES_TO_DROP = None
 
 NANIZE_0 = False
 
-MIN_N_NOT_NA_UNIQUE_VALUE = 64
+MIN_N_NOT_NA_UNIQUE_VALUE = 'max'
 
 LOG = False
 
@@ -56,18 +56,15 @@ FEATURES_TO_PEEK = (
     'ZEB1',
 )
 
-SAMPLES_TO_PEEK = (
-    'HCC1395_BREAST',
-    'CL40_LARGE_INTESTINE',
-)
+SAMPLES_TO_PEEK = ()
 
-SELECT_CONTEXT = 'negative'
+SELECT_CONTEXT = 'both'
 
 FEATURES = None
 
-N_TOP_FEATURE = 1000
+N_TOP_FEATURE = None
 
-SELECT_FEATURE_AUTOMATICALLY = False
+SELECT_FEATURE_AUTOMATICALLY = True
 
 FEATURE_CONTEXT_NORMALIZATION_METHOD = '0-1'
 
@@ -75,31 +72,31 @@ SAMPLES = None
 
 N_TOP_SAMPLE = None
 
-SELECT_SAMPLE_AUTOMATICALLY = False
+SELECT_SAMPLE_AUTOMATICALLY = True
 
 SAMPLE_CONTEXT_NORMALIZATION_METHOD = '0-1'
 
 COMBINING_FUNCTION = combining_function
 
-NMF_KS = tuple(range(3, 18))
+NMF_KS = tuple(range(3, 10))
 
-NMF_K = 14
+NMF_K = 8
 
 NMF_MAP_MDS_RANDOM_SEED = 20121020
 
-NMF_MAP_WT_PULL_POWER = 1.6
+NMF_MAP_WT_PULL_POWER = 1
 
 NMF_MAP_WT_ELEMENT_MARKER_SIZE = 16
 
-NMF_MAP_H_PULL_POWER = 1.6
+NMF_MAP_H_PULL_POWER = 1
 
 NMF_MAP_H_ELEMENT_MARKER_SIZE = 24
 
 HCC_KS = NMF_KS
 
-WT_HCC_K = 14
+WT_HCC_K = NMF_K
 
-H_HCC_K = 14
+H_HCC_K = NMF_K
 
 NMF_MAP_WT_BANDWIDTH_FACTOR = 6.4
 
