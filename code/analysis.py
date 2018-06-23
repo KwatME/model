@@ -8,9 +8,13 @@ FEATURES_TO_DROP = None
 
 SAMPLES_TO_DROP = None
 
-NANIZE_0 = False
+NANIZE_0 = True
 
-MIN_N_NOT_NA_UNIQUE_VALUE = 'max'
+DROP_NA_AXIS = 1
+
+MAX_NA = 0
+
+MIN_N_NOT_NA_UNIQUE_VALUE = None
 
 LOG = False
 
