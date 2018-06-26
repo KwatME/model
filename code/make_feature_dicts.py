@@ -7,6 +7,7 @@ from ccal import make_membership_df_from_categorical_series
 def make_feature_dicts():
 
     with gzip_open('/media/k/Jumis/data/cell_line.pickle.gz') as pickle_file:
+
         feature_dicts = load(pickle_file)
 
     feature_dicts = {

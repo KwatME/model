@@ -1,11 +1,11 @@
-from ccal import establish_path
+from ccal import establish_path, untitle_str
 
 
 def make_paths(a):
 
     paths = {}
 
-    directory_path = '../output/{}'.format(a.NAME)
+    directory_path = '../output/{}'.format(untitle_str(a.NAME))
 
     paths['feature_x_sample_file_path'] = '{}/feature_x_sample.tsv'.format(
         directory_path)

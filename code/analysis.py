@@ -10,11 +10,11 @@ SAMPLES_TO_DROP = None
 
 NANIZE_0 = True
 
-DROP_NA_AXIS = 1
-
 MAX_NA = 0
 
 MIN_N_NOT_NA_UNIQUE_VALUE = None
+
+DROP_NA_AXIS = 1
 
 LOG = False
 
