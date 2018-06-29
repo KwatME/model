@@ -1,6 +1,6 @@
 from numpy import add as combining_function
 
-NAME = '<Data Type> <Description> (like: mRNA CCLE Hematopoietic Cancer)'
+NAME = '<Data Type> <Description> (like: mRNA CCLE Haematopoietic and Lymphoid Tissue)'
 
 FEATURE_X_SAMPLE_FILE_PATH = '../data/feature_x_sample.tsv'
 
