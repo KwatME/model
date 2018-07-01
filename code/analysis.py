@@ -82,9 +82,9 @@ SAMPLE_CONTEXT_NORMALIZATION_METHOD = '0-1'
 
 COMBINING_FUNCTION = combining_function
 
-NMF_KS = tuple(range(3, 10))
+NMF_KS = tuple(range(2, 10))
 
-NMF_K = 8
+NMF_K = 2
 
 NMF_MAP_MDS_RANDOM_SEED = 20121020
 
