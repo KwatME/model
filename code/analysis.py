@@ -1,8 +1,8 @@
 from numpy import add as combining_function
 
-NAME = '<Data Type> <Description> (like: mRNA CCLE Haematopoietic and Lymphoid Tissue)'
+NAME = '<Data Type> <Description> (like: mRNA CCLE Glioma)'
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/feature_x_sample.tsv'
+FEATURE_X_SAMPLE_FILE_PATH = '../data/gene_x_cell_line.tsv'
 
 FEATURES_TO_DROP = None
 
@@ -106,6 +106,6 @@ WT_HCC_K = NMF_K
 
 H_HCC_K = NMF_K
 
-NMF_MAP_WT_BANDWIDTH_FACTOR = 3.2
+NMF_MAP_WT_BANDWIDTH_FACTOR = 1
 
-NMF_MAP_H_BANDWIDTH_FACTOR = 3.2
+NMF_MAP_H_BANDWIDTH_FACTOR = 1
