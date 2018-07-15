@@ -71,6 +71,9 @@ def make_paths(a):
         paths['{}_hcc_match_directory_path'.format(
             wt_or_h)] = '{}/hcc/{}/match'.format(wt_or_h_directory_path, hcc_k)
 
+    paths['nmf_map_file_path'] = '{}/nmf_map.pickle.gz'.format(
+        nmf_k_directory_path)
+
     for name, path in paths.items():
 
         if 'file_path' in name:
@@ -91,6 +94,11 @@ def make_paths(a):
         paths['{}_state_map_plotly_file_path'.format(
             wt_or_h)] = '{}/{} State Map.html'.format(plotly_directory_path,
                                                       element)
+
+        paths['{}_state_maps_plotly_directory_path'.format(
+            wt_or_h)] = '{}/{} State Maps'.format(plotly_directory_path,
+                                                  element)
+
         paths['{}_match_plotly_directory_path'.format(
             wt_or_h)] = '{}/{} Match'.format(plotly_directory_path, element)
 

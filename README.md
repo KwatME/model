@@ -1,4 +1,4 @@
-# Make context map
+# Make Context Map
 
 Make context map :mushroom:
 
