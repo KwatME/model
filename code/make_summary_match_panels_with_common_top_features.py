@@ -3,8 +3,14 @@ from pandas import read_table
 
 
 def make_summary_match_panels_with_common_top_features(
-        targets, target_type, feature_dicts, input_directory_path,
-        feature_types, n_top_features, output_directory_path):
+        targets,
+        target_type,
+        feature_dicts,
+        input_directory_path,
+        feature_types,
+        n_top_features,
+        output_directory_path,
+):
 
     selected_feature_dicts = {
         feature_type: feature_dicts[feature_type].copy()
@@ -18,8 +24,11 @@ def make_summary_match_panels_with_common_top_features(
         for feature_type in feature_types:
 
             features_ = read_table(
-                '{}/{}/{}.tsv'.format(input_directory_path, target_index,
-                                      feature_type),
+                '{}/{}/{}.tsv'.format(
+                    input_directory_path,
+                    target_index,
+                    feature_type,
+                ),
                 index_col=0).index
 
             if 'RRBS' in feature_type:
@@ -61,7 +70,10 @@ def make_summary_match_panels_with_common_top_features(
                 title=target_index,
                 html_file_path=
                 '{}/{}_summary_match_panel_of_common_top_features.html'.format(
-                    output_directory_path, target_index))
+                    output_directory_path,
+                    target_index,
+                ),
+            )
 
 
 def _get_gene_name_from_methylation_feature_name(methylation_feature_name):

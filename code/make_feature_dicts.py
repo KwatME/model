@@ -6,9 +6,9 @@ from ccal import make_membership_df_from_categorical_series
 
 def make_feature_dicts():
 
-    with gzip_open('../data/ccle.pickle.gz') as pickle_file:
+    with gzip_open('../../../data/ccle.pickle.gz') as pickle_gz_file:
 
-        feature_dicts = load(pickle_file)
+        feature_dicts = load(pickle_gz_file)
 
     feature_dicts = {
         feature_type: feature_dicts[feature_type]
@@ -38,13 +38,13 @@ def make_feature_dicts():
         )
     }
 
-    feature_dicts['Primary Site'] = feature_dicts['Information'].copy()
+    # feature_dicts['Primary Site'] = feature_dicts['Information'].copy()
+    #
+    # feature_dicts['Primary Site'][
+    #     'df'] = make_membership_df_from_categorical_series(
+    #         feature_dicts['Information']['df'].loc['Site Primary']).astype(int)
 
-    feature_dicts['Primary Site'][
-        'df'] = make_membership_df_from_categorical_series(
-            feature_dicts['Information']['df'].loc['Site Primary']).astype(int)
-
-    feature_dicts['Primary Site']['data_type'] = 'binary'
+    # feature_dicts['Primary Site']['data_type'] = 'binary'
 
     feature_dicts['Histology Subtype'] = feature_dicts['Information'].copy()
 
