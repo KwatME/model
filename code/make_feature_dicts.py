@@ -7,7 +7,6 @@ from ccal import make_membership_df_from_categorical_series
 def make_feature_dicts(
         data_name,
         information_indices_to_make_membership_df,
-        information_indices,
 ):
 
     if data_name == 'ccle':
