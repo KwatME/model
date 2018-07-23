@@ -34,6 +34,7 @@ environment/*
 !data/Homo_sapiens.GRCh38.92.chr.gff3.gz
 !data/kras_map
 !data/ccle.pickle.gz
+!data/tcga.pickle.gz
 !data/mrna_max__gene_x_suffix_None__histology_glioma__hist_subtype1_None__cell_line.tsv
 
 # Byte-compiled / optimized / DLL files

@@ -4,15 +4,17 @@ from pickle import load
 from ccal import make_membership_df_from_categorical_series
 
 
-def make_feature_dicts():
+def make_feature_dicts(
+        data_name,
+        information_indices_to_make_membership_df,
+        information_indices,
+):
 
-    with gzip_open('../data/ccle.pickle.gz') as pickle_gz_file:
+    if data_name == 'ccle':
 
-        feature_dicts = load(pickle_gz_file)
+        pickle_gz_file_path = '../data/ccle.pickle.gz'
 
-    feature_dicts = {
-        feature_type: feature_dicts[feature_type]
-        for feature_type in (
+        features = (
             'Information',
             'Mutation',
             'Mutational Signature',
@@ -36,24 +38,39 @@ def make_feature_dicts():
             'NP24 Compound',
             'CTRP Compound',
         )
+
+    elif data_name == 'tcga':
+
+        pickle_gz_file_path = '../data/tcga.pickle.gz'
+
+        features = (
+            'Information',
+            'Mutation',
+            'Mutational Signature',
+            'CNV',
+            'Methylation',
+            'miRNA',
+            'mRNA',
+            'Protein',
+        )
+
+    with gzip_open(pickle_gz_file_path) as pickle_gz_file:
+
+        feature_dicts = load(pickle_gz_file)
+
+    feature_dicts = {
+        feature_type: feature_dicts[feature_type]
+        for feature_type in features
     }
 
-    # feature_dicts['Primary Site'] = feature_dicts['Information'].copy()
-    #
-    # feature_dicts['Primary Site'][
-    #     'df'] = make_membership_df_from_categorical_series(
-    #         feature_dicts['Information']['df'].loc['Site Primary']).astype(int)
-    #
-    # feature_dicts['Primary Site']['data_type'] = 'binary'
+    for information_index in information_indices_to_make_membership_df:
 
-    feature_dicts['Histology Subtype'] = feature_dicts['Information'].copy()
+        feature_dicts[information_index] = feature_dicts['Information'].copy()
 
-    feature_dicts['Histology Subtype'][
-        'df'] = make_membership_df_from_categorical_series(feature_dicts[
-            'Information']['df'].loc['Hist Subtype1']).astype(int)
+        feature_dicts[information_index][
+            'df'] = make_membership_df_from_categorical_series(feature_dicts[
+                'Information']['df'].loc[information_index]).astype(int)
 
-    feature_dicts['Histology Subtype']['data_type'] = 'binary'
-
-    feature_dicts.pop('Information')
+        feature_dicts[information_index]['data_type'] = 'binary'
 
     return feature_dicts
