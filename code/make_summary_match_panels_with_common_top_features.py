@@ -29,7 +29,8 @@ def make_summary_match_panels_with_common_top_features(
                     target_index,
                     feature_type,
                 ),
-                index_col=0).index
+                index_col=0,
+            ).index
 
             if 'RRBS' in feature_type:
 
