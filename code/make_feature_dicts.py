@@ -72,4 +72,6 @@ def make_feature_dicts(
 
         feature_dicts[information_index]['data_type'] = 'binary'
 
+    feature_dicts.pop('Information')
+
     return feature_dicts
