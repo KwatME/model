@@ -1,5 +1,5 @@
-# Make Context Map
+# Model and Infer
 
-Make context map :mushroom:
+Workflow to model and infer :saxophone:
 
 Shareable Project powered by <https://spro.io>
