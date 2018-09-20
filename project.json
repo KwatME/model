@@ -1,15 +1,15 @@
 {
-  "name": "Make Context Map",
-  "description": "",
-  "git_url": "https://github.com/UCSD-CCAL/make_context_map",
-  "version": "0.0.25",
-  "keywords": [],
-  "downloads": {},
-  "commands": {},
-  "environment_history": [
-    "conda install --prefix PROJECT_ENVIRONMENT_DIRECTORY_PATH --channel conda-forge --yes jupyterlab nodejs yarn twine pyinstaller pefile git git-lfs bfg awscli yapf isort pylama numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels cython matplotlib plotly pycrypto bcrypt click flask flask-cors requests biopython rpy2 r-mass",
-    "conda install --prefix PROJECT_ENVIRONMENT_DIRECTORY_PATH --channel Guardiome --yes pytabix",
-    "conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff",
-    "pip install --quiet geoparse ccal"
-  ]
+    "name": "Model and Infer",
+    "description": "",
+    "git_url": "https://github.com/KwatME/model_and_infer",
+    "version": "0.1.0",
+    "keywords": [],
+    "downloads": {},
+    "commands": {},
+    "environment_history": [
+	    "conda install --prefix PROJECT_ENVIRONMENT_DIRECTORY_PATH --channel conda-forge --yes jupyterlab nodejs yarn twine pyinstaller pefile git git-lfs bfg awscli yapf isort pylama numpy pandas xlrd hdf5 pytables scipy scikit-learn statsmodels cython matplotlib plotly pycrypto bcrypt click flask flask-cors requests biopython rpy2 r-mass",
+	    "conda install --prefix PROJECT_ENVIRONMENT_DIRECTORY_PATH --channel Guardiome --yes pytabix",
+	    "conda install --channel bioconda --yes dwgsim skewer fastqc picard seqtk htslib samtools bwa kallisto freebayes bcftools snpeff",
+	    "pip install --quiet geoparse ccal"
+    ]
 }

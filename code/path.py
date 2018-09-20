@@ -97,7 +97,7 @@ def path(setting):
                 hcc_k,
             )
 
-    path_dict['nmf_map_file_path'] = '{}/nmf_map.pickle.gz'.format(
+    path_dict['gps_map_file_path'] = '{}/gps_map.pickle.gz'.format(
         nmf_k_directory_path)
 
     for name, path in path_dict.items():

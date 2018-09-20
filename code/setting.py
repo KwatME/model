@@ -1,105 +1,105 @@
-NAME = 'mRNA CCLE Glioma'
+NAME = 'mRNA Cho Medullublastoma'
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/mrna_max__gene_x_suffix_None__histology_glioma__hist_subtype1_None__cell_line.tsv'
+MAX_PLOT_N = int(1e6)
 
-FEATURES_TO_DROP = None
+FEATURE_X_SAMPLE_FILE_PATH = '../data/cho__gene_x_patient.tsv'
 
-SAMPLES_TO_DROP = None
-
-NANIZE_0 = True
+NANIZE =  40
 
 DROP_NA_AXIS = 1
 
 MAX_NA = 0
 
-MIN_N_NOT_NA_UNIQUE_VALUE = None
-
-LOG = True
+LOG_BASE = '2'
 
 NORMALIZATION_AXIS = None
 
-NORMALIZATION_METHOD = None
+NORMALIZATION_METHOD = '-0-'
 
-SELECT_ONLY_GENES = True
+SELECT_GENE_SYMBOLS = True
 
 FEATURES_TO_PEEK = (
     'APC',
+    'AR',
+    'AXL',
     'BRAF',
     'BRCA1',
     'CASP8AP2',
+    'CDK4',
     'CDK6',
     'CTGF',
-    'CTNNB1',
+    'E2F1',
     'EGFR',
     'ERBB3',
-    'E2F1',
+    'ESR1',
     'EZH2',
     'FAT1',
     'GAPDH',
-    'GPX',
+    'GPX1',
+    'IKBKE',
+    'IL6',
+    'IL8',
     'KRAS',
+    'NOTCH1',
     'MAP4K4',
     'MTOR',
     'MYC',
     'NF1',
     'NRAS',
-    'PAX8',
+    'PGR',
     'PIK3CA',
     'POU2F1',
     'POU2F2',
     'POU5F1',
     'PPP2CA',
-    'PRKCA',
     'PTEN',
     'RAD17',
     'RELA',
     'SOX10',
-    'TCF7L2',
     'TP53',
     'YAP1',
     'ZEB1',
 )
 
-SAMPLES_TO_PEEK = (
-    'DKMG_CENTRAL_NERVOUS_SYSTEM',
-    'LN428_CENTRAL_NERVOUS_SYSTEM',
-)
+SAMPLES_TO_PEEK = ()
 
-MAX_N_JOB = 1
+SCALE_WITH_KL = False
+
+MAX_N_JOB = 16
 
 SELECT_CONTEXT = 'both'
 
-FEATURES = None
+N_TOP_FEATURE = 16
 
-N_TOP_FEATURE = None
-
-SELECT_FEATURE_AUTOMATICALLY = True
+SELECT_FEATURE_AUTOMATICALLY = False
 
 NMF_KS = tuple(range(
     2,
     10,
 ))
 
-NMF_K = 4
+NMF_K = 6
 
-EXTREME_FEATURE_THRESHOLD = 16
+ELEMENT_ENTROPY_QUANTILE = 1
 
-NMF_MAP_MDS_RANDOM_SEED = 20121020
+EXTREME_FEATURE_THRESHOLD = 80
 
-NMF_MAP_WT_PULL_POWER = 1.6
+GPS_MAP_MDS_RANDOM_SEED = 20121020
 
-NMF_MAP_WT_ELEMENT_MARKER_SIZE = 8
+GPS_MAP_WT_PULL_POWER = 1.6
 
-NMF_MAP_H_PULL_POWER = 1.6
+GPS_MAP_WT_ELEMENT_MARKER_SIZE = 16
 
-NMF_MAP_H_ELEMENT_MARKER_SIZE = 24
+GPS_MAP_H_PULL_POWER = 1.6
+
+GPS_MAP_H_ELEMENT_MARKER_SIZE = 16
 
 HCC_KS = NMF_KS
 
-WT_HCC_K = 7
+WT_HCC_K = NMF_K
 
-H_HCC_K = 8
+H_HCC_K = NMF_K
 
-NMF_MAP_WT_BANDWIDTH_FACTOR = 2.4
+GPS_MAP_WT_BANDWIDTH_FACTOR = 1.6
 
-NMF_MAP_H_BANDWIDTH_FACTOR = 1.6
+GPS_MAP_H_BANDWIDTH_FACTOR = 1.6
