@@ -129,28 +129,41 @@ def path(setting):
         ),
     ):
 
-        path_dict['{}_map_plotly_file_path'.format(
-            wt_or_h)] = '{}/{} Map.html'.format(
-                plotly_directory_path,
-                element,
-            )
+        if setting.UPLOAD_TO_PLOTLY:
 
-        path_dict['{}_state_map_plotly_file_path'.format(
-            wt_or_h)] = '{}/{} State Map.html'.format(
-                plotly_directory_path,
-                element,
-            )
+            path_dict['{}_map_plotly_file_path'.format(
+                wt_or_h)] = '{}/{} Map.html'.format(
+                    plotly_directory_path,
+                    element,
+                )
 
-        path_dict['{}_state_maps_plotly_directory_path'.format(
-            wt_or_h)] = '{}/{} State Maps'.format(
-                plotly_directory_path,
-                element,
-            )
+            path_dict['{}_state_map_plotly_file_path'.format(
+                wt_or_h)] = '{}/{} State Map.html'.format(
+                    plotly_directory_path,
+                    element,
+                )
 
-        path_dict['{}_match_plotly_directory_path'.format(
-            wt_or_h)] = '{}/{} Match'.format(
-                plotly_directory_path,
-                element,
-            )
+            path_dict['{}_state_maps_plotly_directory_path'.format(
+                wt_or_h)] = '{}/{} State Maps'.format(
+                    plotly_directory_path,
+                    element,
+                )
+
+            path_dict['{}_match_plotly_directory_path'.format(
+                wt_or_h)] = '{}/{} Match'.format(
+                    plotly_directory_path,
+                    element,
+                )
+
+        else:
+
+            path_dict['{}_map_plotly_file_path'.format(wt_or_h)] = None
+
+            path_dict['{}_state_map_plotly_file_path'.format(wt_or_h)] = None
+
+            path_dict['{}_state_maps_plotly_directory_path'.format(
+                wt_or_h)] = None
+
+            path_dict['{}_match_plotly_directory_path'.format(wt_or_h)] = None
 
     return path_dict

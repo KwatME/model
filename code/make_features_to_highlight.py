@@ -1,19 +1,38 @@
 def make_features_to_highlight():
-    
-    features_to_highlight = {
-        'Cho Subtype': (
-            'c1',
-            'c2',
-            'c3',
-            'c4',
-            'c5',
-            'c6',
+
+    return {
+        'Mutation': (
+            'NF1',
+        ),
+        'CNV': (
+            'IL25 (LOSS)',
+            'HOMEZ (LOSS)',
+            'NOTCH2NL (GAIN)',
+        ),
+        'Methylation': (
+            'XRCC2',
+            'DHX37',
+            'FEZ1',
+            'GAS6',
         ),
         'RNA': (
-            'CDK4',
-            'CDK6',
+            'HOMEZ',
+            'TOX4',
+            'CDKN2A',
+            'FZD1',
+            'GPR123',
+            'GPX8',
+            'MAP2',
+            'FAM200B',
+            'TTC23L',
+            'ZEB1',
             'MYC',
+            'RELA',
+            'EGFR',
+            'CDK4',
+            'VIM',
+        ),
+        'Protein': (
+            'VEGFR2',
         ),
     }
-    
-    return features_to_highlight
