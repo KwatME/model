@@ -1,35 +1,17 @@
 from ccal import log_nd_array, make_membership_df_from_categorical_series
-from pandas import DataFrame, read_table
+from pandas import read_table
 
 
 def make_feature_dicts():
 
-    cho_subtype = make_membership_df_from_categorical_series(
-        read_table(
-            '../data/patient_subtype.tsv',
-            index_col=0,
-            squeeze=True,
-        ))
-
-    rna = read_table(
-        '../data/cho__gene_x_patient.tsv',
-        index_col=0,
-    )
-
-    rna = DataFrame(
-        log_nd_array(rna.values),
-        index=rna.index,
-        columns=rna.columns,
-    )
-
     feature_dicts = {
-        'Cho Subtype': {
-            'df': cho_subtype,
-            'data_type': 'binary',
+        'Feature Group 0': {
+            'df': None
+            'data_type': 'continuous',
             'emphasis': 'high',
         },
-        'RNA': {
-            'df': rna,
+        'Feature Group 1': {
+            'df': None
             'data_type': 'continuous',
             'emphasis': 'high',
         },

@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/home/kwatme/github/model_and_infer/environment
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.25.2
+Libs: -L${libdir} -lsqlite3
+Libs.private: -lm -ldl -lpthread 
+Cflags: -I${includedir}

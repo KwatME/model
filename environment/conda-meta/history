@@ -1,0 +1,24 @@
+==> 2018-09-26 16:52:21 <==
+# cmd: /home/kwatme/miniconda3/bin/conda create --prefix /home/kwatme/github/model_and_infer/environment --yes
+# conda version: 4.5.11
+==> 2018-09-26 16:52:35 <==
+# cmd: /home/kwatme/miniconda3/bin/conda install --prefix /home/kwatme/github/model_and_infer/environment --channel conda-forge --yes --quiet pip
+# conda version: 4.5.11
++conda-forge::bzip2-1.0.6-h470a237_2
++conda-forge::ca-certificates-2018.8.24-ha4d7672_0
++conda-forge::certifi-2018.8.24-py37_1001
++conda-forge::libffi-3.2.1-hfc679d8_5
++conda-forge::libgcc-ng-7.2.0-hdf63c60_3
++conda-forge::libstdcxx-ng-7.2.0-hdf63c60_3
++conda-forge::ncurses-6.1-hfc679d8_1
++conda-forge::openssl-1.0.2p-h470a237_0
++conda-forge::pip-18.0-py37_1
++conda-forge::python-3.7.0-h5001a0f_1
++conda-forge::readline-7.0-haf1bffa_1
++conda-forge::setuptools-40.4.0-py37_1000
++conda-forge::sqlite-3.25.2-hb1c47c0_0
++conda-forge::tk-8.6.8-ha92aebf_0
++conda-forge::wheel-0.31.1-py37_1001
++conda-forge::xz-5.2.4-h470a237_1
++conda-forge::zlib-1.2.11-h470a237_3
+# update specs: ['pip']

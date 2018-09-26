@@ -37,29 +37,4 @@ def make_feature_dicts_from_pickle_gz(
                 'high',
             }
 
-    from pandas import read_table
-
-    gpcr_ligand = read_table(
-        '../data/gpcr_ligand.tsv',
-        index_col=0,
-    )
-
-    gpcrs = set(gpcr_ligand.index)
-
-    gpcr_ligands = set(gpcr_ligand.iloc[:, 2:].unstack().dropna())
-
-    rna = feature_dicts['RNA']['df']
-
-    feature_dicts['RNA GPCR'] = {
-        'df': rna.loc[rna.index & gpcrs],
-        'data_type': 'continuous',
-        'emphasis': 'high',
-    }
-
-    feature_dicts['RNA GPCR Ligand'] = {
-        'df': rna.loc[rna.index & gpcr_ligands],
-        'data_type': 'continuous',
-        'emphasis': 'high',
-    }
-
     return feature_dicts
