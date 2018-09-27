@@ -2,7 +2,7 @@ NAME = 'mRNA KRAS Map Breast'
 
 MAX_PLOT_N = int(1e6)
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/pablo/mrna_kras_map__gene_x_cell_line.breast.tsv'
+FEATURE_X_SAMPLE_FILE_PATH = '../data/mrna_max__gene_x_cell_line.breast.tsv'
 
 NANIZE = 0
 
