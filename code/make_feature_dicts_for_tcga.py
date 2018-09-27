@@ -14,7 +14,9 @@ def make_feature_dicts_for_tcga():
             'Methylation',
             'miRNA',
             'RNA',
+            'Gene Set',
             'Protein',
+            'Immune Signature',
         ),
         {},
     )

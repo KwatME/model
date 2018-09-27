@@ -10,11 +10,6 @@ def make_feature_dicts():
             'data_type': 'continuous',
             'emphasis': 'high',
         },
-        'Feature Group 1': {
-            'df': None
-            'data_type': 'continuous',
-            'emphasis': 'high',
-        },
     }
 
     return feature_dicts
