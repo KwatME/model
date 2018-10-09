@@ -1,24 +1,18 @@
-from ccal import establish_path, untitle_str
+from ccal import establish_path
 
 
 def path(setting):
 
     path_dict = {}
 
-    directory_path = '../output/{}'.format(untitle_str(setting.NAME))
-
-    path_dict['feature_x_sample_file_path'] = '{}/feature_x_sample.tsv'.format(
-        directory_path)
+    path_dict['feature_x_sample_file_path'] = '../output/feature_x_sample.tsv'
 
     for element in (
             'feature',
             'sample',
     ):
 
-        element_directory_path = '{}/{}'.format(
-            directory_path,
-            element,
-        )
+        element_directory_path = '../output/{}'.format(element)
 
         path_dict['{}_directory_path'.format(element)] = element_directory_path
 
@@ -29,34 +23,25 @@ def path(setting):
         path_dict['{}_context_matrix_file_path'.format(
             element)] = '{}/context_matrix.tsv'.format(element_directory_path)
 
-    signal_directory_path = '{}/signal'.format(directory_path)
-
-    path_dict['signal_matrix_file_path'] = '{}/signal_matrix.tsv'.format(
-        signal_directory_path)
+    path_dict['signal_matrix_file_path'] = '../output/signal/signal_matrix.tsv'
 
     path_dict[
-        'selected_signal_matrix_file_path'] = '{}/selected_signal_matrix.tsv'.format(
-            signal_directory_path)
+        'selected_signal_matrix_file_path'] = '../output/signal/selected_signal_matrix.tsv'
 
-    nmf_directory_path = '{}/nmf'.format(signal_directory_path)
-
-    path_dict['nmf_directory_path'] = nmf_directory_path
+    path_dict['nmf_directory_path'] = '../output/signal/nmf'
 
     for w_or_h in (
             'w',
             'h',
     ):
 
-        path_dict['{}_file_path'.format(w_or_h)] = '{}/nmf_k{}_{}.tsv'.format(
-            nmf_directory_path,
-            setting.NMF_K,
-            w_or_h,
-        )
+        path_dict['{}_file_path'.format(
+            w_or_h)] = '../output/signal/nmf/nmf_k{}_{}.tsv'.format(
+                setting.NMF_K,
+                w_or_h,
+            )
 
-    nmf_k_directory_path = '{}/{}'.format(
-        nmf_directory_path,
-        setting.NMF_K,
-    )
+    nmf_k_directory_path = '../output/signal/nmf/{}'.format(setting.NMF_K)
 
     for wt_or_h in (
             'wt',
