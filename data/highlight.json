@@ -12,21 +12,9 @@
 
     ],
     "RNA":[
-        "AR",
-        "EZH2",
-        "ERBB2",
-        "ERBB3",
-        "ESR1",
         "E2F1",
-        "HER2",
-        "KRT5",
         "MYC",
-        "PGR",
-        "PR",
         "ZEB1"
-    ],
-    "miRNA":[
-
     ],
     "Gene Set":[
         "AIGNER_ZEB1_TARGETS",
@@ -40,26 +28,21 @@
         "N-Cadherin",
         "ECADHERIN",
         "E-Cadherin",
-        "P-Cadherin_Caution",
-        "AR",
-        "HER2",
-        "HER3",
-        "PR",
-        "VEGFR2"
+        "P-Cadherin_Caution"
     ],
     "Metabolite":[
 
     ],
-    "Achilles RNAi":[
+    "RNAi":[
 
     ],
-    "Achilles CRISPR":[
+    "CRISPR":[
 
     ],
-    "NP24 Compound":[
+    "NP24":[
 
     ],
-    "CTRP Compound":[
+    "CTRP":[
 
     ],
     "Immune Signature":[
