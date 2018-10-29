@@ -1,6 +1,11 @@
 {
     "Mutation":[
-
+        "APC",
+        "KRAS",
+        "NRAS",
+        "EGFR",
+        "YAP1",
+        "TP53"
     ],
     "Mutational Signature":[
 
@@ -14,7 +19,24 @@
     "RNA":[
         "E2F1",
         "MYC",
-        "ZEB1"
+        "ZEB1",
+        "CTNNB1",
+        "NOTCH1",
+        "EGFR",
+        "SNAI1",
+        "SNAI2",
+        "BCL2",
+        "YAP1",
+        "AXL",
+        "MSH2",
+        "MSH6",
+        "APOBEC1",
+        "CDH1",
+        "KRAS",
+        "NRAP",
+        "YAP1",
+        "APC",
+        "TP53"
     ],
     "Gene Set":[
         "AIGNER_ZEB1_TARGETS",
@@ -28,7 +50,10 @@
         "N-Cadherin",
         "ECADHERIN",
         "E-Cadherin",
-        "P-Cadherin_Caution"
+        "P-Cadherin_Caution",
+        "TIGAR",
+        "EGFR",
+        "CDK1"
     ],
     "Metabolite":[
 
