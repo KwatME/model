@@ -22,13 +22,29 @@ NORMALIZATION_METHOD = '-0-'
 
 SELECT_GENE_SYMBOLS = True
 
-FEATURES_TO_PEEK = ()
+FEATURES_TO_PEEK = (
+    'TP53',
+    'PTEN',
+    'APC',
+    'BRCA1',
+    'BRCA2',
+    'NOTCH1',
+    'KRAS',
+    'NRAS',
+    'NRAP',
+    'YAP1',
+    'MYC',
+    'ZEB1',
+    'RELA',
+    'SREBF1',
+    'SREBF2',
+)
 
 SAMPLES_TO_PEEK = ()
 
 SCALE_WITH_KL = True
 
-MAX_N_JOB = 1
+MAX_N_JOB = 8
 
 SELECT_CONTEXT = 'both'
 

@@ -3,6 +3,7 @@
         "APC",
         "KRAS",
         "NRAS",
+        "NRAP",
         "EGFR",
         "YAP1",
         "TP53"
@@ -33,6 +34,7 @@
         "APOBEC1",
         "CDH1",
         "KRAS",
+        "NRAS",
         "NRAP",
         "YAP1",
         "APC",
