@@ -31,8 +31,6 @@ environment/*
 # ==============================================================================
 # Additional rules.
 # ==============================================================================
-!data/gene_set
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -80,6 +78,7 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
@@ -87,9 +86,8 @@ coverage.xml
 
 # Django stuff:
 *.log
-.static_storage/
-.media/
 local_settings.py
+db.sqlite3
 
 # Flask stuff:
 instance/
