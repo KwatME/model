@@ -2,11 +2,11 @@ from ccal import establish_path
 
 
 def path(
-        NAME,
-        NMF_K,
-        WT_HCC_K,
-        H_HCC_K,
-        UPLOAD_TO_PLOTLY,
+        name,
+        nmf_k,
+        wt_hcc_k,
+        h_hcc_k,
+        upload_to_plotly,
 ):
 
     path_dict = {}
@@ -43,11 +43,11 @@ def path(
 
         path_dict['{}_file_path'.format(
             w_or_h)] = '../output/signal/nmf/nmf_k{}_{}.tsv'.format(
-                NMF_K,
+                nmf_k,
                 w_or_h,
             )
 
-    nmf_k_directory_path = '../output/signal/nmf/{}'.format(NMF_K)
+    nmf_k_directory_path = '../output/signal/nmf/{}'.format(nmf_k)
 
     for wt_or_h in (
             'wt',
@@ -76,11 +76,11 @@ def path(
 
         if wt_or_h is 'wt':
 
-            hcc_k = WT_HCC_K
+            hcc_k = wt_hcc_k
 
         elif wt_or_h is 'h':
 
-            hcc_k = H_HCC_K
+            hcc_k = h_hcc_k
 
         path_dict['{}_hcc_match_directory_path'.format(
             wt_or_h)] = '{}/hcc/{}/match'.format(
@@ -107,7 +107,7 @@ def path(
                 'directory',
             )
 
-    plotly_directory_path = 'Cellular Context/{}'.format(NAME)
+    plotly_directory_path = 'Cellular Context/{}'.format(name)
 
     for wt_or_h, element in (
         (
@@ -120,7 +120,7 @@ def path(
         ),
     ):
 
-        if UPLOAD_TO_PLOTLY:
+        if upload_to_plotly:
 
             path_dict['{}_map_plotly_file_path'.format(
                 wt_or_h)] = '{}/{} Map.html'.format(
