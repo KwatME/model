@@ -2,7 +2,7 @@ from ccal import establish_path
 
 
 def path(
-        name,
+        title,
         nmf_k,
         wt_hcc_k,
         h_hcc_k,
@@ -107,7 +107,7 @@ def path(
                 'directory',
             )
 
-    plotly_directory_path = 'Cellular Context/{}'.format(name)
+    plotly_directory_path = 'Cellular Context/{}'.format(title)
 
     for wt_or_h, element in (
         (
