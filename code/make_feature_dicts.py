@@ -7,7 +7,7 @@ import ccal
 def make_feature_dicts():
 
     pickle_gz_file_path = '../data/ccle.pickle.gz'
-    
+
     feature_groups = (
         'Mutation',
         'Mutational Signature',
@@ -24,21 +24,21 @@ def make_feature_dicts():
         # 'Information',
     )
 
-#     pickle_gz_file_path = '../data/tcga.pickle.gz'
+    #     pickle_gz_file_path = '../data/tcga.pickle.gz'
 
-#     feature_groups = (
-#         'Mutation',
-#         'Mutational Signature',
-#         'CNV',
-#         'Methylation',
-#         'RNA',
-#         'miRNA',
-#         'Gene Set',
-#         'Protein',
-#         'Immune Signature',
-#         'Continuous Information',
-#         'Binary Information',
-#     )
+    #     feature_groups = (
+    #         'Mutation',
+    #         'Mutational Signature',
+    #         'CNV',
+    #         'Methylation',
+    #         'RNA',
+    #         'miRNA',
+    #         'Gene Set',
+    #         'Protein',
+    #         'Immune Signature',
+    #         'Continuous Information',
+    #         'Binary Information',
+    #     )
 
     feature_group_features = {}
 
