@@ -1,4 +1,4 @@
-NAME = 'RNA CCLE Large Intestine'
+NAME = 'RNA CCLE Colon Cancer'
 
 UPLOAD_TO_PLOTLY = False
 
@@ -20,7 +20,7 @@ NORMALIZATION_AXIS = 0
 
 NORMALIZATION_METHOD = '-0-'
 
-SELECT_GENE_SYMBOLS = True
+SELECT_GENE_SYMBOL = True
 
 FEATURES_TO_PEEK = (
     'TP53',
@@ -44,7 +44,9 @@ SAMPLES_TO_PEEK = ()
 
 SCALE_WITH_KL = True
 
-MAX_N_JOB = 8
+MAX_N_JOB = 1
+
+CONTEXT_ELEMENT = 'feature & sample'
 
 SELECT_CONTEXT = 'both'
 
