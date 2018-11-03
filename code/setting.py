@@ -32,7 +32,7 @@ MAX_N_JOB = 8
 
 ELEMENTS = ('feature', )
 
-CONTEXTSS = (
+CONTEXTS = (
     'negative',
     'positive',
 )
