@@ -32,9 +32,10 @@ MAX_N_JOB = 8
 
 ELEMENTS = ('feature', )
 
-SELECT_CONTEXT = 'both'
-
-FEATURES_FILE_PATH = None
+CONTEXTSS = (
+    'negative',
+    'positive',
+)
 
 SELECT_FEATURE_AUTOMATICALLY = True
 
