@@ -133,7 +133,7 @@ def path(
                 )
 
             path_dict['{}_map_plotly_directory_path'.format(
-                wt_or_h)] = '{}/{} Maps'.format(
+                wt_or_h)] = '{}/{} Map'.format(
                     plotly_directory_path,
                     element,
                 )
