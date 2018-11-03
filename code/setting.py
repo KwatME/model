@@ -28,9 +28,9 @@ SAMPLES_TO_PEEK = ()
 
 SCALE_WITH_KL = True
 
-MAX_N_JOB = 1
+MAX_N_JOB = 8
 
-CONTEXT_ELEMENT = 'feature'
+ELEMENTS = ('feature', )
 
 SELECT_CONTEXT = 'both'
 

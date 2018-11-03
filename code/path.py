@@ -3,6 +3,7 @@ from ccal import establish_path
 
 def path(
         title,
+        elements,
         nmf_k,
         wt_hcc_k,
         h_hcc_k,
@@ -13,10 +14,7 @@ def path(
 
     path_dict['feature_x_sample_file_path'] = '../output/feature_x_sample.tsv'
 
-    for element in (
-            'feature',
-            'sample',
-    ):
+    for element in elements:
 
         element_directory_path = '../output/{}'.format(element)
 
@@ -122,39 +120,30 @@ def path(
 
         if upload_to_plotly:
 
-            path_dict['{}_map_plotly_file_path'.format(
-                wt_or_h)] = '{}/{} Map.html'.format(
-                    plotly_directory_path,
-                    element,
-                )
-
-            path_dict['{}_state_map_plotly_file_path'.format(
-                wt_or_h)] = '{}/{} State Map.html'.format(
-                    plotly_directory_path,
-                    element,
-                )
-
-            path_dict['{}_state_maps_plotly_directory_path'.format(
-                wt_or_h)] = '{}/{} State Maps'.format(
-                    plotly_directory_path,
-                    element,
-                )
-
             path_dict['{}_match_plotly_directory_path'.format(
                 wt_or_h)] = '{}/{} Match'.format(
                     plotly_directory_path,
                     element,
                 )
 
+            path_dict['{}_map_plotly_file_path'.format(
+                wt_or_h)] = '{}/{} Map.html'.format(
+                    plotly_directory_path,
+                    element,
+                )
+
+            path_dict['{}_map_plotly_directory_path'.format(
+                wt_or_h)] = '{}/{} Maps'.format(
+                    plotly_directory_path,
+                    element,
+                )
+
         else:
+
+            path_dict['{}_match_plotly_directory_path'.format(wt_or_h)] = None
 
             path_dict['{}_map_plotly_file_path'.format(wt_or_h)] = None
 
-            path_dict['{}_state_map_plotly_file_path'.format(wt_or_h)] = None
-
-            path_dict['{}_state_maps_plotly_directory_path'.format(
-                wt_or_h)] = None
-
-            path_dict['{}_match_plotly_directory_path'.format(wt_or_h)] = None
+            path_dict['{}_map_plotly_directory_path'.format(wt_or_h)] = None
 
     return path_dict
