@@ -1,7 +1,5 @@
-import gzip
-import pickle
-
-import pandas as pd
+from gzip import open as gzip_open
+from pickle import load
 
 
 def make_feature_dicts():
@@ -28,25 +26,25 @@ def make_feature_dicts():
         # 'Information',
     )
 
-    # pickle_gz_file_path = '../data/tcga.pickle.gz'
-    #
-    # keys = (
-    #     'Mutation',
-    #     'Mutational Signature',
-    #     'CNV',
-    #     'Methylation',
-    #     'RNA',
-    #     'miRNA',
-    #     'Gene Set',
-    #     'Protein',
-    #     'Immune Signature',
-    #     'Continuous Information',
-    #     'Binary Information',
-    # )
+#     pickle_gz_file_path = '../data/tcga.pickle.gz'
+    
+#     keys = (
+#         'Mutation',
+#         'Mutational Signature',
+#         'CNV',
+#         'Methylation',
+#         'RNA',
+#         'miRNA',
+#         'Gene Set',
+#         'Protein',
+#         'Immune Signature',
+#         'Continuous Information',
+#         'Binary Information',
+#     )
 
-    with gzip.open(pickle_gz_file_path) as pickle_gz_file:
+    with gzip_open(pickle_gz_file_path) as pickle_gz_file:
 
-        feature_dicts = pickle.load(pickle_gz_file)
+        feature_dicts = load(pickle_gz_file)
 
     for key in keys:
 
