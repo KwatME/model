@@ -349,20 +349,7 @@
     ],
     "NP24": [],
     "CTRP": [],
-    "Immune Signature": [
-      "ImmuneScore",
-      "CD8A",
-      "PD1",
-      "PDL1",
-      "PDL2",
-      "CTLA4",
-      "CD80",
-      "CD86",
-      "BTLA",
-      "HVEM",
-      "TIM3",
-      "GAL9",
-      "LAG3"
-    ]
+    "Immune Signature": "All",
+    "Phenotype": "All"
   }
 }
