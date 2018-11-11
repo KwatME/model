@@ -6,7 +6,7 @@ FEATURE_X_SAMPLE_FILE_PATH = '../data/rna__gene_x_sample.tsv'
 
 NANIZE = 0
 
-DROP_NA_AXIS = 1
+DROP_AXIS = 1
 
 MAX_NA = 0.05
 
