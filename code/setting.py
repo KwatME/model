@@ -1,6 +1,6 @@
 TITLE = 'RNA Title (YR.MN.DT)'
 
-UPLOAD_TO_PLOTLY = True
+UPLOAD_TO_PLOTLY = False
 
 FEATURE_X_SAMPLE_FILE_PATH = '../data/rna__gene_x_sample.tsv'
 
