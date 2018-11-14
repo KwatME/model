@@ -1,13 +1,16 @@
 import itertools
 import json
 import os
+from warnings import filterwarnings
 
 import ccal
 import numpy as np
 import pandas as pd
-from plotly.offline import init_notebook_mode
+import plotly as pl
 
 from make_feature_dicts import make_feature_dicts
 from path import path
 
-init_notebook_mode(connected=True)
+filterwarnings('ignore')
+
+pl.offline.init_notebook_mode(connected=True)
