@@ -9,7 +9,6 @@ import pandas as pd
 import plotly as pl
 
 from make_feature_dicts import make_feature_dicts
-from path import path
 
 filterwarnings('ignore')
 

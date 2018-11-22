@@ -1,6 +1,8 @@
-TITLE = 'RNA Title (YR.MN.DT)'
+from _make_path_dict import _make_path_dict
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/rna__gene_x_sample.tsv'
+TITLE = 'RNA TCGA Brain Primary Solid Tumor (18.11.19)'
+
+FEATURE_X_SAMPLE_FILE_PATH = '../data/rna__gene_x_sample.brain_primary_solid_tumor.tsv'
 
 NANIZE = 0
 
@@ -20,13 +22,22 @@ NORMALIZATION_METHOD = '-0-'
 
 SELECT_GENE_SYMBOL = True
 
-FEATURES_TO_PEEK = ()
+FEATURES_TO_PEEK = (
+    'F2RL1',
+    'ST14',
+    'IDH1',
+    'EGFR',
+    'TP53',
+    'NFE2L2',
+)
 
 SAMPLES_TO_PEEK = ()
 
-MAX_N_JOB = 1
+MAX_N_JOB = 8
 
-ELEMENTS = ('feature', )
+ELEMENTS = (
+    'feature',
+)
 
 CONTEXTS = (
     'negative',
@@ -43,31 +54,42 @@ N_TOP_SAMPLE = None
 
 NMF_KS = tuple(range(
     2,
-    17,
+    10,
 ))
 
-NMF_K = 8
+NMF_K = 5
 
 HCC_KS = NMF_KS
 
-WT_HCC_K = NMF_K
+WT_HCC_K = 8
 
-H_HCC_K = NMF_K
+H_HCC_K = 6
 
 EXTREME_FEATURE_THRESHOLD = 16
 
 ELEMENT_ENTROPY_QUANTILE = 1
 
-GPS_MAP_WT_PULL_POWER = 1
+GPS_MAP_WT_PULL_POWER = 1.6
 
-GPS_MAP_WT_ELEMENT_MARKER_SIZE = 16
+GPS_MAP_WT_ELEMENT_MARKER_SIZE = 10
 
-GPS_MAP_WT_BANDWIDTH_FACTOR = 1
+GPS_MAP_WT_BANDWIDTH_FACTOR = 6.4
 
-GPS_MAP_H_PULL_POWER = 1
+GPS_MAP_H_PULL_POWER = 1.6
 
 GPS_MAP_H_ELEMENT_MARKER_SIZE = 16
 
-GPS_MAP_H_BANDWIDTH_FACTOR = 1
+GPS_MAP_H_BANDWIDTH_FACTOR = 6.4
+
+PLOT_STD = 3
 
 UPLOAD_TO_PLOTLY = False
+
+PATH_DICT = path_dict = _make_path_dict(
+    TITLE,
+    ELEMENTS,
+    NMF_K,
+    WT_HCC_K,
+    H_HCC_K,
+    UPLOAD_TO_PLOTLY,
+)

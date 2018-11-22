@@ -8,7 +8,25 @@ def make_feature_dicts():
 
     sample_feature_dicts = {}
 
-    pickle_gz_file_path = '../data/ccle.pickle.gz'
+#     pickle_gz_file_path = '../data/ccle.pickle.gz'
+
+#     keys = (
+#         'Mutation',
+#         'Mutational Signature',
+#         'CNV',
+#         'Methylation',
+#         'RNA',
+#         'Gene Set',
+#         'Protein',
+#         'Metabolite',
+#         'RNAi',
+#         'CRISPR',
+#         'NP24',
+#         'CTRP',
+#         'Phenotype',
+#     )
+
+    pickle_gz_file_path = '../data/tcga.pickle.gz'
 
     keys = (
         'Mutation',
@@ -16,31 +34,13 @@ def make_feature_dicts():
         'CNV',
         'Methylation',
         'RNA',
+        'miRNA',
         'Gene Set',
         'Protein',
-        'Metabolite',
-        'RNAi',
-        'CRISPR',
-        'NP24',
-        'CTRP',
-        'Phenotype',
+        'Immune Signature',
+        'Continuous Information',
+        'Binary Information',
     )
-
-    # pickle_gz_file_path = '../data/tcga.pickle.gz'
-    #
-    # keys = (
-    #     'Mutation',
-    #     'Mutational Signature',
-    #     'CNV',
-    #     'Methylation',
-    #     'RNA',
-    #     'miRNA',
-    #     'Gene Set',
-    #     'Protein',
-    #     'Immune Signature',
-    #     'Continuous Information',
-    #     'Binary Information',
-    # )
 
     with gzip_open(pickle_gz_file_path) as pickle_gz_file:
 
