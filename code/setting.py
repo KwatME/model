@@ -33,9 +33,7 @@ SAMPLES_TO_PEEK = ()
 
 MAX_N_JOB = 1
 
-ELEMENTS = (
-    'feature',
-)
+ELEMENTS = ('feature', )
 
 CONTEXTS = (
     'negative',
