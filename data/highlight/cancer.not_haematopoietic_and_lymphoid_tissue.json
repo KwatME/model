@@ -3,6 +3,7 @@
   "Sample": {
     "Mutation": [
       "KRAS",
+      "GNAS",
       "F2RL1",
       "ST14",
       "IDH1",
@@ -12,6 +13,8 @@
     "CNV": [],
     "Methylation": [],
     "RNA": [
+      "KRAS",
+      "GNAS",
       "F2RL1",
       "ST14",
       "IDH1",
@@ -21,8 +24,8 @@
     "Gene Set": [
       "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
       "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
-      "IPA_E2F1_UP",
-      "HALLMARK_ANGIOGENESIS"
+      "HALLMARK_ANGIOGENESIS",
+      "IPA_E2F1_UP"
     ],
     "Protein": [],
     "Metabolite": [],
