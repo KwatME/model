@@ -1,7 +1,7 @@
 from ccal import establish_path
 
 
-def _make_path_dict(
+def make_path_dict(
         title,
         elements,
         nmf_k,

@@ -2,10 +2,11 @@
   "Feature": {},
   "Sample": {
     "Mutation": [
+      "KRAS",
       "F2RL1",
       "ST14",
       "IDH1",
-      "EGFR",
+      "EGFR"
     ],
     "Mutational Signature": [],
     "CNV": [],
@@ -14,20 +15,23 @@
       "F2RL1",
       "ST14",
       "IDH1",
-      "EGFR",
+      "EGFR"
     ],
+    "miRNA": [],
     "Gene Set": [
       "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
       "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
-      "TIAN_TNF_SIGNALING_VIA_NFKB",
       "IPA_E2F1_UP",
       "HALLMARK_ANGIOGENESIS"
     ],
     "Protein": [],
+    "Metabolite": [],
+    "RNAi": [],
+    "CRISPR": [],
+    "NP24": [],
+    "CTRP": [],
     "Immune Signature": "All",
-    "Binary Information": [
-      "(acronym) LGG",
-      "(acronym) GBM"
-    ]
+    "Continuous Information": [],
+    "Binary Information": []
   }
 }

@@ -1,8 +1,8 @@
-from _make_path_dict import _make_path_dict
+from make_path_dict import make_path_dict
 
-TITLE = 'RNA TCGA Brain Primary Solid Tumor (18.11.19)'
+TITLE = 'RNA CCLE not Haematopoietic and Lymphoid Tissue (18.11.23)'
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/rna__gene_x_sample.brain_primary_solid_tumor.tsv'
+FEATURE_X_SAMPLE_FILE_PATH = '../data/rna__gene_x_cell_line.haematopoietic_and_lymphoid_tissue.not.tsv'
 
 NANIZE = 0
 
@@ -31,7 +31,7 @@ FEATURES_TO_PEEK = (
 
 SAMPLES_TO_PEEK = ()
 
-MAX_N_JOB = 1
+MAX_N_JOB = 16
 
 ELEMENTS = ('feature', )
 
@@ -50,24 +50,24 @@ N_TOP_SAMPLE = None
 
 NMF_KS = tuple(range(
     2,
-    10,
+    20,
 ))
 
-NMF_K = 8
+NMF_K = 13
 
 HCC_KS = NMF_KS
 
-WT_HCC_K = NMF_K
+WT_HCC_K = 14
 
-H_HCC_K = NMF_K
+H_HCC_K = 14
 
 EXTREME_FEATURE_THRESHOLD = 24
 
 ELEMENT_ENTROPY_QUANTILE = 1
 
-GPS_MAP_WT_PULL_POWER = 1
+GPS_MAP_WT_PULL_POWER = 3.2
 
-GPS_MAP_WT_ELEMENT_MARKER_SIZE = 12
+GPS_MAP_WT_ELEMENT_MARKER_SIZE = 10
 
 GPS_MAP_WT_BANDWIDTH_FACTOR = 2.4
 
@@ -79,9 +79,9 @@ GPS_MAP_H_BANDWIDTH_FACTOR = 2.4
 
 PLOT_STD = 2.4
 
-UPLOAD_TO_PLOTLY = False
+UPLOAD_TO_PLOTLY = True
 
-PATH_DICT = path_dict = _make_path_dict(
+PATH_DICT = make_path_dict(
     TITLE,
     ELEMENTS,
     NMF_K,
