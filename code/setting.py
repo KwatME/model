@@ -1,12 +1,12 @@
 from make_path_dict import make_path_dict
 
-TITLE = 'RNA CCLE Old Breast (18.11.25)'
+TITLE = 'RNA CCLE Breast Used in KRAS Map (18.11.26)'
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/test/rna_kras_map__gene_x_cell_line.breast.tsv'
+FEATURE_X_SAMPLE_FILE_PATH = '../data/ccle_breast_used_in_kras_map/rna_kras_map__gene_x_cell_line.breast.tsv'
 
 FEATURE_NAME = 'Gene'
 
-SAMPLE_NAME = 'Breast Cell Line'
+SAMPLE_NAME = 'Cell Line'
 
 NANIZE = 0
 
@@ -40,7 +40,7 @@ FEATURES_TO_PEEK = (
 
 SAMPLES_TO_PEEK = ('HMEL_BREAST', )
 
-MAX_N_JOB = 8
+MAX_N_JOB = 1
 
 ELEMENTS = ('feature', )
 
@@ -70,17 +70,17 @@ EXTREME_FEATURE_THRESHOLD = 24
 
 ELEMENT_ENTROPY_QUANTILE = 1
 
-GPS_MAP_W_PULL_POWER = 1.6
+GPS_MAP_W_PULL_POWER = 2
 
 GPS_MAP_W_ELEMENT_MARKER_SIZE = 12
 
-GPS_MAP_W_BANDWIDTH_FACTOR = 2.4
+GPS_MAP_W_BANDWIDTH_FACTOR = 3.2
 
 GPS_MAP_H_PULL_POWER = 1.6
 
 GPS_MAP_H_ELEMENT_MARKER_SIZE = 24
 
-GPS_MAP_H_BANDWIDTH_FACTOR = 2.4
+GPS_MAP_H_BANDWIDTH_FACTOR = 3.2
 
 PLOT_STD = 2.4
 

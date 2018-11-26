@@ -52,16 +52,16 @@ def make_feature_dicts():
 
         sample_feature_dicts[key] = feature_dicts[key]
 
-    old_state_x_cell_line = read_table(
-        '../data/test/cell_line_state.tsv',
+    state_x_cell_line = read_table(
+        '../data/ccle_breast_used_in_kras_map/states.tsv',
         index_col=0,
         header=None,
     ).T
 
-    old_state_x_cell_line.index = ('Old State', )
+    state_x_cell_line.index = ('State from CCLE Breast Used in KRAS Map', )
 
-    sample_feature_dicts['Old State'] = {
-        'df': old_state_x_cell_line,
+    sample_feature_dicts['Test'] = {
+        'df': state_x_cell_line,
         'data_type': 'categorical',
     }
 
