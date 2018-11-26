@@ -1,8 +1,12 @@
 from make_path_dict import make_path_dict
 
-TITLE = 'RNA CCLE not Haematopoietic and Lymphoid Tissue (18.11.23)'
+TITLE = 'RNA CCLE Old Breast (18.11.25)'
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/rna__gene_x_cell_line.haematopoietic_and_lymphoid_tissue.not.tsv'
+FEATURE_X_SAMPLE_FILE_PATH = '../data/test/rna_kras_map__gene_x_cell_line.breast.tsv'
+
+FEATURE_NAME = 'Gene'
+
+SAMPLE_NAME = 'Breast Cell Line'
 
 NANIZE = 0
 
@@ -23,15 +27,20 @@ NORMALIZATION_METHOD = '-0-'
 SELECT_GENE_SYMBOL = True
 
 FEATURES_TO_PEEK = (
-    'F2RL1',
-    'ST14',
-    'IDH1',
-    'EGFR',
+    'AR',
+    'E2F3',
+    'ERBB2',
+    'ERBB3',
+    'ESR1',
+    'HER2',
+    'KRT5',
+    'PGR',
+    'ZEB1',
 )
 
-SAMPLES_TO_PEEK = ()
+SAMPLES_TO_PEEK = ('HMEL_BREAST', )
 
-MAX_N_JOB = 16
+MAX_N_JOB = 8
 
 ELEMENTS = ('feature', )
 
@@ -42,50 +51,45 @@ CONTEXTS = (
 
 SELECT_FEATURE_AUTOMATICALLY = True
 
-N_TOP_FEATURE = None
-
 SELECT_SAMPLE_AUTOMATICALLY = False
-
-N_TOP_SAMPLE = None
 
 NMF_KS = tuple(range(
     2,
-    20,
+    10,
 ))
 
-NMF_K = 13
+NMF_K = 6
 
 HCC_KS = NMF_KS
 
-WT_HCC_K = 14
+W_HCC_K = NMF_K
 
-H_HCC_K = 14
+H_HCC_K = NMF_K
 
 EXTREME_FEATURE_THRESHOLD = 24
 
 ELEMENT_ENTROPY_QUANTILE = 1
 
-GPS_MAP_WT_PULL_POWER = 3.2
+GPS_MAP_W_PULL_POWER = 1.6
 
-GPS_MAP_WT_ELEMENT_MARKER_SIZE = 10
+GPS_MAP_W_ELEMENT_MARKER_SIZE = 12
 
-GPS_MAP_WT_BANDWIDTH_FACTOR = 2.4
+GPS_MAP_W_BANDWIDTH_FACTOR = 2.4
 
-GPS_MAP_H_PULL_POWER = 1
+GPS_MAP_H_PULL_POWER = 1.6
 
-GPS_MAP_H_ELEMENT_MARKER_SIZE = 12
+GPS_MAP_H_ELEMENT_MARKER_SIZE = 24
 
 GPS_MAP_H_BANDWIDTH_FACTOR = 2.4
 
 PLOT_STD = 2.4
 
-UPLOAD_TO_PLOTLY = True
+UPLOAD_TO_PLOTLY = False
 
 PATH_DICT = make_path_dict(
     TITLE,
-    ELEMENTS,
     NMF_K,
-    WT_HCC_K,
+    W_HCC_K,
     H_HCC_K,
     UPLOAD_TO_PLOTLY,
 )

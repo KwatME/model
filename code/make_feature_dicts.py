@@ -1,6 +1,8 @@
 from gzip import open as gzip_open
 from pickle import load
 
+from pandas import read_table
+
 
 def make_feature_dicts():
 
@@ -9,7 +11,7 @@ def make_feature_dicts():
     sample_feature_dicts = {}
 
     pickle_gz_file_path = '../data/ccle.pickle.gz'
-    
+
     keys = (
         'Mutation',
         'Mutational Signature',
@@ -26,21 +28,21 @@ def make_feature_dicts():
         'Binary Information',
     )
 
-#     pickle_gz_file_path = '../data/tcga.pickle.gz'
-
-#     keys = (
-#         'Mutation',
-#         'Mutational Signature',
-#         'CNV',
-#         'Methylation',
-#         'RNA',
-#         'miRNA',
-#         'Gene Set',
-#         'Protein',
-#         'Immune Signature',
-#         'Continuous Information',
-#         'Binary Information',
-#     )
+    # pickle_gz_file_path = '../data/tcga.pickle.gz'
+    #
+    # keys = (
+    #     'Mutation',
+    #     'Mutational Signature',
+    #     'CNV',
+    #     'Methylation',
+    #     'RNA',
+    #     'miRNA',
+    #     'Gene Set',
+    #     'Protein',
+    #     'Immune Signature',
+    #     'Continuous Information',
+    #     'Binary Information',
+    # )
 
     with gzip_open(pickle_gz_file_path) as pickle_gz_file:
 
@@ -50,7 +52,20 @@ def make_feature_dicts():
 
         sample_feature_dicts[key] = feature_dicts[key]
 
+    old_state_x_cell_line = read_table(
+        '../data/test/cell_line_state.tsv',
+        index_col=0,
+        header=None,
+    ).T
+
+    old_state_x_cell_line.index = ('Old State', )
+
+    sample_feature_dicts['Old State'] = {
+        'df': old_state_x_cell_line,
+        'data_type': 'categorical',
+    }
+
     return {
-        'Feature': feature_feature_dicts,
-        'Sample': sample_feature_dicts,
+        'feature': feature_feature_dicts,
+        'sample': sample_feature_dicts,
     }
