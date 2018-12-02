@@ -10,22 +10,22 @@ def make_feature_dicts():
 
     sample_feature_dicts = {}
 
-    pickle_gz_file_path = '../data/ccle.pickle.gz'
+    pickle_gz_file_path = "../data/ccle.pickle.gz"
 
     keys = (
-        'Mutation',
-        'Mutational Signature',
-        'CNV',
-        'Methylation',
-        'RNA',
-        'Gene Set',
-        'Protein',
-        'Metabolite',
-        'RNAi',
-        'CRISPR',
-        'NP24',
-        'CTRP',
-        'Binary Information',
+        "Mutation",
+        "Mutational Signature",
+        "CNV",
+        "Methylation",
+        "RNA",
+        "Gene Set",
+        "Protein",
+        "Metabolite",
+        "RNAi",
+        "CRISPR",
+        "NP24",
+        "CTRP",
+        "Binary Information",
     )
 
     # pickle_gz_file_path = '../data/tcga.pickle.gz'
@@ -53,19 +53,11 @@ def make_feature_dicts():
         sample_feature_dicts[key] = feature_dicts[key]
 
     state_x_cell_line = read_table(
-        '../data/ccle_breast_used_in_kras_map/states.tsv',
-        index_col=0,
-        header=None,
+        "../data/ccle_breast_used_in_kras_map/states.tsv", index_col=0, header=None
     ).T
 
-    state_x_cell_line.index = ('State from CCLE Breast Used in KRAS Map', )
+    state_x_cell_line.index = ("State from CCLE Breast Used in KRAS Map",)
 
-    sample_feature_dicts['Test'] = {
-        'df': state_x_cell_line,
-        'data_type': 'categorical',
-    }
+    sample_feature_dicts["Test"] = {"df": state_x_cell_line, "data_type": "categorical"}
 
-    return {
-        'feature': feature_feature_dicts,
-        'sample': sample_feature_dicts,
-    }
+    return {"feature": feature_feature_dicts, "sample": sample_feature_dicts}

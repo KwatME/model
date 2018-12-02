@@ -10,6 +10,6 @@ import plotly as pl
 
 from make_feature_dicts import make_feature_dicts
 
-filterwarnings('ignore')
+filterwarnings("ignore")
 
 pl.offline.init_notebook_mode(connected=True)

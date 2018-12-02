@@ -1,12 +1,14 @@
 from make_path_dict import make_path_dict
 
-TITLE = 'RNA CCLE Breast Used in KRAS Map (18.11.26)'
+TITLE = "RNA CCLE Breast Used in KRAS Map (18.11.26)"
 
-FEATURE_X_SAMPLE_FILE_PATH = '../data/ccle_breast_used_in_kras_map/rna_kras_map__gene_x_cell_line.breast.tsv'
+FEATURE_X_SAMPLE_FILE_PATH = (
+    "../data/ccle_breast_used_in_kras_map/rna_kras_map__gene_x_cell_line.breast.tsv"
+)
 
-FEATURE_NAME = 'Gene'
+FEATURE_NAME = "Gene"
 
-SAMPLE_NAME = 'Cell Line'
+SAMPLE_NAME = "Cell Line"
 
 NANIZE = 0
 
@@ -16,47 +18,41 @@ MAX_NA = 0.05
 
 MIN_N_NOT_NA_UNIQUE_VALUE = None
 
-SHIFT_AS_NECESSARY_BEFORE_LOGGING = '0<'
+SHIFT_AS_NECESSARY_BEFORE_LOGGING = "0<"
 
-LOG_BASE = '2'
+LOG_BASE = "2"
 
 NORMALIZATION_AXIS = 0
 
-NORMALIZATION_METHOD = '-0-'
+NORMALIZATION_METHOD = "-0-"
 
 SELECT_GENE_SYMBOL = True
 
 FEATURES_TO_PEEK = (
-    'AR',
-    'E2F3',
-    'ERBB2',
-    'ERBB3',
-    'ESR1',
-    'HER2',
-    'KRT5',
-    'PGR',
-    'ZEB1',
+    "AR",
+    "E2F3",
+    "ERBB2",
+    "ERBB3",
+    "ESR1",
+    "HER2",
+    "KRT5",
+    "PGR",
+    "ZEB1",
 )
 
-SAMPLES_TO_PEEK = ('HMEL_BREAST', )
+SAMPLES_TO_PEEK = ("HMEL_BREAST",)
 
 MAX_N_JOB = 1
 
-ELEMENTS = ('feature', )
+ELEMENTS = ("feature",)
 
-CONTEXTS = (
-    'negative',
-    'positive',
-)
+CONTEXTS = ("negative", "positive")
 
 SELECT_FEATURE_AUTOMATICALLY = True
 
 SELECT_SAMPLE_AUTOMATICALLY = False
 
-NMF_KS = tuple(range(
-    2,
-    10,
-))
+NMF_KS = tuple(range(2, 10))
 
 NMF_K = 6
 
@@ -86,10 +82,4 @@ PLOT_STD = 2.4
 
 UPLOAD_TO_PLOTLY = False
 
-PATH_DICT = make_path_dict(
-    TITLE,
-    NMF_K,
-    W_HCC_K,
-    H_HCC_K,
-    UPLOAD_TO_PLOTLY,
-)
+PATH_DICT = make_path_dict(TITLE, NMF_K, W_HCC_K, H_HCC_K, UPLOAD_TO_PLOTLY)
