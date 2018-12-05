@@ -1,85 +1,145 @@
 from make_path_dict import make_path_dict
 
-TITLE = "RNA CCLE Breast Used in KRAS Map (18.11.26)"
+# ==============================================================================
+# Please tell me about your feature-by-sample data.
+# ==============================================================================
+FEATURE_X_SAMPLE_FILE_PATH = "../data/feature_x_sample.tsv"
 
-FEATURE_X_SAMPLE_FILE_PATH = (
-    "../data/ccle_breast_used_in_kras_map/rna_kras_map__gene_x_cell_line.breast.tsv"
-)
+FEATURE_X_SAMPLE_ALIAS = "RNA GTEx v6p Normal (18.12.03)"
 
-FEATURE_NAME = "Gene"
+FEATURE_ALIAS = "Gene"
 
-SAMPLE_NAME = "Cell Line"
+SAMPLE_ALIAS = "Sample"
 
-NANIZE = 0
+FEATURE_X_SAMPLE_VALUE_NAME = "Gene Expression"
 
-DROP_AXIS = 1
+HIGHLIGHT_JSON_FILE_PATH = "../data/highlight/ribosome.json"
 
-MAX_NA = 0.05
+# ==============================================================================
+# How do you want to plot?
+# ==============================================================================
+PLOT_MAX_SIZE = int(1e6)
 
-MIN_N_NOT_NA_UNIQUE_VALUE = None
+PLOT_STD = 2.4
 
-SHIFT_AS_NECESSARY_BEFORE_LOGGING = "0<"
+UPLOAD_TO_PLOTLY = True
 
-LOG_BASE = "2"
+# ==============================================================================
+# How many thread(s) are you willing to use simultaneously?
+# ==============================================================================
+MAX_N_JOB = 32
 
-NORMALIZATION_AXIS = 0
+# ==============================================================================
+# How do you want to pre-process the data?
+# ==============================================================================
+FEATURES_TO_DROP = None
 
-NORMALIZATION_METHOD = "-0-"
+SAMPLES_TO_DROP = None
 
-SELECT_GENE_SYMBOL = True
+NANIZE = None
 
-FEATURES_TO_PEEK = (
-    "AR",
-    "E2F3",
-    "ERBB2",
-    "ERBB3",
-    "ESR1",
-    "HER2",
-    "KRT5",
-    "PGR",
-    "ZEB1",
-)
+DROP_AXIS = None
 
-SAMPLES_TO_PEEK = ("HMEL_BREAST",)
+MAX_NA = None
 
-MAX_N_JOB = 1
+MIN_N_NOT_NA_UNIQUE_VALUE = 1
 
-ELEMENTS = ("feature",)
+SHIFT_AS_NECESSARY_TO_ACHIEVE_MIN_BEFORE_LOGGING = "0<"
 
+LOG_BASE = 2
+
+NORMALIZATION_AXIS = None
+
+NORMALIZATION_METHOD = None
+
+CLIP_MIN = None
+
+CLIP_MAX = None
+
+# ==============================================================================
+# Do you want to select only good gene symbols?
+# ==============================================================================
+SELECT_GENE_SYMBOL = False
+
+# ==============================================================================
+# What are some elements you want to focus on?
+# ==============================================================================
+FEATURES_TO_PEEK = ()
+
+SAMPLES_TO_PEEK = ()
+
+# ==============================================================================
+# Which element type(s) do you want to compute context for?
+# ==============================================================================
+ELEMENT_TYPES = ("feature",)
+
+# ==============================================================================
+# Which context(s) do you want to focus on?
+# ==============================================================================
 CONTEXTS = ("negative", "positive")
 
-SELECT_FEATURE_AUTOMATICALLY = True
+# ==============================================================================
+# Do you want to select elements automatically when making signal?
+# ==============================================================================
+SELECT_FEATURE_AUTOMATICALLY = False
 
 SELECT_SAMPLE_AUTOMATICALLY = False
 
+# ==============================================================================
+# How do you want to factorize the signal?
+# ==============================================================================
 NMF_KS = tuple(range(2, 10))
 
 NMF_K = 6
 
+# ==============================================================================
+# How do you want to cluster elements using the factors?
+# ==============================================================================
 HCC_KS = NMF_KS
 
-W_HCC_K = NMF_K
+W_HCC_K = 5
 
 H_HCC_K = NMF_K
 
-EXTREME_FEATURE_THRESHOLD = 24
+# ==============================================================================
+# How do you want to make match panel?
+# ==============================================================================
+EXTREME_FEATURE_THRESHOLD = 16
 
-ELEMENT_ENTROPY_QUANTILE = 1
+N_SAMPLING = 0
 
+N_PERMUTATION = 0
+
+# ==============================================================================
+# How do you want to filter noisy elements when making GPS Map?
+# ==============================================================================
+ELEMENT_ENTROPY_QUANTILE = 0.9
+
+# ==============================================================================
+# How do you want to make feature GPS Map?
+# ==============================================================================
 GPS_MAP_W_PULL_POWER = 2
 
-GPS_MAP_W_ELEMENT_MARKER_SIZE = 12
+GPS_MAP_W_ELEMENT_MARKER_SIZE = 32
 
-GPS_MAP_W_BANDWIDTH_FACTOR = 3.2
+GPS_MAP_W_BANDWIDTH_FACTOR = 2
 
-GPS_MAP_H_PULL_POWER = 1.6
+# ==============================================================================
+# How do you want to make sample GPS Map?
+# ==============================================================================
+GPS_MAP_H_PULL_POWER = 2
 
-GPS_MAP_H_ELEMENT_MARKER_SIZE = 24
+GPS_MAP_H_ELEMENT_MARKER_SIZE = 8
 
-GPS_MAP_H_BANDWIDTH_FACTOR = 3.2
+GPS_MAP_H_BANDWIDTH_FACTOR = 16
 
-PLOT_STD = 2.4
+# ==============================================================================
+# I'm making output paths based on these settings and populating `../output`.
+# ==============================================================================
+PATH_DICT = make_path_dict(
+    NMF_K, W_HCC_K, H_HCC_K, FEATURE_X_SAMPLE_ALIAS, UPLOAD_TO_PLOTLY
+)
 
-UPLOAD_TO_PLOTLY = False
-
-PATH_DICT = make_path_dict(TITLE, NMF_K, W_HCC_K, H_HCC_K, UPLOAD_TO_PLOTLY)
+# ==============================================================================
+# All set! Enjoy this workflow :)
+# ==============================================================================

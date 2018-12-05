@@ -1,67 +1,48 @@
 from ccal import establish_path
 
 
-def make_path_dict(title, nmf_k, w_hcc_k, h_hcc_k, upload_to_plotly):
+def make_path_dict(nmf_k, w_hcc_k, h_hcc_k, plotly_directory_name, upload_to_plotly):
 
     path_dict = {}
 
-    path_dict["feature_x_sample_file_path"] = "../output/feature_x_sample.tsv"
+    name = "feature_x_sample.processed.tsv"
 
-    for element in ("feature", "sample"):
+    path_dict[name] = "../output/{}".format(name)
 
-        element_directory_path = "../output/{}".format(element)
+    for name in ("feature_x_fit_parameter.tsv", "sample_x_fit_parameter.tsv"):
 
-        path_dict["{}_directory_path".format(element)] = element_directory_path
+        path_dict[name] = "../output/fit/{}".format(name)
 
-        path_dict[
-            "{}_skew_t_pdf_fit_parameter_file_path".format(element)
-        ] = "{}/skew_t_pdf_fit_parameter.tsv".format(element_directory_path)
+    for name in (
+        "feature_x_sample.feature_context.tsv",
+        "feature_x_sample.sample_context.tsv",
+    ):
 
-        path_dict[
-            "{}_context_matrix_file_path".format(element)
-        ] = "{}/context_matrix.tsv".format(element_directory_path)
+        path_dict[name] = "../output/context/{}".format(name)
 
-    path_dict["raw_signal_matrix_file_path"] = "../output/signal/raw_signal_matrix.tsv"
+    for name in (
+        "feature_x_sample.raw_signal.tsv",
+        "feature_x_sample.context_signal.tsv",
+        "nmf/",
+    ):
 
-    path_dict[
-        "context_signal_matrix_file_path"
-    ] = "../output/signal/context_signal_matrix.tsv"
-
-    path_dict["nmf_directory_path"] = "../output/signal/nmf"
-
-    for w_or_h in ("w", "h"):
-
-        path_dict[
-            "{}_file_path".format(w_or_h)
-        ] = "../output/signal/nmf/nmf_k{}_{}.tsv".format(nmf_k, w_or_h)
-
-    nmf_k_directory_path = "../output/signal/nmf/{}".format(nmf_k)
+        path_dict[name] = "../output/signal/{}".format(name)
 
     for w_or_h in ("w", "h"):
 
-        w_or_h_directory_path = "{}/{}".format(nmf_k_directory_path, w_or_h)
+        for name in ("{}.tsv".format(w_or_h), "{}/".format(w_or_h)):
 
-        path_dict["{}_directory_path".format(w_or_h)] = w_or_h_directory_path
+            path_dict[name] = "../output/signal/nmf/{}/{}".format(nmf_k, name)
 
-        path_dict["{}_signature_directory_path".format(w_or_h)] = "{}/signatue".format(
-            w_or_h_directory_path
-        )
+        for name in ("signature", "match", "hcc"):
 
-        path_dict["{}_match_directory_path".format(w_or_h)] = "{}/match".format(
-            w_or_h_directory_path
-        )
-
-        path_dict["{}_hcc_directory_path".format(w_or_h)] = "{}/hcc".format(
-            w_or_h_directory_path
-        )
+            path_dict[
+                "{}|{}/".format(w_or_h, name)
+            ] = "../output/signal/nmf/{}/{}/{}".format(nmf_k, w_or_h, name)
 
         path_dict[
-            "{}_hcc__k_x_column_file_path".format(w_or_h)
-        ] = "{}/hcc/hcc__k_x_column.tsv".format(w_or_h_directory_path)
-
-        path_dict["{}_map_directory_path".format(w_or_h)] = "{}/map".format(
-            w_or_h_directory_path
-        )
+            "{}|hcc__k_x_column.tsv".format(w_or_h)
+        ] = "../output/signal/nmf/{}/{}/hcc/hcc__k_x_column.tsv".format(nmf_k, w_or_h)
 
         if w_or_h is "w":
 
@@ -71,46 +52,66 @@ def make_path_dict(title, nmf_k, w_hcc_k, h_hcc_k, upload_to_plotly):
 
             hcc_k = h_hcc_k
 
-        path_dict[
-            "{}_hcc_match_directory_path".format(w_or_h)
-        ] = "{}/hcc/{}/match".format(w_or_h_directory_path, hcc_k)
+        name = "cluster_x_column.tsv"
 
-    path_dict["gps_map_file_path"] = "{}/gps_map.pickle.gz".format(nmf_k_directory_path)
+        path_dict[
+            "{}|{}".format(w_or_h, name)
+        ] = "../output/signal/nmf/{}/{}/hcc/{}/{}".format(nmf_k, w_or_h, hcc_k, name)
+
+        for name in ("match", "map", "comparison"):
+
+            path_dict[
+                "{}|hcc|{}/".format(w_or_h, name)
+            ] = "../output/signal/nmf/{}/{}/hcc/{}/{}".format(
+                nmf_k, w_or_h, hcc_k, name
+            )
+
+    name = "gps_map.pickle.gz"
+
+    path_dict[name] = "../output/signal/nmf/{}/{}".format(nmf_k, name)
+
+    name = "summary/"
+
+    path_dict[name] = "../output/{}".format(name)
 
     for name, path in path_dict.items():
 
-        if "file_path" in name:
+        if name.endswith("/"):
 
-            establish_path(path, "file")
+            path_type = "directory"
 
-        elif "directory_path" in name:
+        elif any(name.endswith(suffix) for suffix in (".tsv", ".pickle.gz")):
 
-            establish_path(path, "directory")
-
-    plotly_directory_path = "Cellular Context/{}".format(title)
-
-    for w_or_h, element in (("w", "Feature"), ("h", "Sample")):
-
-        if upload_to_plotly:
-
-            path_dict[
-                "{}_match_plotly_directory_path".format(w_or_h)
-            ] = "{}/{} Match".format(plotly_directory_path, element)
-
-            path_dict[
-                "{}_map_plotly_file_path".format(w_or_h)
-            ] = "{}/{} Map.html".format(plotly_directory_path, element)
-
-            path_dict[
-                "{}_map_plotly_directory_path".format(w_or_h)
-            ] = "{}/{} Map".format(plotly_directory_path, element)
+            path_type = "file"
 
         else:
 
-            path_dict["{}_match_plotly_directory_path".format(w_or_h)] = None
+            raise ValueError(name)
 
-            path_dict["{}_map_plotly_file_path".format(w_or_h)] = None
+        establish_path(path, path_type)
 
-            path_dict["{}_map_plotly_directory_path".format(w_or_h)] = None
+    path_dict["plotly/"] = "Cellular Context/{}".format(plotly_directory_name)
+
+    for w_or_h, element_type_title in (("w", "Feature"), ("h", "Sample")):
+
+        if upload_to_plotly:
+
+            plotly_match_directory_path = "Cellular Context/{}/{} Match".format(
+                plotly_directory_name, element_type_title
+            )
+
+            plotly_map_directory_path = "Cellular Context/{}/{} Map".format(
+                plotly_directory_name, element_type_title
+            )
+
+        else:
+
+            plotly_match_directory_path = None
+
+            plotly_map_directory_path = None
+
+        path_dict["plotly|{}_match/".format(w_or_h)] = plotly_match_directory_path
+
+        path_dict["plotly|{}_map/".format(w_or_h)] = plotly_map_directory_path
 
     return path_dict
