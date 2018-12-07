@@ -38,7 +38,7 @@ SAMPLES_TO_DROP = None
 
 NANIZE = None
 
-DROP_AXIS = None
+DROP_AXIS = None # "0" to drop columns, "1" to drop rows, "None" will drop both
 
 MAX_NA = None
 
