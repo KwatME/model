@@ -32,6 +32,7 @@ environment/*
 # Additional rules.
 # ==============================================================================
 !data/highlight
+!data/test
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
