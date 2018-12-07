@@ -38,9 +38,9 @@ FEATURES_TO_DROP = None
 
 SAMPLES_TO_DROP = None
 
-NANIZE = None
+NANIZE = None  # Value less than or equal to NANIZE will become nan
 
-DROP_AXIS = None
+DROP_AXIS = None  # "0" for column | "1" for row | None for both
 
 MAX_NA = None
 
@@ -52,7 +52,7 @@ LOG_BASE = 2
 
 NORMALIZATION_AXIS = 0
 
-NORMALIZATION_METHOD = "-0-"
+NORMALIZATION_METHOD = "-0-"  # "-0-" | "0-1" | "sum" | "rank"
 
 CLIP_MIN = None
 
