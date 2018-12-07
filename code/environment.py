@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import plotly as pl
 
-from make_feature_dicts import make_feature_dicts
+from make_data_dicts import make_data_dicts
 
 warnings.filterwarnings("ignore")
 

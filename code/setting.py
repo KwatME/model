@@ -3,17 +3,19 @@ from make_path_dict import make_path_dict
 # ==============================================================================
 # Please tell me about your feature-by-sample data.
 # ==============================================================================
-FEATURE_X_SAMPLE_FILE_PATH = "../data/feature_x_sample.tsv"
+FEATURE_X_SAMPLE_FILE_PATH = (
+    "../data/ccle_breast_used_in_kras_map/rna_kras_map__gene_x_cell_line.breast.tsv"
+)
 
-FEATURE_X_SAMPLE_ALIAS = "RNA GTEx v6p Normal (18.12.03)"
+FEATURE_X_SAMPLE_ALIAS = "RNA CCLE Breast Used in KRAS Map (18.12.07)"
 
 FEATURE_ALIAS = "Gene"
 
-SAMPLE_ALIAS = "Sample"
+SAMPLE_ALIAS = "Cell Line"
 
 FEATURE_X_SAMPLE_VALUE_NAME = "Gene Expression"
 
-HIGHLIGHT_JSON_FILE_PATH = "../data/highlight/ribosome.json"
+HIGHLIGHT_JSON_FILE_PATH = "../data/highlight/cancer.ccle_breast_used_in_kras_map.json"
 
 # ==============================================================================
 # How do you want to plot?
@@ -27,7 +29,7 @@ UPLOAD_TO_PLOTLY = True
 # ==============================================================================
 # How many thread(s) are you willing to use simultaneously?
 # ==============================================================================
-MAX_N_JOB = 32
+MAX_N_JOB = 1
 
 # ==============================================================================
 # How do you want to pre-process the data?
@@ -48,9 +50,9 @@ SHIFT_AS_NECESSARY_TO_ACHIEVE_MIN_BEFORE_LOGGING = "0<"
 
 LOG_BASE = 2
 
-NORMALIZATION_AXIS = None
+NORMALIZATION_AXIS = 0
 
-NORMALIZATION_METHOD = None
+NORMALIZATION_METHOD = "-0-"
 
 CLIP_MIN = None
 
@@ -59,14 +61,25 @@ CLIP_MAX = None
 # ==============================================================================
 # Do you want to select only good gene symbols?
 # ==============================================================================
-SELECT_GENE_SYMBOL = False
+SELECT_GENE_SYMBOL = True
 
 # ==============================================================================
 # What are some elements you want to focus on?
 # ==============================================================================
-FEATURES_TO_PEEK = ()
+FEATURES_TO_PEEK = (
+    "AR",
+    "E2F3",
+    "ERBB2",
+    "ERBB3",
+    "ESR1",
+    "HER2",
+    "KRT5",
+    "PGR",
+    "ZEB1",
+)
 
-SAMPLES_TO_PEEK = ()
+SAMPLES_TO_PEEK = ("HMEL_BREAST",)
+
 
 # ==============================================================================
 # Which element type(s) do you want to compute context for?
@@ -81,7 +94,7 @@ CONTEXTS = ("negative", "positive")
 # ==============================================================================
 # Do you want to select elements automatically when making signal?
 # ==============================================================================
-SELECT_FEATURE_AUTOMATICALLY = False
+SELECT_FEATURE_AUTOMATICALLY = True
 
 SELECT_SAMPLE_AUTOMATICALLY = False
 
@@ -97,14 +110,14 @@ NMF_K = 6
 # ==============================================================================
 HCC_KS = NMF_KS
 
-W_HCC_K = 5
+W_HCC_K = NMF_K
 
 H_HCC_K = NMF_K
 
 # ==============================================================================
 # How do you want to make match panel?
 # ==============================================================================
-EXTREME_FEATURE_THRESHOLD = 16
+EXTREME_FEATURE_THRESHOLD = 24
 
 N_SAMPLING = 0
 
@@ -113,25 +126,25 @@ N_PERMUTATION = 0
 # ==============================================================================
 # How do you want to filter noisy elements when making GPS Map?
 # ==============================================================================
-ELEMENT_ENTROPY_QUANTILE = 0.9
+ELEMENT_ENTROPY_QUANTILE = 1
 
 # ==============================================================================
 # How do you want to make feature GPS Map?
 # ==============================================================================
-GPS_MAP_W_PULL_POWER = 2
+GPS_MAP_W_PULL_POWER = 2.4
 
-GPS_MAP_W_ELEMENT_MARKER_SIZE = 32
+GPS_MAP_W_ELEMENT_MARKER_SIZE = 10
 
-GPS_MAP_W_BANDWIDTH_FACTOR = 2
+GPS_MAP_W_BANDWIDTH_FACTOR = 6.4
 
 # ==============================================================================
 # How do you want to make sample GPS Map?
 # ==============================================================================
-GPS_MAP_H_PULL_POWER = 2
+GPS_MAP_H_PULL_POWER = 1.6
 
-GPS_MAP_H_ELEMENT_MARKER_SIZE = 8
+GPS_MAP_H_ELEMENT_MARKER_SIZE = 24
 
-GPS_MAP_H_BANDWIDTH_FACTOR = 16
+GPS_MAP_H_BANDWIDTH_FACTOR = 2.4
 
 # ==============================================================================
 # I'm making output paths based on these settings and populating `../output`.
