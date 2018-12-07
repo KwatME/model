@@ -3,9 +3,7 @@ from make_path_dict import make_path_dict
 # ==============================================================================
 # Please tell me about your feature-by-sample data.
 # ==============================================================================
-FEATURE_X_SAMPLE_FILE_PATH = (
-    "../data/ccle_breast_used_in_kras_map/rna_kras_map__gene_x_cell_line.breast.tsv"
-)
+FEATURE_X_SAMPLE_FILE_PATH = "../data/test/rna_kras_map__gene_x_cell_line.breast.tsv"
 
 FEATURE_X_SAMPLE_ALIAS = "RNA CCLE Breast Used in KRAS Map (18.12.07)"
 
@@ -15,7 +13,7 @@ SAMPLE_ALIAS = "Cell Line"
 
 FEATURE_X_SAMPLE_VALUE_NAME = "Gene Expression"
 
-HIGHLIGHT_JSON_FILE_PATH = "../data/highlight/cancer.ccle_breast_used_in_kras_map.json"
+HIGHLIGHT_JSON_FILE_PATH = "../data/test/highlight.json"
 
 # ==============================================================================
 # How do you want to plot?

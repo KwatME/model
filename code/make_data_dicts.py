@@ -53,7 +53,7 @@ def make_data_dicts():
         sample_data_dicts[key] = pickle_sample_data_dicts[key]
 
     state_x_cell_line = read_table(
-        "../data/ccle_breast_used_in_kras_map/states.tsv", index_col=0, header=None
+        "../data/test/states.tsv", index_col=0, header=None
     ).T
 
     state_x_cell_line.index = ("State from CCLE Breast Used in KRAS Map",)

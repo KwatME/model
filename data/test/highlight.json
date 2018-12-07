@@ -1,0 +1,49 @@
+{
+  "feature": {},
+  "sample": {
+    "Test": [
+      "State from CCLE Breast Used in KRAS Map"
+    ],
+    "Mutation": [],
+    "Mutational Signature": [],
+    "CNV": [],
+    "Methylation": [],
+    "RNA": [
+      "AR",
+      "E2F3",
+      "ERBB2",
+      "ERBB3",
+      "ESR1",
+      "HER2",
+      "KRT5",
+      "PGR",
+      "ZEB1"
+    ],
+    "miRNA": [],
+    "Gene Set": [
+      "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+      "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+      "HALLMARK_ANGIOGENESIS",
+      "IPA_E2F1_UP"
+    ],
+    "Protein": [
+      "AR",
+      "ER-alpha",
+      "HER2",
+      "HER3",
+      "PR"
+    ],
+    "Metabolite": [],
+    "RNAi": [
+      "FGFR1"
+    ],
+    "CRISPR": [
+      "FGFR1"
+    ],
+    "NP24": [],
+    "CTRP": [],
+    "Immune Signature": "All",
+    "Continuous Information": [],
+    "Binary Information": []
+  }
+}
