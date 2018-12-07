@@ -50,7 +50,7 @@ LOG_BASE = 2
 
 NORMALIZATION_AXIS = None
 
-NORMALIZATION_METHOD = None
+NORMALIZATION_METHOD = None # "-0-", "0-1", "sum", or "rank"
 
 CLIP_MIN = None
 
