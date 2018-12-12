@@ -90,28 +90,34 @@ def make_path_dict(nmf_k, w_hcc_k, h_hcc_k, plotly_directory_name, upload_to_plo
 
         establish_path(path, path_type)
 
-    path_dict["plotly/"] = "Cellular Context/{}".format(plotly_directory_name)
+    if upload_to_plotly:
+
+        path_dict["plotly/"] = "Cellular Context/{}".format(plotly_directory_name)
+
+    else:
+
+        path_dict["plotly/"] = None
 
     for w_or_h, element_type_title in (("w", "Feature"), ("h", "Sample")):
 
         if upload_to_plotly:
 
-            plotly_match_directory_path = "Cellular Context/{}/{} Match".format(
+            path_dict[
+                "plotly|{}_match/".format(w_or_h)
+            ] = "Cellular Context/{}/{} Match".format(
                 plotly_directory_name, element_type_title
             )
 
-            plotly_map_directory_path = "Cellular Context/{}/{} Map".format(
+            path_dict[
+                "plotly|{}_map/".format(w_or_h)
+            ] = "Cellular Context/{}/{} Map".format(
                 plotly_directory_name, element_type_title
             )
 
         else:
 
-            plotly_match_directory_path = None
+            path_dict["plotly|{}_match/".format(w_or_h)] = None
 
-            plotly_map_directory_path = None
-
-        path_dict["plotly|{}_match/".format(w_or_h)] = plotly_match_directory_path
-
-        path_dict["plotly|{}_map/".format(w_or_h)] = plotly_map_directory_path
+            path_dict["plotly|{}_map/".format(w_or_h)] = None
 
     return path_dict
