@@ -79,7 +79,7 @@ SAMPLES_TO_PEEK = ()
 # ==============================================================================
 RAW_SIGNAL_NORMALIZATION_METHOD = "0-1"
 
-CONTEXT_SIGNAL_NORMALIZATION_METHOD = None
+CONTEXT_SIGNAL_NORMALIZATION_METHOD = "0-1"
 
 # ==============================================================================
 # Which element type(s) do you want use for signal?
