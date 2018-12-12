@@ -1,8 +1,6 @@
 from gzip import open as gzip_open
 from pickle import load
 
-from pandas import read_table
-
 
 def make_data_dicts():
 
@@ -26,20 +24,20 @@ def make_data_dicts():
         "Binary Information",
     )
 
-    # pickle_gz_file_path = '../data/tcga.pickle.gz'
+    # pickle_gz_file_path = "../data/tcga.pickle.gz"
     #
     # keys = (
-    #     'Mutation',
-    #     'Mutational Signature',
-    #     'CNV',
-    #     'Methylation',
-    #     'RNA',
-    #     'miRNA',
-    #     'Gene Set',
-    #     'Protein',
-    #     'Immune Signature',
-    #     'Continuous Information',
-    #     'Binary Information',
+    #     "Mutation",
+    #     "Mutational Signature",
+    #     "CNV",
+    #     "Methylation",
+    #     "RNA",
+    #     "miRNA",
+    #     "Gene Set",
+    #     "Protein",
+    #     "Immune Signature",
+    #     "Continuous Information",
+    #     "Binary Information",
     # )
 
     with gzip_open(pickle_gz_file_path) as pickle_gz_file:
