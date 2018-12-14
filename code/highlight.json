@@ -117,6 +117,9 @@
     "Immune Signature": "All",
     "Continuous Information": [],
     "Binary Information": [
+      "Attached",
+      "Attached and Suspended",
+      "Suspended",
       "(acronym) ACC",
       "(acronym) BLCA",
       "(acronym) BRCA",

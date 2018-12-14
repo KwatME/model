@@ -2,7 +2,7 @@ from gzip import open as gzip_open
 from pickle import load
 
 
-def make_data_dicts_for_tcga(
+def make_data_dicts_for_ccle(
     pickle_gz_file_path="../data/ccle.pickle.gz",
     data_names=(
         "Mutation",
