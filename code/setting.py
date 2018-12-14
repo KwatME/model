@@ -4,21 +4,26 @@ from make_path_dict import make_path_dict
 # ==============================================================================
 # Please tell me about your feature-by-sample data.
 # ==============================================================================
-FEATURE_X_SAMPLE_FILE_PATH = "../../erna__enhancer_region_x_tcga_sample__cleaned.tsv"
+FEATURE_X_SAMPLE_FILE_PATH = (
+    "/home/kwatme/project/enhancer/erna__enhancer_region_x_tcga_sample.tsv"
+)
 
-FEATURE_X_SAMPLE_ALIAS = "eRNA TCGA (18.12.13)"
+FEATURE_X_SAMPLE_ALIAS = "eRNA TCGA (18.12.14)"
 
 FEATURE_ALIAS = "Region"
 
-SAMPLE_ALIAS = "TCGA Sample"
+SAMPLE_ALIAS = "Sample"
 
 FEATURE_X_SAMPLE_VALUE_NAME = "Expression"
 
 HIGHLIGHT_JSON_FILE_PATH = "../code/highlight.json"
 
-OUTPUT_DIRECTORY_PATH = "../../{}".format(FEATURE_X_SAMPLE_ALIAS)
+OUTPUT_DIRECTORY_PATH = "/home/kwatme/project/enhancer/{}".format(
+    FEATURE_X_SAMPLE_ALIAS
+)
 
-PLOTLY_DIRECTORY_PATH = None  # "{}".format(FEATURE_X_SAMPLE_ALIAS)
+PLOTLY_DIRECTORY_PATH = None
+# PLOTLY_DIRECTORY_PATH = "Cellular Context/{}".format(FEATURE_X_SAMPLE_ALIAS)
 
 # ==============================================================================
 # How do you want to plot?
@@ -99,12 +104,12 @@ CONTEXTS = ("negative", "positive")
 # ==============================================================================
 SELECT_FEATURE_AUTOMATICALLY = True
 
-SELECT_SAMPLE_AUTOMATICALLY = True
+SELECT_SAMPLE_AUTOMATICALLY = False
 
 # ==============================================================================
 # How do you want to factorize the signal?
 # ==============================================================================
-NMF_KS = tuple(range(2, 25))
+NMF_KS = tuple(range(2, 30))
 
 NMF_K = 16
 
@@ -113,7 +118,7 @@ NMF_K = 16
 # ==============================================================================
 HCC_KS = NMF_KS
 
-W_HCC_K = 19
+W_HCC_K = NMF_K
 
 H_HCC_K = NMF_K
 
@@ -136,21 +141,21 @@ ELEMENT_ENTROPY_QUANTILE = 1
 # ==============================================================================
 GPS_MAP_W_PULL_POWER = 2.4
 
-GPS_MAP_W_ELEMENT_MARKER_SIZE = 10
+GPS_MAP_W_ELEMENT_MARKER_SIZE = 8
 
 GPS_MAP_W_BANDWIDTH_FACTOR = 6.4
 
 # ==============================================================================
 # How do you want to make sample GPS Map?
 # ==============================================================================
-GPS_MAP_H_PULL_POWER = 1
+GPS_MAP_H_PULL_POWER = 2.4
 
-GPS_MAP_H_ELEMENT_MARKER_SIZE = 10
+GPS_MAP_H_ELEMENT_MARKER_SIZE = 8
 
 GPS_MAP_H_BANDWIDTH_FACTOR = 6.4
 
 # ==============================================================================
-# I'm making output paths based on these settings and populating `../output`.
+# I'm making output paths based on these settings ...
 # ==============================================================================
 PATH_DICT = make_path_dict(
     NMF_K, W_HCC_K, H_HCC_K, OUTPUT_DIRECTORY_PATH, PLOTLY_DIRECTORY_PATH
