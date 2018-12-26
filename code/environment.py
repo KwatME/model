@@ -6,8 +6,11 @@ import warnings
 import ccal
 import numpy as np
 import pandas as pd
-import plotly as pl
+import plotly
+import yaml
+
+from make_path_dict import make_path_dict
 
 warnings.filterwarnings("ignore")
 
-pl.offline.init_notebook_mode(connected=True)
+plotly.offline.init_notebook_mode(connected=True)
