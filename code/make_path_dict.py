@@ -36,9 +36,9 @@ def make_path_dict(setting):
                 setting["output_directory_path"], setting["nmf_k"], name
             )
 
-        for name in ("signature", "match", "hcc"):
+        for name in ("signature.tsv", "match/", "hcc/"):
 
-            path_dict["{}|{}/".format(w_or_h, name)] = "{}/signal/nmf/{}/{}/{}".format(
+            path_dict["{}|{}".format(w_or_h, name)] = "{}/signal/nmf/{}/{}/{}".format(
                 setting["output_directory_path"], setting["nmf_k"], w_or_h, name
             )
 
@@ -58,10 +58,10 @@ def make_path_dict(setting):
             setting["output_directory_path"], setting["nmf_k"], w_or_h, hcc_k, name
         )
 
-        for name in ("match", "gps_map", "comparison"):
+        for name in ("match/", "gps_map/", "comparison/"):
 
             path_dict[
-                "{}|hcc|{}/".format(w_or_h, name)
+                "{}|hcc|{}".format(w_or_h, name)
             ] = "{}/signal/nmf/{}/{}/hcc/{}/{}".format(
                 setting["output_directory_path"], setting["nmf_k"], w_or_h, hcc_k, name
             )
