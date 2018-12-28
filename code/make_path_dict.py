@@ -36,7 +36,7 @@ def make_path_dict(setting):
                 setting["output_directory_path"], setting["nmf_k"], name
             )
 
-        for name in ("signature.tsv", "match/", "hcc/"):
+        for name in ("signature.tsv", "match/", "gps_map/", "hcc/"):
 
             path_dict["{}|{}".format(w_or_h, name)] = "{}/signal/nmf/{}/{}/{}".format(
                 setting["output_directory_path"], setting["nmf_k"], w_or_h, name
@@ -88,27 +88,17 @@ def make_path_dict(setting):
 
         establish_path(path, path_type)
 
-    path_dict["plotly/"] = setting["plotly_directory_path"]
+    if setting["plotly_directory_path"] is not None:
 
-    if path_dict["plotly/"] is None:
+        for element_type_title in ("Feature", "Sample"):
 
-        for w_or_h in ("w", "h"):
+            if element_type_title == "Feature":
 
-            path_dict["plotly|{}_match/".format(w_or_h)] = None
+                w_or_h = "w"
 
-            path_dict["plotly|{}_gps_map/".format(w_or_h)] = None
+            elif element_type_title == "Sample":
 
-    else:
-
-        for w_or_h in ("w", "h"):
-
-            if w_or_h == "w":
-
-                element_type_title = "Feature"
-
-            elif w_or_h == "h":
-
-                element_type_title = "Sample"
+                w_or_h = "h"
 
             path_dict["plotly|{}_match/".format(w_or_h)] = "{}/{} Match".format(
                 setting["plotly_directory_path"], element_type_title
