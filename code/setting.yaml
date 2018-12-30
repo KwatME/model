@@ -17,7 +17,7 @@ plot_cluster_max_size:                            6400
 plot_std:                                         2.4
 
 # ==============================================================================
-max_n_job:                                        6
+max_n_job:                                        7
 
 # ==============================================================================
 features_to_drop:
@@ -97,7 +97,7 @@ w_hcc_k:                                          6
 h_hcc_k:                                          6
 
 # ==============================================================================
-n_required_for_match_function:                    0.64
+n_required_for_match_function:                    0.16
 extreme_feature_threshold:                        32
 n_sampling:                                       0
 n_permutation:                                    0
