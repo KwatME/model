@@ -1,13 +1,13 @@
 # ==============================================================================
 feature_x_sample_file_path:                       ../data/feature_x_sample.tsv
-feature_x_sample_alias:                           RNA GTEx v6p (18.12.26)
+feature_x_sample_alias:                           RNA GTEx v6p Blood Brain (18.12.26)
 feature_alias:                                    Gene
 sample_alias:                                     Sample
 feature_x_sample_value_name:                      Expression
 
 # ==============================================================================
 output_directory_path:                            ../output
-plotly_directory_path:                            Cellular Context/RNA GTEx v6p (18.12.26)
+plotly_directory_path:                            Cellular Context/RNA GTEx v6p Blood Brain (18.12.26)
 
 # ==============================================================================
 plot_heat_map_max_size:                           640000
@@ -80,7 +80,7 @@ nmf_ks:
   - 8
   - 9
 nmf_n_clustering:                                 10
-nmf_k:                                            6
+nmf_k:                                            3
 
 # ==============================================================================
 hcc_ks:
@@ -93,8 +93,8 @@ hcc_ks:
   - 8
   - 9
 hcc_n_clustering:                                 10
-w_hcc_k:                                          6
-h_hcc_k:                                          6
+w_hcc_k:                                          3
+h_hcc_k:                                          3
 
 # ==============================================================================
 n_required_for_match_function:                    0.16
@@ -114,7 +114,7 @@ gps_map_w_bandwidth_factor:                       2
 # ==============================================================================
 gps_map_h_n_pull:
 gps_map_h_pull_power:                             2
-gps_map_h_element_marker_size:                    8
+gps_map_h_element_marker_size:                    16
 gps_map_h_bandwidth_factor:                       16
 
 
@@ -126,6 +126,21 @@ sample_data:
   Phenotype:
     file_path:                                    ../data/phenotype_x_sample.tsv
     data_type:                                    binary
+    indices:
+      - Brain.Amygdala
+      - Brain.Anterior.cingulate.cortex.BA24
+      - Brain.Caudate.basal.ganglia
+      - Brain.Cerebellar.Hemisphere
+      - Brain.Cerebellum
+      - Brain.Cortex
+      - Brain.Frontal.Cortex.BA9
+      - Brain.Hippocampus
+      - Brain.Hypothalamus
+      - Brain.Nucleus.accumbens.basal.ganglia
+      - Brain.Putamen.basal.ganglia
+      - Brain.Spinal.cord.cervical.c1
+      - Brain.Substantia.nigra
+      - Whole.Blood
   Selected Phenotype:
     file_path:                                    ../data/selected_phenotype_x_sample.tsv
     data_type:                                    categorical
