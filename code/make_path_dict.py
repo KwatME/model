@@ -49,15 +49,6 @@ def make_path_dict(setting):
                 name,
             )
 
-        path_dict[
-            "{}|hcc.k_x_column.tsv".format(w_or_h)
-        ] = "{}/signal/{}/nmf/{}/{}/hcc/hcc.k_x_column.tsv".format(
-            setting["output_directory_path"],
-            setting["signal_type"],
-            setting["nmf_k"],
-            w_or_h,
-        )
-
         hcc_k = setting["{}_hcc_k".format(w_or_h)]
 
         name = "cluster_x_column.tsv"
@@ -108,24 +99,38 @@ def make_path_dict(setting):
 
         establish_path(path, path_type)
 
-    if setting["plotly_directory_path"] is not None:
+    for w_or_h in ("w", "h"):
 
-        for element_type_title in ("Feature", "Sample"):
+        if w_or_h == "w":
 
-            if element_type_title == "Feature":
+            element_type_title = "Feature"
 
-                w_or_h = "w"
+        elif w_or_h == "h":
 
-            elif element_type_title == "Sample":
+            element_type_title = "Sample"
 
-                w_or_h = "h"
+        if setting["plotly_directory_path"] is None:
 
-            path_dict["plotly|{}_match/".format(w_or_h)] = "{}/{} Match".format(
+            plotly_w_or_h_match_directory_path = None
+
+            plotly_w_or_h_gps_directory_path = None
+
+        else:
+
+            plotly_w_or_h_match_directory_path = "{}/{} Match".format(
                 setting["plotly_directory_path"], element_type_title
             )
 
-            path_dict["plotly|{}_gps_map/".format(w_or_h)] = "{}/{} GPS Map".format(
+            plotly_w_or_h_gps_directory_path = "{}/{} GPS Map".format(
                 setting["plotly_directory_path"], element_type_title
             )
+
+        path_dict[
+            "plotly|{}_match/".format(w_or_h)
+        ] = plotly_w_or_h_match_directory_path
+
+        path_dict[
+            "plotly|{}_gps_map/".format(w_or_h)
+        ] = plotly_w_or_h_gps_directory_path
 
     return path_dict

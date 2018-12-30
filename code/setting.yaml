@@ -1,1 +1,148 @@
-/home/kwatme/play/ribosomal_rna/blood_brain.model_and_infer.setting.yaml
+# ==============================================================================
+feature_x_sample_file_path:                       ../data/feature_x_sample.tsv
+feature_x_sample_alias:                           RNA GTEx v6p (18.12.26)
+feature_alias:                                    Gene
+sample_alias:                                     Sample
+feature_x_sample_value_name:                      Expression
+
+# ==============================================================================
+output_directory_path:                            ../output
+plotly_directory_path:                            Cellular Context/RNA GTEx v6p (18.12.26)
+
+# ==============================================================================
+plot_heat_map_max_size:                           640000
+plot_distributions_max_size:                      64000
+plot_rug_max_size:                                6400
+plot_cluster_max_size:                            6400
+plot_std:                                         2.4
+
+# ==============================================================================
+max_n_job:                                        6
+
+# ==============================================================================
+features_to_drop:
+samples_to_drop:
+nanize:
+drop_axis:
+max_na:
+min_n_not_na_unique_value:                        1
+shift_as_necessary_to_achieve_min_before_logging: 0<
+log_base:                                         2
+normalization_axis:
+normalization_method:
+clip_min:
+clip_max:
+
+# ==============================================================================
+select_gene_symbol:                               no
+
+# ==============================================================================
+features_to_peek:
+  - RPS17
+
+# ==============================================================================
+samples_to_peek:
+
+# ==============================================================================
+element_types:
+  - feature
+
+# ==============================================================================
+contexts:
+  - negative
+  - positive
+
+# ==============================================================================
+select_feature_automatically:                     no
+
+# ==============================================================================
+select_sample_automatically:                      no
+
+# ==============================================================================
+signal_type:                                      raw
+
+# ==============================================================================
+raw_signal_normalization_axis:                    1
+raw_signal_normalization_method:                  0-1
+
+# ==============================================================================
+context_signal_normalization_axis:                1
+context_signal_normalization_method:              sum
+
+# ==============================================================================
+nmf_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+nmf_n_clustering:                                 10
+nmf_k:                                            6
+
+# ==============================================================================
+hcc_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+hcc_n_clustering:                                 10
+w_hcc_k:                                          6
+h_hcc_k:                                          6
+
+# ==============================================================================
+n_required_for_match_function:                    0.64
+extreme_feature_threshold:                        32
+n_sampling:                                       0
+n_permutation:                                    0
+
+# ==============================================================================
+element_entropy_quantile:                         1
+
+# ==============================================================================
+gps_map_w_n_pull:
+gps_map_w_pull_power:                             2
+gps_map_w_element_marker_size:                    32
+gps_map_w_bandwidth_factor:                       2
+
+# ==============================================================================
+gps_map_h_n_pull:
+gps_map_h_pull_power:                             2
+gps_map_h_element_marker_size:                    8
+gps_map_h_bandwidth_factor:                       16
+
+
+# ==============================================================================
+feature_data:
+
+# ==============================================================================
+sample_data:
+  Phenotype:
+    file_path:                                    ../data/phenotype_x_sample.tsv
+    data_type:                                    binary
+    indices:
+      - Brain.Amygdala
+      - Brain.Anterior.cingulate.cortex.BA24
+      - Brain.Caudate.basal.ganglia
+      - Brain.Cerebellar.Hemisphere
+      - Brain.Cerebellum
+      - Brain.Cortex
+      - Brain.Frontal.Cortex.BA9
+      - Brain.Hippocampus
+      - Brain.Hypothalamus
+      - Brain.Nucleus.accumbens.basal.ganglia
+      - Brain.Putamen.basal.ganglia
+      - Brain.Spinal.cord.cervical.c1
+      - Brain.Substantia.nigra
+      - Whole.Blood
+  Selected Phenotype:
+    file_path:                                    ../data/selected_phenotype_x_sample.tsv
+    data_type:                                    categorical
+    indices:
+      - Blood and Brain
