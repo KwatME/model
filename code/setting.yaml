@@ -1,13 +1,13 @@
 # ==============================================================================
 feature_x_sample_file_path:                       ../data/feature_x_sample.tsv
-feature_x_sample_alias:                           RNA GTEx v6p Blood Brain (18.12.26)
+feature_x_sample_alias:                           RNA GTEx v6p Blood Brain (19.01.02)
 feature_alias:                                    Gene
 sample_alias:                                     Sample
 feature_x_sample_value_name:                      Expression
 
 # ==============================================================================
 output_directory_path:                            ../output
-plotly_directory_path:                            Cellular Context/RNA GTEx v6p Blood Brain (18.12.26)
+plotly_directory_path:                            Cellular Context/RNA GTEx v6p Blood Brain (19.01.02)
 
 # ==============================================================================
 plot_heat_map_max_size:                           640000
@@ -17,7 +17,7 @@ plot_cluster_max_size:                            6400
 plot_std:                                         2.4
 
 # ==============================================================================
-max_n_job:                                        7
+max_n_job:                                        6
 
 # ==============================================================================
 features_to_drop:
