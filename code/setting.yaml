@@ -147,6 +147,15 @@ feature_data:
 
 # ==============================================================================
 sample_data:
+  RNA:
+    file_path:                                    ../data/gene_x_patient.tsv
+    data_type:                                    continuous
+    indices:
+      - F2RL1
+      - ST14
+      - MYC
+      - NOTCH1
+      - SHH
   Gene Set:
     file_path:                                    ../data/gene_set_x_patient.tsv
     data_type:                                    continuous

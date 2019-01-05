@@ -37,7 +37,7 @@ def make_path_dict(setting):
                 name,
             )
 
-        for name in ("signature.tsv", "match/", "gps_map/", "hcc/"):
+        for name in ("match/", "gps_map/", "hcc/"):
 
             path_dict[
                 "{}|{}".format(w_or_h, name)
