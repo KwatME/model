@@ -1,13 +1,13 @@
 # ==============================================================================
-feature_x_sample_file_path:                       ../data/feature_x_sample.tsv
-feature_x_sample_alias:                           RNA GTEx v6p Blood Brain (19.01.02)
-feature_alias:                                    Gene
-sample_alias:                                     Sample
+feature_x_sample_file_path:                       ../data/gene_x_patient.tsv
+feature_x_sample_alias:                           RNA Medulloblastoma Cho et al (19.01.04)
 feature_x_sample_value_name:                      Expression
+feature_alias:                                    Gene
+sample_alias:                                     Patient
 
 # ==============================================================================
 output_directory_path:                            ../output
-plotly_directory_path:                            Cellular Context/RNA GTEx v6p Blood Brain (19.01.02)
+plotly_directory_path:                            Cellular Context/RNA Medulloblastoma Cho et al (19.01.04)
 
 # ==============================================================================
 plot_heat_map_max_size:                           640000
@@ -28,20 +28,25 @@ max_na:
 min_n_not_na_unique_value:                        1
 shift_as_necessary_to_achieve_min_before_logging: 0<
 log_base:                                         2
-normalization_axis:
-normalization_method:
+normalization_axis:                               0
+normalization_method:                             -0-
 clip_min:
 clip_max:
 
 # ==============================================================================
-select_gene_symbol:                               no
+select_gene_symbol:                               yes
 
 # ==============================================================================
 features_to_peek:
-  - RPS17
+  - F2RL1
+  - ST14
+  - MYC
+  - NOTCH1
+  - SHH
 
 # ==============================================================================
 samples_to_peek:
+  - MD_1
 
 # ==============================================================================
 element_types:
@@ -53,13 +58,13 @@ contexts:
   - positive
 
 # ==============================================================================
-select_feature_automatically:                     no
+select_feature_automatically:                     yes
 
 # ==============================================================================
 select_sample_automatically:                      no
 
 # ==============================================================================
-signal_type:                                      raw
+signal_type:                                      context
 
 # ==============================================================================
 raw_signal_normalization_axis:                    1
@@ -79,8 +84,18 @@ nmf_ks:
   - 7
   - 8
   - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
 nmf_n_clustering:                                 10
-nmf_k:                                            3
+nmf_k:                                            16
 
 # ==============================================================================
 hcc_ks:
@@ -92,57 +107,53 @@ hcc_ks:
   - 7
   - 8
   - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
 hcc_n_clustering:                                 10
-w_hcc_k:                                          3
-h_hcc_k:                                          3
+w_hcc_k:                                          16
+h_hcc_k:                                          16
 
 # ==============================================================================
-n_required_for_match_function:                    0.16
-extreme_feature_threshold:                        32
+n_required_for_match_function:                    0.64
+extreme_feature_threshold:                        24
 n_sampling:                                       0
 n_permutation:                                    0
 
 # ==============================================================================
-element_entropy_quantile:                         1
+element_entropy_quantile:
 
 # ==============================================================================
 gps_map_w_n_pull:
 gps_map_w_pull_power:                             2
-gps_map_w_element_marker_size:                    32
-gps_map_w_bandwidth_factor:                       2
+gps_map_w_element_marker_size:                    8
+gps_map_w_bandwidth_factor:                       2.4
 
 # ==============================================================================
 gps_map_h_n_pull:
 gps_map_h_pull_power:                             2
 gps_map_h_element_marker_size:                    16
-gps_map_h_bandwidth_factor:                       16
-
+gps_map_h_bandwidth_factor:                       2.4
 
 # ==============================================================================
 feature_data:
 
 # ==============================================================================
 sample_data:
-  Phenotype:
-    file_path:                                    ../data/phenotype_x_sample.tsv
+  Gene Set:
+    file_path:                                    ../data/gene_set_x_patient.tsv
+    data_type:                                    continuous
+    indices:
+      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
+      - HALLMARK_TNFA_SIGNALING_VIA_NFKB
+      - HALLMARK_ANGIOGENESIS
+  Subtype:
+    file_path:                                    ../data/subtype_x_patient.tsv
     data_type:                                    binary
-    indices:
-      - Brain.Amygdala
-      - Brain.Anterior.cingulate.cortex.BA24
-      - Brain.Caudate.basal.ganglia
-      - Brain.Cerebellar.Hemisphere
-      - Brain.Cerebellum
-      - Brain.Cortex
-      - Brain.Frontal.Cortex.BA9
-      - Brain.Hippocampus
-      - Brain.Hypothalamus
-      - Brain.Nucleus.accumbens.basal.ganglia
-      - Brain.Putamen.basal.ganglia
-      - Brain.Spinal.cord.cervical.c1
-      - Brain.Substantia.nigra
-      - Whole.Blood
-  Selected Phenotype:
-    file_path:                                    ../data/selected_phenotype_x_sample.tsv
-    data_type:                                    categorical
-    indices:
-      - Blood and Brain

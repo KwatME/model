@@ -6,6 +6,7 @@
 # package.json so spro can get them.
 # ==============================================================================
 data/*
+output/*
 
 # ==============================================================================
 # Do not track environment files because spro manages environment/.
