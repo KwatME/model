@@ -158,7 +158,7 @@ feature_data:
 sample_data:
   RNA:
     file_path:                                    ../data/gene_x_patient.tsv
-    data_type:                                    continuous
+    type:                                    continuous
     indices:
       - F2RL1
       - ST14
@@ -167,11 +167,11 @@ sample_data:
       - SHH
   Gene Set:
     file_path:                                    ../data/gene_set_x_patient.tsv
-    data_type:                                    continuous
+    type:                                    continuous
     indices:
       - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
       - HALLMARK_TNFA_SIGNALING_VIA_NFKB
       - HALLMARK_ANGIOGENESIS
   Subtype:
     file_path:                                    ../data/subtype_x_patient.tsv
-    data_type:                                    binary
+    type:                                    binary
