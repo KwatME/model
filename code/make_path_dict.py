@@ -83,9 +83,9 @@ def make_path_dict(setting):
         setting["output_directory_path"], setting["signal_type"], setting["nmf_k"], name
     )
 
-    name = "summary/"
+    for name in ("summary/", "infer/"):
 
-    path_dict[name] = "{}/{}".format(setting["output_directory_path"], name)
+        path_dict[name] = "{}/{}".format(setting["output_directory_path"], name)
 
     for name, path in path_dict.items():
 

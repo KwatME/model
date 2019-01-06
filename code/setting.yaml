@@ -6,6 +6,15 @@ feature_alias:                                    Gene
 sample_alias:                                     Patient
 
 # ==============================================================================
+feature_x_new_sample_file_path:                   ../data/gene_x_pdx.tsv
+feature_x_new_sample_alias:                       RNA Medulloblastoma PDX
+new_sample_alias:                                 PDX
+
+# ==============================================================================
+inconsistent_feature_fraction_to_drop:            0.24
+
+
+# ==============================================================================
 output_directory_path:                            ../output
 plotly_directory_path:                            Cellular Context/RNA Medulloblastoma Cho et al (19.01.04)
 
@@ -128,7 +137,7 @@ n_sampling:                                       0
 n_permutation:                                    0
 
 # ==============================================================================
-element_entropy_quantile:
+caotic_element_fraction_to_drop:                  0.24
 
 # ==============================================================================
 gps_map_w_n_pull:
