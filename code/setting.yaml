@@ -13,10 +13,10 @@ new_sample_alias:                                 PDX
 # ==============================================================================
 inconsistent_feature_fraction_to_drop:            0.24
 
-
 # ==============================================================================
 output_directory_path:                            ../output
-plotly_directory_path:                            Cellular Context/RNA Medulloblastoma Cho et al (19.01.04)
+# plotly_directory_path:                          Cellular Context/RNA Medulloblastoma Cho et al (19.01.04)
+plotly_directory_path:
 
 # ==============================================================================
 plot_heat_map_max_size:                           640000
@@ -68,9 +68,11 @@ contexts:
 
 # ==============================================================================
 select_feature_automatically:                     yes
+select_feature_standard_deviation:                0.32
 
 # ==============================================================================
 select_sample_automatically:                      no
+select_sample_standard_deviation:                 0.32
 
 # ==============================================================================
 signal_type:                                      context
@@ -104,7 +106,7 @@ nmf_ks:
   - 18
   - 19
 nmf_n_clustering:                                 10
-nmf_k:                                            16
+nmf_k:                                            12
 
 # ==============================================================================
 hcc_ks:
@@ -127,23 +129,23 @@ hcc_ks:
   - 18
   - 19
 hcc_n_clustering:                                 10
-w_hcc_k:                                          16
-h_hcc_k:                                          16
+w_hcc_k:                                          6
+h_hcc_k:                                          10
 
 # ==============================================================================
 n_required_for_match_function:                    0.64
-extreme_feature_threshold:                        24
+n_extreme:                                        24
 n_sampling:                                       0
 n_permutation:                                    0
 
 # ==============================================================================
-caotic_element_fraction_to_drop:                  0.24
+caotic_element_fraction_to_drop:
 
 # ==============================================================================
 gps_map_w_n_pull:
 gps_map_w_pull_power:                             2
 gps_map_w_element_marker_size:                    8
-gps_map_w_bandwidth_factor:                       2.4
+gps_map_w_bandwidth_factor:                       3.2
 
 # ==============================================================================
 gps_map_h_n_pull:
@@ -158,7 +160,7 @@ feature_data:
 sample_data:
   RNA:
     file_path:                                    ../data/gene_x_patient.tsv
-    type:                                    continuous
+    type:                                         continuous
     indices:
       - F2RL1
       - ST14
@@ -167,11 +169,11 @@ sample_data:
       - SHH
   Gene Set:
     file_path:                                    ../data/gene_set_x_patient.tsv
-    type:                                    continuous
+    type:                                         continuous
     indices:
       - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
       - HALLMARK_TNFA_SIGNALING_VIA_NFKB
       - HALLMARK_ANGIOGENESIS
   Subtype:
     file_path:                                    ../data/subtype_x_patient.tsv
-    type:                                    binary
+    type:                                         binary
