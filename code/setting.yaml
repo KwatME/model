@@ -1,6 +1,6 @@
 # ==============================================================================
 feature_x_sample_file_path:                       ../data/gene_x_patient.tsv
-feature_x_sample_alias:                           RNA Medulloblastoma Cho et al (19.01.04)
+feature_x_sample_alias:                           RNA Medulloblastoma Cho et al (19.01.06)
 feature_x_sample_value_name:                      Expression
 feature_alias:                                    Gene
 sample_alias:                                     Patient
@@ -15,7 +15,7 @@ inconsistent_feature_fraction_to_drop:            0.1
 
 # ==============================================================================
 output_directory_path:                            ../output
-plotly_directory_path:                          Cellular Context/RNA Medulloblastoma Cho et al (19.01.06)
+plotly_directory_path:                            Cellular Context/RNA Medulloblastoma Cho et al (19.01.06)
 
 # ==============================================================================
 plot_heat_map_max_size:                           640000
