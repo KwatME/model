@@ -21,7 +21,7 @@ plotly_directory_path:                            Cellular Context/RNA Medullobl
 plot_heat_map_max_size:                           640000
 plot_distributions_max_size:                      64000
 plot_rug_max_size:                                6400
-plot_cluster_max_size:                            6400
+plot_cluster_max_size:                            2400
 plot_std:                                         2.4
 
 # ==============================================================================
@@ -46,15 +46,23 @@ select_gene_symbol:                               yes
 
 # ==============================================================================
 features_to_peek:
+  - APC
+  - HNF4A
+  - AXL
+  - TIGAR
+  - TP53
+  - KRAS
+  - PIK3CA
+  - BRAF
   - F2RL1
   - ST14
   - MYC
   - NOTCH1
   - SHH
+  - GAPDH
 
 # ==============================================================================
 samples_to_peek:
-  - MD_1
 
 # ==============================================================================
 element_types:
@@ -71,7 +79,7 @@ select_feature_standard_deviation:                0.32
 
 # ==============================================================================
 select_sample_automatically:                      no
-select_sample_standard_deviation:                 0.32
+select_sample_standard_deviation:
 
 # ==============================================================================
 signal_type:                                      context
@@ -161,11 +169,20 @@ sample_data:
     file_path:                                    ../data/gene_x_patient.tsv
     type:                                         continuous
     indices:
+      - APC
+      - HNF4A
+      - AXL
+      - TIGAR
+      - TP53
+      - KRAS
+      - PIK3CA
+      - BRAF
       - F2RL1
       - ST14
       - MYC
       - NOTCH1
       - SHH
+      - GAPDH
   Gene Set:
     file_path:                                    ../data/gene_set_x_patient.tsv
     type:                                         continuous
