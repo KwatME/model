@@ -1,8 +1,8 @@
 # ==============================================================================
-feature_x_sample_file_path:                       ../data/rna__gene_x_cell_line.not.haematopoietic_and_lymphoid_tissue.tsv
-feature_x_sample_alias:                           RNA CCLE Solid (19.01.06)
-feature_x_sample_value_name:                      Expression
-feature_alias:                                    Gene
+feature_x_sample_file_path:                       /home/kwatme/tmp/data/cell_line/ctrp_select/ctrp_2g__compound_x_cell_line.CENTRAL_NERVOUS_SYSTEM.FIBROBLAST.MATCHED_NORMAL_TISSUE.tsv
+feature_x_sample_alias:                           Compound CTRP 2g Central Nervous System (19.01.07)
+feature_x_sample_value_name:                      AUC
+feature_alias:                                    Compound
 sample_alias:                                     Cell Line
 
 # ==============================================================================
@@ -14,8 +14,8 @@ new_sample_alias:
 inconsistent_feature_fraction_to_drop:
 
 # ==============================================================================
-output_directory_path:                            ../output
-plotly_directory_path:                            Cellular Context/RNA CCLE Solid (19.01.06)
+output_directory_path:                            /home/kwatme/tmp/project/model_and_infer.compound_ctrp_2g_central_nervous_system/output
+plotly_directory_path:                            #Compound CTRP 2g Central Nervous System (19.01.07)
 
 # ==============================================================================
 plot_heat_map_max_size:                           640000
@@ -25,57 +25,65 @@ plot_cluster_max_size:                            2400
 plot_std:                                         2.4
 
 # ==============================================================================
-max_n_job:                                        1
+max_n_job:                                        8
 
 # ==============================================================================
 features_to_drop:
 samples_to_drop:
 nanize:
 drop_axis:
-max_na:
-min_n_not_na_unique_value:                        1
-shift_as_necessary_to_achieve_min_before_logging: 0<
-log_base:                                         2
-normalization_axis:                               0
-normalization_method:                             -0-
+max_na:                                           0.64
+min_n_not_na_unique_value:
+shift_as_necessary_to_achieve_min_before_logging:
+log_base:
+normalization_axis:
+normalization_method:
 clip_min:
 clip_max:
 
 # ==============================================================================
-select_gene_symbol:                               yes
+select_gene_symbol:                               no
 
 # ==============================================================================
 features_to_peek:
-  - APC
-  - HNF4A
-  - AXL
-  - TIGAR
-  - TP53
-  - KRAS
-  - PIK3CA
-  - BRAF
-  - F2RL1
-  - ST14
-  - MYC
-  - NOTCH1
-  - SHH
-  - GAPDH
+  - 1S3R-RSL-3
+  - austocystin D
+  - AZD4547
+  - erastin
+  - ML162
+  - ML210
+  - nintedanib
+  - selumetinib
+  - YM-155
+  - GMX-1778
+  - bortezomib
 
 # ==============================================================================
 samples_to_peek:
+  - HMCB_SKIN
+  - SKMEL31_SKIN
+  - CAL51_BREAST
+  - CAL148_BREAST
+  - HMC18_BREAST
+  - KPL1_BREAST
+  - MDAMB468_BREAST
+  - BEN_LUNG
+  - AM38_CENTRAL_NERVOUS_SYSTEM
+  - DAOY_CENTRAL_NERVOUS_SYSTEM
+  - SF126_CENTRAL_NERVOUS_SYSTEM
 
 # ==============================================================================
 element_types:
   - feature
+  - sample
 
 # ==============================================================================
 contexts:
   - negative
-  - positive
 
 # ==============================================================================
-select_feature_automatically:                     yes
-select_feature_standard_deviation:                0
+select_feature_automatically:                     no
+select_feature_standard_deviation:
 
 # ==============================================================================
 select_sample_automatically:                      no
@@ -85,12 +93,12 @@ select_sample_standard_deviation:
 signal_type:                                      context
 
 # ==============================================================================
-raw_signal_normalization_axis:                    1
-raw_signal_normalization_method:                  0-1
+raw_signal_normalization_axis:
+raw_signal_normalization_method:
 
 # ==============================================================================
-context_signal_normalization_axis:                1
-context_signal_normalization_method:              sum
+context_signal_normalization_axis:
+context_signal_normalization_method:
 
 # ==============================================================================
 nmf_ks:
@@ -103,30 +111,8 @@ nmf_ks:
   - 8
   - 9
   - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
-  - 16
-  - 17
-  - 18
-  - 19
-  - 20
-  - 21
-  - 22
-  - 23
-  - 24
-  - 25
-  - 26
-  - 27
-  - 28
-  - 29
-  - 30
-  - 31
-  - 32
 nmf_n_clustering:                                 10
-nmf_k:                                            24
+nmf_k:                                            6
 
 # ==============================================================================
 hcc_ks:
@@ -139,31 +125,9 @@ hcc_ks:
   - 8
   - 9
   - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
-  - 16
-  - 17
-  - 18
-  - 19
-  - 20
-  - 21
-  - 22
-  - 23
-  - 24
-  - 25
-  - 26
-  - 27
-  - 28
-  - 29
-  - 30
-  - 31
-  - 32
-hcc_n_clustering:                                 10
-w_hcc_k:                                          22
-h_hcc_k:                                          22
+hcc_n_clustering:                                 100
+w_hcc_k:                                          6
+h_hcc_k:                                          5
 
 # ==============================================================================
 n_required_for_match_function:                    0.64
@@ -172,20 +136,20 @@ n_sampling:                                       0
 n_permutation:                                    0
 
 # ==============================================================================
-gps_map_caotic_w_element_fraction_to_drop:        0.72
+gps_map_caotic_w_element_fraction_to_drop:
 gps_map_caotic_h_element_fraction_to_drop:
 
 # ==============================================================================
-gps_map_w_n_pull:                                 3
-gps_map_w_pull_power:                             6.4
-gps_map_w_element_marker_size:                    12
+gps_map_w_n_pull:
+gps_map_w_pull_power:                             3.2
+gps_map_w_element_marker_size:                    16
 gps_map_w_bandwidth_factor:                       6.4
 
 # ==============================================================================
-gps_map_h_n_pull:                                 3
+gps_map_h_n_pull:
 gps_map_h_pull_power:                             2.4
-gps_map_h_element_marker_size:                    12
-gps_map_h_bandwidth_factor:                       6.4
+gps_map_h_element_marker_size:                    24
+gps_map_h_bandwidth_factor:                       2.4
 
 # ==============================================================================
 feature_data:
@@ -213,19 +177,45 @@ sample_data:
     type:                                         continuous
     indices:
       - APC
-      - HNF4A
+      - AR
       - AXL
-      - TIGAR
-      - TP53
-      - KRAS
-      - PIK3CA
       - BRAF
+      - BRCA1
+      - CDK1
+      - CDK2
+      - CTNNB1
+      - EGFR
+      - ERBB2
+      - ERBB3
+      - ESR1
       - F2RL1
-      - ST14
+      - FAT1
+      - GNAS
+      - HER2
+      - HER3
+      - HNF4A
+      - IDH1
+      - KRAS
+      - KRT5
+      - MCAM
+      - MICAL2
+      - MTOR
       - MYC
       - NOTCH1
+      - NRAS
+      - PGR
+      - PIK3CA
+      - POLE
+      - PTEN
       - SHH
-      - GAPDH
+      - SOX10
+      - SRC
+      - ST14
+      - TERT
+      - TIGAR
+      - TP53
+      - YAP1
+      - ZEB1
   Gene Set:
     file_path:                                    /home/kwatme/tmp/data/cell_line/gene_set_x_cell_line/gene_set_x_cell_line.tsv
     type:                                         continuous
@@ -251,6 +241,18 @@ sample_data:
   CTRP:
     file_path:                                    /home/kwatme/tmp/data/cell_line/ctrp/ctrp__compound_x_cell_line.tsv
     type:                                         continuous
+    indices:
+      - 1S3R-RSL-3
+      - austocystin D
+      - AZD4547
+      - erastin
+      - ML162
+      - ML210
+      - nintedanib
+      - selumetinib
+      - YM-155
+      - GMX-1778
+      - bortezomib
   Binary Information:
     file_path:                                    /home/kwatme/tmp/data/cell_line/depmap/information/binary_information_x_cell_line.tsv
     type:                                         binary
