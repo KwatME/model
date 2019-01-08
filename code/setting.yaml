@@ -15,7 +15,7 @@ inconsistent_feature_fraction_to_drop:
 
 # ==============================================================================
 output_directory_path:                            /home/kwatme/tmp/project/model_and_infer.compound_ctrp_2g_central_nervous_system/output
-plotly_directory_path:                            #Compound CTRP 2g Central Nervous System (19.01.07)
+plotly_directory_path:                            Compound CTRP 2g Central Nervous System (19.01.07)
 
 # ==============================================================================
 plot_heat_map_max_size:                           640000
@@ -25,7 +25,7 @@ plot_cluster_max_size:                            2400
 plot_std:                                         2.4
 
 # ==============================================================================
-max_n_job:                                        8
+max_n_job:                                        24
 
 # ==============================================================================
 features_to_drop:
@@ -127,11 +127,11 @@ hcc_ks:
   - 10
 hcc_n_clustering:                                 100
 w_hcc_k:                                          6
-h_hcc_k:                                          5
+h_hcc_k:                                          6
 
 # ==============================================================================
 n_required_for_match_function:                    0.64
-n_extreme:                                        24
+n_extreme:                                        16
 n_sampling:                                       0
 n_permutation:                                    0
 
@@ -153,6 +153,16 @@ gps_map_h_bandwidth_factor:                       2.4
 
 # ==============================================================================
 feature_data:
+  Target:
+    file_path:                                    /home/kwatme/tmp/data/cell_line/ctrp/gene_symbol_of_protein_target_x_compound.tsv
+    type:                                         binary
+  Activity:
+    file_path:                                    /home/kwatme/tmp/data/cell_line/ctrp/target_or_activity_of_compound_x_compound.tsv
+    type:                                         binary
+  Status:
+    file_path:                                    /home/kwatme/tmp/data/cell_line/ctrp/cpd_status_x_compound.tsv
+    type:                                         binary
+    indices:                                      all
 
 # ==============================================================================
 sample_data:
