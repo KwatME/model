@@ -1,5 +1,5 @@
 # ==============================================================================
-feature_x_sample_file_path:                       /media/kwatme/CarrotCake/data/cell_line/ctrp_select/ctrp_2g__compound_x_cell_line__clean.tsv
+feature_x_sample_file_path:                       /media/kwatme/CarrotCake/data/cell_line/ctrp/ctrp__compound_x_cell_line__clean.tsv
 feature_x_sample_alias:                           Compound CTRP 2g (19.01.11)
 feature_x_sample_value_name:                      AUC
 feature_alias:                                    Compound
@@ -25,14 +25,14 @@ plot_cluster_max_size:                            2400
 plot_std:                                         2.4
 
 # ==============================================================================
-max_n_job:                                        1
+max_n_job:                                        8
 
 # ==============================================================================
 features_to_drop:
 samples_to_drop:
 nanize:
 drop_axis:
-max_na:                                           0.24
+max_na:                                           0.16
 min_n_not_na_unique_value:
 shift_as_necessary_to_achieve_min_before_logging:
 log_base:
@@ -140,7 +140,7 @@ nmf_ks:
   - 48
   - 49
 nmf_n_clustering:                                 10
-nmf_k:                                            21
+nmf_k:                                            16
 
 # ==============================================================================
 hcc_ks:
@@ -193,8 +193,8 @@ hcc_ks:
   - 48
   - 49
 hcc_n_clustering:                                 100
-w_hcc_k:                                          21
-h_hcc_k:                                          21
+w_hcc_k:                                          14
+h_hcc_k:                                          14
 
 # ==============================================================================
 n_required_for_match_function:                    0.64
@@ -208,15 +208,15 @@ gps_map_caotic_h_element_fraction_to_drop:
 
 # ==============================================================================
 gps_map_w_n_pull:
-gps_map_w_pull_power:                             2.4
+gps_map_w_pull_power:                             6.4
 gps_map_w_element_marker_size:                    16
-gps_map_w_bandwidth_factor:                       3.2
+gps_map_w_bandwidth_factor:                       6.4
 
 # ==============================================================================
 gps_map_h_n_pull:
-gps_map_h_pull_power:                             1.6
-gps_map_h_element_marker_size:                    24
-gps_map_h_bandwidth_factor:                       2.4
+gps_map_h_pull_power:                             6.4
+gps_map_h_element_marker_size:                    16
+gps_map_h_bandwidth_factor:                       6.4
 
 # ==============================================================================
 feature_data:
