@@ -1,1 +1,162 @@
-/media/kwatme/CarrotCake/project/ribosome/model_and_infer.gtex_v7_ribosomal_rna_in_blood_and_brain/setting.yaml
+# ==============================================================================
+feature_x_sample_file_path:                       /media/kwatme/CarrotCake/data/gtex_v7/tpm__gene_x_sample.ribosomal_gene.tsv
+feature_x_sample_alias:                           GTEx v7 Ribosomal RNA (19.01.14)
+feature_x_sample_value_name:                      TPM
+feature_alias:                                    Ribosomal Gene
+sample_alias:                                     Sample
+
+# ==============================================================================
+feature_x_new_sample_file_path:
+feature_x_new_sample_alias:
+new_sample_alias:
+
+# ==============================================================================
+inconsistent_feature_fraction_to_drop:
+
+# ==============================================================================
+output_directory_path:                            /media/kwatme/CarrotCake/project/ribosome/model_and_infer.gtex_v7_ribosomal_rna/output
+plotly_directory_path:                            #GTEx v7 Ribosomal RNA (19.01.14)
+
+# ==============================================================================
+plot_heat_map_max_size:                           1000000
+plot_distributions_max_size:                      10000
+plot_rug_max_size:                                1000
+plot_cluster_max_size:                            1000
+plot_std:                                         2.4
+
+# ==============================================================================
+max_n_job:                                        18
+
+# ==============================================================================
+features_to_drop:
+samples_to_drop:
+nanize:
+drop_axis:
+max_na:
+min_n_not_na_unique_value:
+shift_as_necessary_to_achieve_min_before_logging:
+log_base:
+normalization_axis:                               1
+normalization_method:                             0-1
+clip_min:
+clip_max:
+
+# ==============================================================================
+select_gene_symbol:                               no
+
+# ==============================================================================
+features_to_peek:
+
+# ==============================================================================
+samples_to_peek:
+
+# ==============================================================================
+signal_type:                                      raw
+
+# ==============================================================================
+select_feature_automatically:                     no
+select_feature_standard_deviation:
+
+# ==============================================================================
+select_sample_automatically:                      no
+select_sample_standard_deviation:
+
+# ==============================================================================
+context_element_types:
+
+# ==============================================================================
+contexts:
+
+# ==============================================================================
+signal_normalization_axis:
+signal_normalization_method:
+
+# ==============================================================================
+nmf_ks:
+  - 50
+  - 60
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+nmf_n_clustering:                                 10
+nmf_k:                                            19
+
+# ==============================================================================
+hcc_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+hcc_n_clustering:                                 100
+w_hcc_k:                                          3
+h_hcc_k:                                          3
+
+# ==============================================================================
+n_required_for_match_function:                    0.64
+n_extreme:                                        16
+n_sampling:                                       0
+n_permutation:                                    0
+
+# ==============================================================================
+gps_map_caotic_w_element_fraction_to_drop:
+gps_map_caotic_h_element_fraction_to_drop:
+
+# ==============================================================================
+gps_map_w_n_pull:
+gps_map_w_pull_power:                             10
+gps_map_w_element_marker_size:                    24
+gps_map_w_bandwidth_factor:                       6.4
+
+# ==============================================================================
+gps_map_h_n_pull:
+gps_map_h_pull_power:                             10
+gps_map_h_element_marker_size:                    8
+gps_map_h_bandwidth_factor:                       6.4
+
+# ==============================================================================
+feature_data:
+
+# ==============================================================================
+sample_data:
+  Tissue Group:
+    file_path:                                    /media/kwatme/CarrotCake/data/gtex_v7/tissue_group_x_sample.tsv
+    type:                                         categorical
+    indices:                                      all
+
+# ==============================================================================
+plot_only_columns_shared_by_target_and_all_data:  no
+
+# ==============================================================================
+h_summary:
+
+# ==============================================================================
+h_cluster_summary:
