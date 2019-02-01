@@ -1,9 +1,9 @@
 # ==============================================================================
-feature_x_sample_file_path:                       /media/kwatme/CarrotCake/project/model_and_infer.gtex_v7_ribosomal_rna/gene_x_sample.tsv
-feature_x_sample_alias:                           GTEx v7 Ribosomal RNA (19.01.30)
-feature_x_sample_value_name:                      TPM
-feature_alias:                                    RNA
-sample_alias:                                     Sample
+feature_x_sample_file_path:                       /media/kwatme/CarrotCake/data/cell_line/depmap/crispr/crispr.gene_x_cell_line.tsv
+feature_x_sample_alias:                           DepMap CRISPR (19.01.31)
+feature_x_sample_value_name:                      Viability
+feature_alias:                                    Gene
+sample_alias:                                     Cell Line
 
 # ==============================================================================
 feature_x_new_sample_file_path:
@@ -14,8 +14,8 @@ new_sample_alias:
 inconsistent_feature_fraction_to_drop:
 
 # ==============================================================================
-output_directory_path:                            /media/kwatme/CarrotCake/project/model_and_infer.gtex_v7_ribosomal_rna/output
-plotly_directory_path:                            #Cellular Context/GTEx v7 Ribosomal RNA (19.01.30)
+output_directory_path:                            /media/kwatme/CarrotCake/project/model_and_infer.depmap_crispr/output
+plotly_directory_path:                            #Cellular Context/
 
 # ==============================================================================
 plot_heat_map_max_size:                           240000
@@ -25,11 +25,10 @@ plot_cluster_max_size:                            2400
 plot_std:                                         2.4
 
 # ==============================================================================
-n_job:                                            32
+n_job:                                            16
 
 # ==============================================================================
 features_to_drop:
-  - RPS17
 samples_to_drop:
 nanize:
 drop_axis:
@@ -37,8 +36,8 @@ max_na:
 min_n_not_na_unique_value:
 shift_as_necessary_to_achieve_min_before_logging:
 log_base:
-normalization_axis:                               0
-normalization_method:                             -0-
+normalization_axis:
+normalization_method:
 clip_min:
 clip_max:
 
@@ -52,10 +51,10 @@ features_to_peek:
 samples_to_peek:
 
 # ==============================================================================
-signal_type:                                      raw
+signal_type:                                      context
 
 # ==============================================================================
-select_feature_automatically:                     no
+select_feature_automatically:                     yes
 select_feature_standard_deviation:
 
 # ==============================================================================
@@ -64,13 +63,16 @@ select_sample_standard_deviation:
 
 # ==============================================================================
 context_element_types:
+  - feature
+  - sample
 
 # ==============================================================================
 contexts:
+  - negative
 
 # ==============================================================================
-signal_normalization_axis:                        0
-signal_normalization_method:                      0-1
+signal_normalization_axis:
+signal_normalization_method:
 
 # ==============================================================================
 nmf_ks:
@@ -105,7 +107,6 @@ nmf_ks:
   - 30
   - 31
   - 32
-
 nmf_n_clustering:                                 10
 nmf_k:                                            16
 
@@ -143,8 +144,8 @@ hcc_ks:
   - 31
   - 32
 hcc_n_clustering:                                 100
-w_hcc_k:                                          3
-h_hcc_k:                                          3
+w_hcc_k:                                          16
+h_hcc_k:                                          16
 
 # ==============================================================================
 n_required_for_match_function:                    0.64
@@ -158,14 +159,14 @@ gps_map_caotic_h_element_fraction_to_drop:
 
 # ==============================================================================
 gps_map_w_n_pull:
-gps_map_w_pull_power:                             8
-gps_map_w_element_marker_size:                    24
+gps_map_w_pull_power:                             1
+gps_map_w_element_marker_size:                    16
 gps_map_w_bandwidth_factor:                       1
 
 # ==============================================================================
 gps_map_h_n_pull:
-gps_map_h_pull_power:                             8
-gps_map_h_element_marker_size:                    12
+gps_map_h_pull_power:                             1
+gps_map_h_element_marker_size:                    16
 gps_map_h_bandwidth_factor:                       1
 
 # ==============================================================================
@@ -173,8 +174,109 @@ feature_data:
 
 # ==============================================================================
 sample_data:
-  Tissue:
-    file_path:                                    /media/kwatme/CarrotCake/data/gtex_v7/information/tissue_x_sample.tsv
+  KRAS Factor:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/kras_map/nmf_k9_h.tsv
+    type:                                         continuous
+    indices:                                      all
+  Mutation:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/mutation/mutation.gene_x_cell_line.binary.tsv
+    type:                                         binary
+  Copy Number:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/copy_number/copy_number.gene_loss_gain_x_cell_line.tsv
+    type:                                         binary
+  Methylation:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/methylation/methylation.gene_x_cell_line.tsv
+    type:                                         continuous
+  RNA:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/rna/rna.gene_x_cell_line.log.tsv
+    type:                                         continuous
+    indices:
+      - APC
+      - AR
+      - AXL
+      - BRAF
+      - BRCA1
+      - CDK1
+      - CDK2
+      - CTNNB1
+      - EGFR
+      - ERBB2
+      - ERBB3
+      - ESR1
+      - F2RL1
+      - FAT1
+      - GNAS
+      - HER2
+      - HER3
+      - HNF4A
+      - IDH1
+      - KRAS
+      - KRT5
+      - MCAM
+      - MICAL2
+      - MTOR
+      - MYC
+      - NOTCH1
+      - NRAS
+      - PGR
+      - PIK3CA
+      - POLE
+      - PTEN
+      - SHH
+      - SOX10
+      - SRC
+      - ST14
+      - TERT
+      - TIGAR
+      - TP53
+      - YAP1
+      - ZEB1
+  Gene Set:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/gene_set_x_cell_line/gene_set_x_cell_line.tsv
+    type:                                         continuous
+    indices:
+      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
+      - HALLMARK_TNFA_SIGNALING_VIA_NFKB
+      - HALLMARK_ANGIOGENESIS
+  Protein:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/rppa/rppa.protein_x_cell_line.tsv
+    type:                                         continuous
+  Metabolite:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/metabolite/metabolite_x_cell_line.log.tsv
+    type:                                         continuous
+  RNAi:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/rnai/rnai.gene_x_cell_line.tsv
+    type:                                         continuous
+  CRISPR:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/crispr/crispr.gene_x_cell_line.tsv
+    type:                                         continuous
+  NP24:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/np24/np24.compound_x_cell_line.tsv
+    type:                                         continuous
+  CTRP:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/2g/ctrp_2g.compound_x_cell_line.tsv
+    type:                                         continuous
+    indices:
+      - SB-743921
+      - 1S3R-RSL-3
+      - austocystin D
+      - AZD4547
+      - erastin
+      - ML162
+      - ML210
+      - nintedanib
+      - selumetinib
+      - YM-155
+      - GMX-1778
+      - bortezomib
+  Binary Information:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/information/binary_information_x_cell_line.tsv
+    type:                                         binary
+    indices:
+      - (DepMap) Is Fibroblast
+      - (smoker) y
+  Growth Mode:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/vg/growth_mode_x_cell_line.tsv
     type:                                         binary
     indices:                                      all
 
