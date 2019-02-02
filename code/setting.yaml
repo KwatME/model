@@ -1,6 +1,6 @@
 # ==============================================================================
-feature_x_sample_file_path:                       /media/kwatme/CarrotCake/data/cell_line/depmap/crispr/crispr.gene_x_cell_line.tsv
-feature_x_sample_alias:                           DepMap CRISPR (19.01.31)
+feature_x_sample_file_path:                       ../data/crispr.gene_x_cell_line.tsv
+feature_x_sample_alias:                           DepMap CRISPR (19.02.01)
 feature_x_sample_value_name:                      Viability
 feature_alias:                                    Gene
 sample_alias:                                     Cell Line
@@ -14,7 +14,7 @@ new_sample_alias:
 inconsistent_feature_fraction_to_drop:
 
 # ==============================================================================
-output_directory_path:                            /media/kwatme/CarrotCake/project/model_and_infer.depmap_crispr/output
+output_directory_path:                            ../output
 plotly_directory_path:                            #Cellular Context/
 
 # ==============================================================================
@@ -25,7 +25,7 @@ plot_cluster_max_size:                            2400
 plot_std:                                         2.4
 
 # ==============================================================================
-n_job:                                            16
+n_job:                                            8
 
 # ==============================================================================
 features_to_drop:
@@ -36,8 +36,8 @@ max_na:
 min_n_not_na_unique_value:
 shift_as_necessary_to_achieve_min_before_logging:
 log_base:
-normalization_axis:
-normalization_method:
+normalization_axis:                               1
+normalization_method:                             -0-
 clip_min:
 clip_max:
 
@@ -46,6 +46,8 @@ select_gene_symbol:                               no
 
 # ==============================================================================
 features_to_peek:
+  - KRAS
+  - TP53
 
 # ==============================================================================
 samples_to_peek:
@@ -55,7 +57,7 @@ signal_type:                                      context
 
 # ==============================================================================
 select_feature_automatically:                     yes
-select_feature_standard_deviation:
+select_feature_standard_deviation:                1.5
 
 # ==============================================================================
 select_sample_automatically:                      no
@@ -108,7 +110,7 @@ nmf_ks:
   - 31
   - 32
 nmf_n_clustering:                                 10
-nmf_k:                                            16
+nmf_k:                                            20
 
 # ==============================================================================
 hcc_ks:
@@ -154,20 +156,20 @@ n_sampling:                                       0
 n_permutation:                                    0
 
 # ==============================================================================
-gps_map_caotic_w_element_fraction_to_drop:
-gps_map_caotic_h_element_fraction_to_drop:
+gps_map_caotic_w_element_fraction_to_drop:        0.2
+gps_map_caotic_h_element_fraction_to_drop:        0.2
 
 # ==============================================================================
 gps_map_w_n_pull:
-gps_map_w_pull_power:                             1
-gps_map_w_element_marker_size:                    16
-gps_map_w_bandwidth_factor:                       1
+gps_map_w_pull_power:                             2
+gps_map_w_element_marker_size:                    10
+gps_map_w_bandwidth_factor:                       2.4
 
 # ==============================================================================
 gps_map_h_n_pull:
-gps_map_h_pull_power:                             1
+gps_map_h_pull_power:                             2
 gps_map_h_element_marker_size:                    16
-gps_map_h_bandwidth_factor:                       1
+gps_map_h_bandwidth_factor:                       2.4
 
 # ==============================================================================
 feature_data:
@@ -175,20 +177,20 @@ feature_data:
 # ==============================================================================
 sample_data:
   KRAS Factor:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/kras_map/nmf_k9_h.tsv
+    file_path:                                    ../data/nmf_k9_h.tsv
     type:                                         continuous
     indices:                                      all
   Mutation:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/mutation/mutation.gene_x_cell_line.binary.tsv
+    file_path:                                    ../data/mutation.gene_x_cell_line.binary.tsv
     type:                                         binary
   Copy Number:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/copy_number/copy_number.gene_loss_gain_x_cell_line.tsv
+    file_path:                                    ../data/copy_number.gene_loss_gain_x_cell_line.tsv
     type:                                         binary
   Methylation:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/methylation/methylation.gene_x_cell_line.tsv
+    file_path:                                    ../data/methylation.gene_x_cell_line.tsv
     type:                                         continuous
   RNA:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/rna/rna.gene_x_cell_line.log.tsv
+    file_path:                                    ../data/rna.gene_x_cell_line.log.tsv
     type:                                         continuous
     indices:
       - APC
@@ -196,6 +198,7 @@ sample_data:
       - AXL
       - BRAF
       - BRCA1
+      - BRCA2
       - CDK1
       - CDK2
       - CTNNB1
@@ -218,6 +221,7 @@ sample_data:
       - MYC
       - NOTCH1
       - NRAS
+      - PAX8
       - PGR
       - PIK3CA
       - POLE
@@ -232,29 +236,29 @@ sample_data:
       - YAP1
       - ZEB1
   Gene Set:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/gene_set_x_cell_line/gene_set_x_cell_line.tsv
+    file_path:                                    ../data/gene_set_x_cell_line.tsv
     type:                                         continuous
     indices:
       - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
       - HALLMARK_TNFA_SIGNALING_VIA_NFKB
       - HALLMARK_ANGIOGENESIS
   Protein:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/rppa/rppa.protein_x_cell_line.tsv
+    file_path:                                    ../data/rppa.protein_x_cell_line.tsv
     type:                                         continuous
   Metabolite:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/metabolite/metabolite_x_cell_line.log.tsv
+    file_path:                                    ../data/metabolite_x_cell_line.log.tsv
     type:                                         continuous
   RNAi:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/rnai/rnai.gene_x_cell_line.tsv
+    file_path:                                    ../data/rnai.gene_x_cell_line.tsv
     type:                                         continuous
   CRISPR:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/depmap/crispr/crispr.gene_x_cell_line.tsv
+    file_path:                                    ../data/crispr.gene_x_cell_line.tsv
     type:                                         continuous
   NP24:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/np24/np24.compound_x_cell_line.tsv
+    file_path:                                    ../data/np24.compound_x_cell_line.tsv
     type:                                         continuous
   CTRP:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/2g/ctrp_2g.compound_x_cell_line.tsv
+    file_path:                                    ../data/ctrp_2g.compound_x_cell_line.tsv
     type:                                         continuous
     indices:
       - SB-743921
@@ -270,13 +274,13 @@ sample_data:
       - GMX-1778
       - bortezomib
   Binary Information:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/information/binary_information_x_cell_line.tsv
+    file_path:                                    ../data/binary_information_x_cell_line.tsv
     type:                                         binary
     indices:
       - (DepMap) Is Fibroblast
       - (smoker) y
   Growth Mode:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/vg/growth_mode_x_cell_line.tsv
+    file_path:                                    ../data/growth_mode_x_cell_line.tsv
     type:                                         binary
     indices:                                      all
 
@@ -285,6 +289,684 @@ plot_only_columns_shared_by_target_and_all_data:
 
 # ==============================================================================
 h_summary:
+  F0:
+    KRAS Factor:
+      - EMT
+    Mutation:
+      - C17orf77
+      - OPN5
+    Copy Number:
+      - KIAA2026 (Loss)
+      - IFNA8 (Loss)
+    Methylation:
+      - DIS3L
+      - PRKCZ
+    RNA:
+      - ANTXR1
+      - TGFB1I1
+      - DENND1C
+    Gene Set:
+      - IPA_NFIB_UP
+      - IPA_BRCA2_DN
+    Protein:
+      - E-Cadherin
+      - PR
+    Metabolite:
+      - 1-methylnicotinamide
+    RNAi:
+      - SOX10
+      - ARF4
+      - OR6K6
+    CRISPR:
+      - LSM5
+      - TBC1D3
+    Binary Information:
+      - (Primary Disease) Brain Cancer
+  F1:
+    KRAS Factor:
+      - MYC-E2F
+    Mutation:
+      - SLC22A16
+      - CAPN5
+      - GOLGA8Q
+      - KRT33A
+    Copy Number:
+      - TARP (Loss)
+      - ZNF705G (Gain)
+    Methylation:
+      - NFIB
+      - ZBP1
+    RNA:
+      - TIFAB
+      - C1orf200
+      - SPI1
+      - CTB-83J4.2
+      - TEAD1
+      - YAP1
+      - SNX7
+    Gene Set:
+      - IPA_FLI1_DN
+    Protein:
+      - Bcl-2
+      - VAV1_Caution
+      - PI3K-p85
+      - STAT5-alpha
+      - Rb_Caution
+      - Syk
+      - E-Cadherin
+      - VEGFR2
+      - alpha-Catenin
+      - YAP_Caution
+      - beta-Catenin
+    Metabolite:
+      - UMP
+      - AMP
+      - CMP
+      - GMP
+      - C20:4 CE
+      - C16:0 CE
+      - C18:1 CE
+    RNAi:
+      - MDM4
+      - MYB
+    CRISPR:
+      - IKZF1
+      - MYB
+      - ALAS1
+      - ALAD
+    NP24:
+      - L-685458
+      - PD-0332991
+    CTRP:
+      - clofarabine
+      - dacarbazine
+      - barasertib
+      - cytarabine hydrochloride
+      - decitabine
+    Binary Information:
+      - (Primary Disease) Leukemia
+    Growth Mode:
+      - Attached and Suspended
+  F2:
+    Mutation:
+      - DHX58
+      - GABRG3
+      - EPHB3
+    Copy Number:
+      - TRG-AS1 (Loss)
+    Methylation:
+      - MAP3K14-AS1
+      - COL18A1-AS1
+    RNA:
+      - FAM83H
+    Protein:
+      - MDMX_MDM4(BetIHC-00108)_Caution
+      - beta-Catenin
+    CRISPR:
+      - C10orf91
+      - ZNF195
+    CTRP:
+      - decitabine
+      - nelarabine
+      - cytarabine hydrochloride
+  F3:
+    KRAS Factor:
+      - RAS-WNT-PI3K
+      - TNF-NFKB-YAP
+    Mutation:
+      - KRAS
+      - OR2T2
+    Copy Number:
+      - KRAS (Gain)
+    Methylation:
+      - FRGCA
+      - NR1I2
+    RNA:
+      - CDKN2A
+    Gene Set:
+      - IPA_ZEB1_DN
+    Protein:
+      - Transglutaminase
+      - HER3_pY1289_Caution
+    RNAi:
+      - KRAS
+    CRISPR:
+      - TEAD1
+      - KRAS
+      - DOCK5
+    Binary Information:
+      - (Primary Disease) Pancreatic Cancer
+  F4:
+    Mutation:
+      - ARHGAP9
+    Copy Number:
+      - SYT6 (Loss)
+    Methylation:
+      - ERBB2
+      - HDAC7
+    RNA:
+      - PIM2
+      - YAP1
+      - SNX7
+    Gene Set:
+      - BIOCARTA_TCAPOPTOSIS_PATHWAY
+      - WU_CELL_MIGRATION
+    Protein:
+      - Bcl-2
+      - Src
+      - VEGFR2
+      - beta-Catenin
+      - YAP_Caution
+    Metabolite:
+      - thiamine
+      - xanthine
+      - lactose
+      - allantoin
+      - kynurenic acid
+      - lactate
+      - sorbitol
+    RNAi:
+      - NFKB2
+      - NFKB1
+      - IRF4
+      - RELB
+    CRISPR:
+      - NFKB2
+      - MEF2C
+      - SMAD7
+      - NFKB1
+      - IRF4
+      - RELB
+    NP24:
+      - AEW541
+      - Nilotinib
+    CTRP:
+      - MK-2206
+      - decitabine
+    Binary Information:
+      - (Primary Disease) Myeloma
+    Growth Mode:
+      - Attached and Suspended
+  F5:
+    KRAS Factor:
+      - KRAS-AP1
+    Mutation:
+      - KRT6C
+      - KRT3
+    Copy Number:
+      - SHANK2-AS1 (Gain)
+    Methylation:
+      - ANKRD2
+      - ALOX12
+    RNA:
+      - KRT5
+      - FAT2
+    Gene Set:
+      - chr12q
+      - JI_CARCINOGENESIS_BY_KRAS_AND_STK11_UP
+    Protein:
+      - P-Cadherin_Caution
+      - E-Cadherin
+    Metabolite:
+      - pyroglutamic acid
+      - methionine
+      - asparagine
+      - cis/trans-hydroxyproline
+    RNAi:
+      - EGFR
+      - ERBB3
+      - TP63
+    CRISPR:
+      - EGFR
+      - ERBB2
+      - ERBB3
+      - SNAI2
+      - TP63
+    NP24:
+      - Erlotinib
+    CTRP:
+      - ibrutinib
+      - gefitinib
+      - afatinib
+    Binary Information:
+      - (Primary Disease) Head and Neck Cancer
+  F6:
+    KRAS Factor:
+      - MYC-E2F
+    Mutation:
+      - S1PR2
+      - MCM5
+      - GBA
+    Copy Number:
+      - BLVRB (Gain)
+      - AKT2 (Gain)
+    CRISPR:
+      - ETV2
+  F7:
+    KRAS Factor:
+      - HNF1-PAX8
+      - MYC-E2F
+    Mutation:
+      - TRAPPC12
+    Copy Number:
+      - NRXN3 (Loss)
+      - LNPEP (Loss)
+      - CCNE1 (Gain)
+      - ADAMTS17 (Loss)
+      - PDE4D (Loss)
+      - ESRRB (Loss)
+      - ERAP2 (Loss)
+      - GPX8 (Loss)
+    Methylation:
+      - LYPLAL1
+      - LYPLAL1-AS1
+      - MIR4673
+    RNA:
+      - PAX8
+    Gene Set:
+      - chr3q
+      - chr11p14
+    Protein:
+      - Cyclin_E1
+      - MEK1
+    Metabolite:
+      - C36:4 PC-B
+      - GMP
+    RNAi:
+      - MDM2
+      - CDK2
+      - HNF1B
+      - PAX8
+    CRISPR:
+      - CDK2
+      - HNF1B
+      - PARD6B
+      - PARD3
+      - PAX8
+    NP24:
+      - ZD-6474
+    CTRP:
+      - dasatinib
+      - saracatinib
+      - veliparib
+    Binary Information:
+      - (Primary Disease) Ovarian Cancer
+      - (gender) f
+      - (Primary Disease) Endometrial/Uterine Cancer
+  F8:
+    Mutation:
+      - GH1
+      - MARCH8
+      - SNX20
+      - H3F3A
+      - EPHX4
+    Metabolite:
+      - adipate
+    RNAi:
+      - KRAS
+      - CTNNB1
+    CRISPR:
+      - IKZF4
+      - CD5L
+      - KRT79
+      - KRT84
+  F9:
+    KRAS Factor:
+      - RAS-WNT-PI3K
+    Mutation:
+      - VPS53
+      - NLRP12
+    Copy Number:
+      - NBPF11 (Loss)
+      - PDPR (Loss)
+      - MIR483 (Gain)
+      - INS-IGF2 (Gain)
+      - IGF2-AS (Gain)
+    Methylation:
+      - DOCK3
+      - ZEB1
+      - MIR192
+      - MIR194-2
+      - MIR4648
+    RNA:
+      - APOBEC1
+      - HNF4A
+    Gene Set:
+      - IPA_MSX1_DN
+    Protein:
+      - TIGAR
+      - Syk
+      - CDK1
+      - TAZ
+      - Caveolin-1
+    Metabolite:
+      - betaine
+      - lactate
+      - C40:6 PC
+      - C38:5 PC
+    RNAi:
+      - PIK3CA
+      - YAP1
+      - BRAF
+      - GATA6
+      - KRAS
+      - TCF7L2
+      - CTNNB1
+    CRISPR:
+      - GATA6
+      - SOX9
+      - BRAF
+      - HNF4A
+      - HNF1B
+      - CTNNB1
+      - TCF7L2
+    Binary Information:
+      - (Primary Disease) Colon/Colorectal Cancer
+      - (Primary Disease) Gastric Cancer
+  F10:
+    KRAS Factor:
+      - HNF1-PAX8
+    Mutation:
+      - NARG2
+      - ITGB2
+      - CCDC169
+      - SGMS2
+      - NRDE2
+    RNA:
+      - NREP
+    Gene Set:
+      - IPA_NFIB_UP
+    Protein:
+      - MIG-6
+      - EGFR
+      - CD20
+    Metabolite:
+      - asparagine
+    RNAi:
+      - PAX8
+      - HNF1B
+      - ACOX1
+      - KRAS
+    CRISPR:
+      - PEX19
+      - PEX14
+      - PEX1
+      - PEX26
+      - PEX5
+      - PEX13
+      - PEX10
+      - HSD17B4
+      - PEX2
+      - PEX3
+      - PEX12
+      - PEX6
+      - ACOX1
+    NP24:
+      - Erlotinib
+      - ZD-6474
+    Binary Information:
+      - (Subtype Disease) Non-Small Cell Lung Cancer (NSCLC), Adenocarcinoma
+  F11:
+    KRAS Factor:
+      - BRAF-MAPK
+    Mutation:
+      - BRAF
+      - RBM42
+      - GPR141
+      - MSL3
+      - ZNF639
+    Copy Number:
+      - MITF (Gain)
+      - NRP2 (Gain)
+      - STAT1 (Loss)
+      - RASA4 (Gain)
+    Methylation:
+      - SOX10
+      - FAM102A
+    RNA:
+      - OR5J2
+    Gene Set:
+      - IPA_MYRF_UP
+      - IPA_BRCA2_DN
+    Protein:
+      - NDRG1_pT346
+      - MEK1_pS217_S221
+      - Akt
+      - PTEN
+      - ATM
+    RNAi:
+      - MAPK1
+      - MITF
+      - MDM2
+      - BRAF
+      - SOX10
+    CRISPR:
+      - SOX10
+      - MAPK1
+      - DUSP4
+      - MDM2
+      - BRAF
+    NP24:
+      - AZD6244
+      - PLX4720
+    CTRP:
+      - betulinic acid
+      - PLX-4720
+      - compound 1B
+    Binary Information:
+      - (Primary Disease) Skin Cancer
+      - (Primary Disease) Sarcoma
+      - (Subtype Disease) Endometrial Adenocarcinoma
+  F12:
+    KRAS Factor:
+      - ERBB3-PI3K
+    Mutation:
+      - HIST1H4D
+      - PRCC
+      - PAG1
+      - PSTK
+    Copy Number:
+      - LINC00674 (Gain)
+      - BPTF (Gain)
+    Methylation:
+      - GSTP1
+      - MAPK12
+      - MIR6852
+      - MIR5582
+    RNA:
+      - CYP4Z2P
+      - CREB3L4
+      - TGFB1
+      - APOBEC3C
+      - SLC16A1
+    Gene Set:
+      - CHARAFE_BREAST_CANCER_LUMINAL_VS_BASAL_UP
+      - chr17q24
+    Protein:
+      - AR
+      - GATA3
+      - ER-alpha
+      - HER2
+      - HER3_pY1289_Caution
+    Metabolite:
+      - lauroylcarnitine
+      - myristoylcarnitine
+      - glutamate
+      - beta-alanine
+      - C20:4 LPE
+    RNAi:
+      - PIK3CA
+      - CDK4
+      - ERBB3
+      - ESR1
+      - GATA3
+      - SPDEF
+      - FOXA1
+    CRISPR:
+      - PIK3CA
+      - CDK4
+      - ERBB3
+      - ESR1
+      - GATA3
+      - SPDEF
+      - FOXA1
+    NP24:
+      - Lapatinib
+    CTRP:
+      - gefitinib
+      - neratinib
+      - MK-0752
+      - ibrutinib
+    Binary Information:
+      - (Primary Disease) Breast Cancer
+  F13:
+    Copy Number:
+      - CAMK2G (Loss)
+      - JMJD1C (Loss)
+    Methylation:
+      - NOTCH1
+    Gene Set:
+      - HOLLEMAN_VINCRISTINE_RESISTANCE_ALL_DN
+    RNAi:
+      - IRF4
+    CRISPR:
+      - PSORS1C2
+    CTRP:
+      - BRD-K16147474
+  F14:
+    Mutation:
+      - ZNF232
+      - LRRC24
+      - BCAR1
+    Copy Number:
+      - DOCK4 (Gain)
+      - ZNF277 (Gain)
+    Methylation:
+      - STAT5B
+      - BRD1
+    Protein:
+      - G6PD
+    Metabolite:
+      - C48:1 TAG
+      - C46:1 TAG
+      - C52:2 TAG
+      - heptanoylcarnitine
+      - C50:2 TAG
+      - C52:1 TAG
+      - C50:1 TAG
+    RNAi:
+      - AKT1
+      - HNF1B
+      - EGFR
+      - PIK3CB
+    CRISPR:
+      - RAN
+  F15:
+    Mutation:
+      - GZMH
+    Methylation:
+      - SLC43A2
+    RNA:
+      - TMEM260
+      - TMEM97
+    Gene Set:
+      - CHAN_INTERFERON_PRODUCING_DENDRITIC_CELL
+    Protein:
+      - STAT3_pY705
+      - Shc_pY317
+      - SHP-2_pY542_Caution
+      - beta-Catenin
+    Metabolite:
+      - C56:8 TAG
+      - C58:8 TAG
+      - carnosine
+      - creatinine
+    RNAi:
+      - KRAS
+    CRISPR:
+      - IKZF1
+      - STAT3
+    NP24:
+      - PF2341066
+    CTRP:
+      - ruxolitinib
+      - NVP-TAE684
+    Binary Information:
+      - (Primary Disease) Lymphoma
+    Growth Mode:
+      - Attached and Suspended
+  F16:
+    KRAS Factor:
+      - EMT
+      - TNF-NFKB-YAP
+    Mutation:
+      - OR4A5
+    Gene Set:
+      - IPA_HOXB1_UP
+    Protein:
+      - AR
+      - PR
+    Metabolite:
+      - trimethylamine-N-oxide
+    RNAi:
+      - FGFR1
+    CRISPR:
+      - OR8J1
+      - OR5B21
+      - OR9G1
+      - OR5D18
+      - OR5L1
+      - SLC5A10
+  F17:
+    Methylation:
+      - AKR7L
+    RNA:
+      - CDKN2A
+    Gene Set:
+      - OHM_EMBRYONIC_CARCINOMA_UP
+    RNAi:
+      - FOXA1
+      - DBH
+    CRISPR:
+      - PRDX1
+  F18:
+    Mutation:
+      - KAT2A
+    RNA:
+      - CDKN2A
+    Gene Set:
+      - IPA_NFIB_UP
+    Protein:
+      - NF2_Caution
+    Metabolite:
+      - C54:7 TAG
+      - C56:8 TAG
+    RNAi:
+      - GNAS
+      - ASNS
+    CRISPR:
+      - PLEK
+      - CPPED1
+    NP24:
+      - AZD0530
+    Binary Information:
+      - (Subtype Disease) Carcinoma
+  F19:
+    KRAS Factor:
+      - MYC-E2F
+    Gene Set:
+      - BENPORATH_PRC2_TARGETS
+    Metabolite:
+      - C50:0 TAG
+      - C46:0 TAG
+    RNAi:
+      - SMARCA2
+    CRISPR:
+      - ECM1
+      - GJA5
+      - SELENBP1
+    NP24:
+      - PLX4720
 
 # ==============================================================================
 h_cluster_summary:
