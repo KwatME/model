@@ -153,7 +153,7 @@ nmf_ks:
   - 31
   - 32
 nmf_n_clustering:                                 10
-nmf_k:                                            19
+nmf_k:                                            12
 
 # ==============================================================================
 hcc_ks:
@@ -189,8 +189,8 @@ hcc_ks:
   - 31
   - 32
 hcc_n_clustering:                                 100
-w_hcc_k:                                          19
-h_hcc_k:                                          19
+w_hcc_k:                                          12
+h_hcc_k:                                          12
 
 # ==============================================================================
 n_required_for_match_function:                    0.64
@@ -204,15 +204,15 @@ gps_map_caotic_h_element_fraction_to_drop:        0.2
 
 # ==============================================================================
 gps_map_w_n_pull:
-gps_map_w_pull_power:                             2.4
-gps_map_w_element_marker_size:                    13
-gps_map_w_bandwidth_factor:                       2.4
+gps_map_w_pull_power:                             3.2
+gps_map_w_element_marker_size:                    16
+gps_map_w_bandwidth_factor:                       3.2
 
 # ==============================================================================
 gps_map_h_n_pull:
-gps_map_h_pull_power:                             2.4
-gps_map_h_element_marker_size:                    13
-gps_map_h_bandwidth_factor:                       2.4
+gps_map_h_pull_power:                             3.2
+gps_map_h_element_marker_size:                    16
+gps_map_h_bandwidth_factor:                       3.2
 
 # ==============================================================================
 feature_data:
