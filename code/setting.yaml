@@ -378,7 +378,7 @@ h_summary:
       - CAD
     Protein:
       - Claudin-7
-      - Heregulin 
+      - Heregulin
   F4:
     CTRP:
       - birinapant
@@ -407,9 +407,9 @@ h_summary:
       - TP63
     Protein:
       - Claudin-7
-      - Heregulin 
+      - Heregulin
     Gene Set:
-      - JI_CARCINOGENESIS_BY_KRAS_AND_STK11_UP 
+      - JI_CARCINOGENESIS_BY_KRAS_AND_STK11_UP
     RNA:
       - KRT5
       - FGFR1
@@ -428,7 +428,7 @@ h_summary:
       - decitabine
       - cytarabine hydrochloride
       - ruxolitinib
-      - nutlin-3 
+      - nutlin-3
     CRISPR:
       - MDM2
       - MDM4
@@ -436,7 +436,7 @@ h_summary:
       - MDM2
       - MDM4
     Protein:
-      - MDMX_MDM4(BetIHC-00108)_Caution 
+      - MDMX_MDM4(BetIHC-00108)_Caution
       - Bax
       - p14
     RNA:
@@ -464,7 +464,7 @@ h_summary:
     RNA:
       - AXL
     Copy Number:
-      - KRAS (Gain) 
+      - KRAS (Gain)
     Mutation:
       - KRAS
   F9:
@@ -607,7 +607,7 @@ h_summary:
       - MYCN (Gain)
   F15:
     KRAS Factor:
-      - EMT 
+      - EMT
     Binary Information:
       - (primary_site) central_nervous_system
     CTRP:
@@ -623,7 +623,7 @@ h_summary:
       - RAN
       - FGFR1
     Protein:
-      - p21 
+      - p21
       - Fibronectin
       - PAI-1
       - E-Cadherin
@@ -658,7 +658,7 @@ h_summary:
     CRISPR:
       - MRPS33
     Protein:
-      - p53_Caution 
-      
+      - p53_Caution
+
 # ==============================================================================
 h_cluster_summary:
