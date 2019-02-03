@@ -1,6 +1,6 @@
 # ==============================================================================
-feature_x_sample_file_path:                       ../data/crispr.gene_x_cell_line.tsv
-feature_x_sample_alias:                           DepMap CRISPR (19.02.02)
+feature_x_sample_file_path:                       ../data/crispr.gene_x_not_leukemia_myeloma_lymphoma_cell_line.tsv
+feature_x_sample_alias:                           DepMap CRISPR not Leukemia Myeloma Lymphoma (19.02.02)
 feature_x_sample_value_name:                      Viability
 feature_alias:                                    Gene
 sample_alias:                                     Cell Line
@@ -18,14 +18,14 @@ output_directory_path:                            ../output
 plotly_directory_path:                            #Cellular Context/
 
 # ==============================================================================
-plot_heat_map_max_size:                           240000
-plot_distributions_max_size:                      24000
-plot_rug_max_size:                                2400
-plot_cluster_max_size:                            2400
+plot_heat_map_max_size:                           640000
+plot_distributions_max_size:                      64000
+plot_rug_max_size:                                6400
+plot_cluster_max_size:                            1600
 plot_std:                                         2.4
 
 # ==============================================================================
-n_job:                                            32
+n_job:                                            33
 
 # ==============================================================================
 features_to_drop:
@@ -220,15 +220,54 @@ sample_data:
     file_path:                                    ../data/nmf_k9_h.tsv
     type:                                         continuous
     indices:                                      all
-  Mutation:
-    file_path:                                    ../data/mutation.gene_x_cell_line.binary.tsv
+  Growth Mode:
+    file_path:                                    ../data/growth_mode_x_cell_line.tsv
     type:                                         binary
-  Copy Number:
-    file_path:                                    ../data/copy_number.gene_loss_gain_x_cell_line.tsv
+    indices:                                      all
+  Binary Information:
+    file_path:                                    ../data/binary_information_x_cell_line.tsv
     type:                                         binary
-  Methylation:
-    file_path:                                    ../data/methylation.gene_x_cell_line.tsv
+    indices:
+      - (DepMap) Is Fibroblast
+      - (smoker) y
+  CTRP:
+    file_path:                                    ../data/ctrp_2g.compound_x_cell_line.tsv
     type:                                         continuous
+    indices:
+      - SB-743921
+      - 1S3R-RSL-3
+      - austocystin D
+      - AZD4547
+      - erastin
+      - ML162
+      - ML210
+      - nintedanib
+      - selumetinib
+      - YM-155
+      - GMX-1778
+      - bortezomib
+  NP24:
+    file_path:                                    ../data/np24.compound_x_cell_line.tsv
+    type:                                         continuous
+  CRISPR:
+    file_path:                                    ../data/crispr.gene_x_cell_line.tsv
+    type:                                         continuous
+  RNAi:
+    file_path:                                    ../data/rnai.gene_x_cell_line.tsv
+    type:                                         continuous
+  Metabolite:
+    file_path:                                    ../data/metabolite_x_cell_line.log.tsv
+    type:                                         continuous
+  Protein:
+    file_path:                                    ../data/rppa.protein_x_cell_line.tsv
+    type:                                         continuous
+  Gene Set:
+    file_path:                                    ../data/gene_set_x_cell_line.tsv
+    type:                                         continuous
+    indices:
+      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
+      - HALLMARK_TNFA_SIGNALING_VIA_NFKB
+      - HALLMARK_ANGIOGENESIS
   RNA:
     file_path:                                    ../data/rna.gene_x_cell_line.log.tsv
     type:                                         continuous
@@ -275,54 +314,15 @@ sample_data:
       - TP53
       - YAP1
       - ZEB1
-  Gene Set:
-    file_path:                                    ../data/gene_set_x_cell_line.tsv
+  Methylation:
+    file_path:                                    ../data/methylation.gene_x_cell_line.tsv
     type:                                         continuous
-    indices:
-      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
-      - HALLMARK_TNFA_SIGNALING_VIA_NFKB
-      - HALLMARK_ANGIOGENESIS
-  Protein:
-    file_path:                                    ../data/rppa.protein_x_cell_line.tsv
-    type:                                         continuous
-  Metabolite:
-    file_path:                                    ../data/metabolite_x_cell_line.log.tsv
-    type:                                         continuous
-  RNAi:
-    file_path:                                    ../data/rnai.gene_x_cell_line.tsv
-    type:                                         continuous
-  CRISPR:
-    file_path:                                    ../data/crispr.gene_x_cell_line.tsv
-    type:                                         continuous
-  NP24:
-    file_path:                                    ../data/np24.compound_x_cell_line.tsv
-    type:                                         continuous
-  CTRP:
-    file_path:                                    ../data/ctrp_2g.compound_x_cell_line.tsv
-    type:                                         continuous
-    indices:
-      - SB-743921
-      - 1S3R-RSL-3
-      - austocystin D
-      - AZD4547
-      - erastin
-      - ML162
-      - ML210
-      - nintedanib
-      - selumetinib
-      - YM-155
-      - GMX-1778
-      - bortezomib
-  Binary Information:
-    file_path:                                    ../data/binary_information_x_cell_line.tsv
+  Copy Number:
+    file_path:                                    ../data/copy_number.gene_loss_gain_x_cell_line.tsv
     type:                                         binary
-    indices:
-      - (DepMap) Is Fibroblast
-      - (smoker) y
-  Growth Mode:
-    file_path:                                    ../data/growth_mode_x_cell_line.tsv
+  Mutation:
+    file_path:                                    ../data/mutation.gene_x_cell_line.binary.tsv
     type:                                         binary
-    indices:                                      all
 
 # ==============================================================================
 plot_only_columns_shared_by_target_and_all_data:
@@ -331,32 +331,32 @@ plot_only_columns_shared_by_target_and_all_data:
 h_summary:
   KRAS Factor:
     -
-  Mutation:
-    -
-  Copy Number:
-    -
-  Methylation:
-    -
-  RNA:
-    -
-  Gene Set:
-    -
-  Protein:
-    -
-  Metabolite:
-    -
-  RNAi:
-    -
-  CRISPR:
-    -
-  NP24:
-    -
-  CTRP:
+  Growth Mode:
     -
   Binary Information:
     -
-  Growth Mode:
+  CTRP:
     -
-  
+  NP24:
+    -
+  CRISPR:
+    -
+  RNAi:
+    -
+  Metabolite:
+    -
+  Protein:
+    -
+  Gene Set:
+    -
+  RNA:
+    -
+  Methylation:
+    -
+  Copy Number:
+    -
+  Mutation:
+    -
+
 # ==============================================================================
 h_cluster_summary:
