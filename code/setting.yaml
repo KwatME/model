@@ -25,7 +25,7 @@ plot_cluster_max_size:                            1600
 plot_std:                                         2.4
 
 # ==============================================================================
-n_job:                                            33
+n_job:                                            16
 
 # ==============================================================================
 features_to_drop:
@@ -54,6 +54,9 @@ features_to_peek:
   - BRCA2
   - CDK1
   - CDK2
+  - CDK4
+  - CDK6
+  - CDKN1A
   - CTNNB1
   - EGFR
   - ERBB2
@@ -150,7 +153,7 @@ nmf_ks:
   - 31
   - 32
 nmf_n_clustering:                                 10
-nmf_k:                                            16
+nmf_k:                                            19
 
 # ==============================================================================
 hcc_ks:
@@ -186,8 +189,8 @@ hcc_ks:
   - 31
   - 32
 hcc_n_clustering:                                 100
-w_hcc_k:                                          16
-h_hcc_k:                                          16
+w_hcc_k:                                          19
+h_hcc_k:                                          19
 
 # ==============================================================================
 n_required_for_match_function:                    0.64
@@ -201,14 +204,14 @@ gps_map_caotic_h_element_fraction_to_drop:        0.2
 
 # ==============================================================================
 gps_map_w_n_pull:
-gps_map_w_pull_power:                             2
-gps_map_w_element_marker_size:                    10
+gps_map_w_pull_power:                             2.4
+gps_map_w_element_marker_size:                    13
 gps_map_w_bandwidth_factor:                       2.4
 
 # ==============================================================================
 gps_map_h_n_pull:
-gps_map_h_pull_power:                             2
-gps_map_h_element_marker_size:                    16
+gps_map_h_pull_power:                             2.4
+gps_map_h_element_marker_size:                    13
 gps_map_h_bandwidth_factor:                       2.4
 
 # ==============================================================================
@@ -246,9 +249,6 @@ sample_data:
       - YM-155
       - GMX-1778
       - bortezomib
-  NP24:
-    file_path:                                    ../data/np24.compound_x_cell_line.tsv
-    type:                                         continuous
   CRISPR:
     file_path:                                    ../data/crispr.gene_x_cell_line.tsv
     type:                                         continuous
@@ -280,6 +280,9 @@ sample_data:
       - BRCA2
       - CDK1
       - CDK2
+      - CDK4
+      - CDK6
+      - CDKN1A
       - CTNNB1
       - EGFR
       - ERBB2
@@ -329,34 +332,333 @@ plot_only_columns_shared_by_target_and_all_data:
 
 # ==============================================================================
 h_summary:
-  KRAS Factor:
-    -
-  Growth Mode:
-    -
-  Binary Information:
-    -
-  CTRP:
-    -
-  NP24:
-    -
-  CRISPR:
-    -
-  RNAi:
-    -
-  Metabolite:
-    -
-  Protein:
-    -
-  Gene Set:
-    -
-  RNA:
-    -
-  Methylation:
-    -
-  Copy Number:
-    -
-  Mutation:
-    -
-
+  F0:
+    Binary Information:
+      - (primary_site) central_nervous_system
+    CTRP:
+      - ruxolitinib
+    Gene Set:
+      - IPA_NFIB_UP
+  F1:
+    KRAS Factor:
+      - RAS-WNT-PI3K
+      - MYC-E2F
+    CTRP:
+      - spautin-1
+      - BRD-K97651142
+    RNAi:
+      - CTNNB1
+    Protein:
+      - CDK1
+    Gene Set:
+      - REACTOME_INTRINSIC_PATHWAY
+      - REACTOME_FGFR4_LIGAND_BINDING_AND_ACTIVATION
+  F2:
+    KRAS Factor:
+      - KRAS-AP1
+    CTRP:
+      - ruxolitinib
+    RNAi:
+      - CTNNB1
+    Protein:
+      - Heregulin
+    Methylation:
+      - IRF7
+      - ALOX12
+  F3:
+    KRAS Factor:
+      - RAS-WNT-PI3K
+      - ERBB3-PI3K
+    Binary Information:
+      - (primary_site) breast
+    CRISPR:
+      - CAD
+      - ATIC
+    RNAi:
+      - CAD
+    Protein:
+      - Claudin-7
+      - Heregulin 
+  F4:
+    CTRP:
+      - birinapant
+    RNAi:
+      - CDK2
+      - KRAS
+      - SMARCA2
+  F5:
+    KRAS Factor:
+      - KRAS-AP1
+    Binary Information:
+      - (primary_site) upper_aerodigestive_tract
+    CTRP:
+      - gefitinib
+      - erlotinib
+      - ibrutinib
+      - afatinib
+    CRISPR:
+      - ERBB2
+      - EGFR
+      - ERBB3
+      - TP63
+    RNAi:
+      - ERBB3
+      - EGFR
+      - TP63
+    Protein:
+      - Claudin-7
+      - Heregulin 
+    Gene Set:
+      - JI_CARCINOGENESIS_BY_KRAS_AND_STK11_UP 
+    RNA:
+      - KRT5
+      - FGFR1
+    Methylation:
+      - FGF1
+      - ALOX12
+    Copy Number:
+      - FGF3 (Gain)
+      - FGF4 (Gain)
+      - FGF19 (Gain)
+  F6:
+    CRISPR:
+      - IL18
+  F7:
+    CTRP:
+      - decitabine
+      - cytarabine hydrochloride
+      - ruxolitinib
+      - nutlin-3 
+    CRISPR:
+      - MDM2
+      - MDM4
+    RNAi:
+      - MDM2
+      - MDM4
+    Protein:
+      - MDMX_MDM4(BetIHC-00108)_Caution 
+      - Bax
+      - p14
+    RNA:
+      - CDKN1A
+      - MDM2
+    Mutation:
+      - TP53
+  F8:
+    KRAS Factor:
+      - TNF-NFKB-YAP
+    Binary Information:
+      - (primary_site) pancreas
+    CRISPR:
+      - ITGAV
+      - TEAD1
+      - KRAS
+    RNAi:
+      - ITGAV
+      - TP53
+      - KRAS
+    Protein:
+      - Transglutaminase
+    Gene Set:
+      - SENESE_HDAC2_TARGETS_UP
+    RNA:
+      - AXL
+    Copy Number:
+      - KRAS (Gain) 
+    Mutation:
+      - KRAS
+  F9:
+    KRAS Factor:
+      - RAS-WNT-PI3K
+    Binary Information:
+      - (primary_site) large_intestine
+    CTRP:
+      - ibrutinib
+    CRISPR:
+      - KRAS
+      - HNF4A
+      - CTNNB1
+    RNAi:
+      - MAGEA11
+      - FOXA1
+      - YAP1
+      - PIK3CA
+      - CTNNB1
+    Protein:
+      - Claudin-7
+      - E-Cadherin
+      - TIGAR
+      - CDK1
+      - HER3
+      - HER2
+      - N-Cadherin
+      - PAI-1
+      - Heregulin
+      - TAZ
+    Gene Set:
+      - CHARAFE_BREAST_CANCER_LUMINAL_VS_MESENCHYMAL_UP
+    RNA:
+      - GPX2
+      - IRF6
+    Methylation:
+      - ZEB1
+    Copy Number:
+      - MAPK4 (Loss)
+    Mutation:
+      - KRAS
+  F10:
+    KRAS Factor:
+      - HNF1-PAX8
+    Binary Information:
+      - (primary_site) kidney
+    CTRP:
+      - zebularine
+    CRISPR:
+      - MDM2
+      - HNF1B
+      - PAX8
+    RNAi:
+      - AR
+      - PAX8
+      - HNF1B
+    Protein:
+      - PEA15_pS116
+    Gene Set:
+      - IPA_NR2F2_UP
+      - PID_ATR_PATHWAY
+    Mutation:
+      - VHL
+  F11:
+    CTRP:
+      - necrostatin-1
+    CRISPR:
+      - PEX5
+      - PEX12
+      - ACOX1
+      - PEX6
+  F12:
+    KRAS Factor:
+      - BRAF-MAPK
+    Binary Information:
+      - (Primary Disease) Skin Cancer
+    CTRP:
+      - PLX-4720
+    CRISPR:
+      - MAPK1
+      - ZEB2
+      - BRAF
+      - SOX10
+      - MITF
+    RNAi:
+      - ZEB2
+      - MDM2
+      - MAPK1
+      - NRAS
+      - MITF
+      - BRAF
+      - SOX10
+    Protein:
+      - STAT5-alpha
+      - HER3
+      - ATM
+      - E-Cadherin
+      - Claudin-7
+    RNA:
+      - PMEL
+    Methylation:
+      - SOX10
+    Copy Number:
+      - MITF (Gain)
+    Mutation:
+      - BRAF
+  F13:
+    CTRP:
+      - birinapant
+  F14:
+    KRAS Factor:
+      - MYC
+      - MYC-E2F
+    Binary Information:
+      - (primary_site) autonomic_ganglia
+      - (primary_site) bone
+    CTRP:
+      - alisertib
+      - BI-2536
+      - cytarabine hydrochloride
+      - crizotinib
+      - barasertib
+    CRISPR:
+      - MDM2
+      - MYCN
+      - HDAC2
+    Protein:
+      - SF2
+      - c-Kit
+      - Stathmin
+      - Bcl-2
+      - Smad4
+      - HER2
+      - YAP_pS127_Caution
+      - p62
+    Gene Set:
+      - REACTOME_ACETYLCHOLINE_BINDING_AND_DOWNSTREAM_EVENTS
+      - VERHAAK_GLIOBLASTOMA_PRONEURAL
+    Copy Number:
+      - MYCN (Gain)
+  F15:
+    KRAS Factor:
+      - EMT 
+    Binary Information:
+      - (primary_site) central_nervous_system
+    CTRP:
+      - cabozantinib
+      - compound 1B
+      - AZD4547
+    CRISPR:
+      - MET
+      - ITGAV
+      - JUN
+      - FGFR1
+    RNAi:
+      - RAN
+      - FGFR1
+    Protein:
+      - p21 
+      - Fibronectin
+      - PAI-1
+      - E-Cadherin
+      - Claudin-7
+    Gene Set:
+      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
+    RNA:
+      - VIM
+    Mutation:
+      - KRAS
+  F16:
+    Binary Information:
+      - (primary_site) endometrium
+    CTRP:
+      - 16-beta-bromoandrosterone
+    CRISPR:
+      - RAN
+    RNAi:
+      - NFKBIE
+      - FOXA1
+      - SOX10
+      - MDM4
+      - BRAF
+      - MITF
+      - MDM2
+  F17:
+    CRISPR:
+      - ADAT3
+  F18:
+    KRAS Factor:
+      - MYC-E2F
+    CRISPR:
+      - MRPS33
+    Protein:
+      - p53_Caution 
+      
 # ==============================================================================
 h_cluster_summary:
