@@ -25,7 +25,7 @@ plot_cluster_max_size:                            1600
 plot_std:                                         2.4
 
 # ==============================================================================
-n_job:                                            16
+n_job:                                            8
 
 # ==============================================================================
 features_to_drop:
@@ -249,6 +249,9 @@ sample_data:
       - YM-155
       - GMX-1778
       - bortezomib
+  NP24:
+    file_path:                                    ../data/np24.compound_x_cell_line.tsv
+    type:                                         continuous
   CRISPR:
     file_path:                                    ../data/crispr.gene_x_cell_line.tsv
     type:                                         continuous
@@ -333,12 +336,22 @@ plot_only_columns_shared_by_target_and_all_data:
 # ==============================================================================
 h_summary:
   F0:
-    Binary Information:
-      - (primary_site) central_nervous_system
+    KRAS Factor:
+      - MYC-E2F
     CTRP:
-      - ruxolitinib
+      - zebularine
+    CRISPR:
+      - NARS2
+      - SSBP1
+      - DAP3
+    RNAi:
+      - EPN2
+      - FCRL1
+      - DOPEY2
+    Protein:
+      - p53_Caution
     Gene Set:
-      - IPA_NFIB_UP
+      - IPA_HDAC10_DN
   F1:
     KRAS Factor:
       - RAS-WNT-PI3K
@@ -346,25 +359,40 @@ h_summary:
     CTRP:
       - spautin-1
       - BRD-K97651142
+    CRISPR:
+      - NDUFA8
+      - NDUFC2
     RNAi:
       - CTNNB1
+      - COX4I1
+      - MRPL38
     Protein:
       - CDK1
     Gene Set:
       - REACTOME_INTRINSIC_PATHWAY
       - REACTOME_FGFR4_LIGAND_BINDING_AND_ACTIVATION
+    RNA:
+      - S100A16
   F2:
     KRAS Factor:
-      - KRAS-AP1
+      - MYC
+    Binary Information:
+      - (primary_site) autonomic_ganglia
+      - (primary_site) bone
     CTRP:
-      - ruxolitinib
-    RNAi:
-      - CTNNB1
+      - 16-beta-bromoandrosterone
+    CRISPR:
+      - MOK
+      - RGPD6
+      - MTRNR2L8
     Protein:
-      - Heregulin
-    Methylation:
-      - IRF7
-      - ALOX12
+      - YAP_Caution
+    Gene Set:
+      - IPA_TFDP2_UP
+      - IPA_ACTR3_UP
+      - REACTOME_ACETYLCHOLINE_BINDING_AND_DOWNSTREAM_EVENTS
+    RNA:
+      - S100A16
   F3:
     KRAS Factor:
       - RAS-WNT-PI3K
@@ -373,19 +401,33 @@ h_summary:
       - (primary_site) breast
     CRISPR:
       - CAD
+      - PPAT
       - ATIC
     RNAi:
+      - OGDH
+      - ADSL
       - CAD
     Protein:
       - Claudin-7
       - Heregulin
+    RNA: 
+      - DZIP1
+      - GJC1
+      - BASP1
+    Methylation:
+      - RORA
+      - WNT9A
   F4:
+    Binary Information:
+      - (primary_site) central_nervous_system
+      - (primary_site) pancreas
     CTRP:
-      - birinapant
-    RNAi:
-      - CDK2
-      - KRAS
-      - SMARCA2
+      - ruxolitinib
+    CRISPR:
+      - TIMM9
+      - MRE11A
+      - ORC3
+      - TPRKB
   F5:
     KRAS Factor:
       - KRAS-AP1
@@ -398,7 +440,10 @@ h_summary:
       - afatinib
     CRISPR:
       - ERBB2
+      - GRHL2
+      - STX4
       - EGFR
+      - ITGA3
       - ERBB3
       - TP63
     RNAi:
@@ -407,27 +452,63 @@ h_summary:
       - TP63
     Protein:
       - Claudin-7
-      - Heregulin
+      - Rab25
+      - TSC1_Caution
+      - PKC-pan_BetaII_pS660
     Gene Set:
       - JI_CARCINOGENESIS_BY_KRAS_AND_STK11_UP
     RNA:
       - KRT5
-      - FGFR1
     Methylation:
-      - FGF1
       - ALOX12
-    Copy Number:
-      - FGF3 (Gain)
-      - FGF4 (Gain)
-      - FGF19 (Gain)
   F6:
+    KRAS Factor:
+      - RAS-WNT-PI3K
+      - ERBB3-PI3K
+    Binary Information:
+      - (primary_site) pancreas
+      - (primary_site) large_intestine
+      - (primary_site) lung
     CRISPR:
-      - IL18
+      - CTNNB1
+      - KRAS
+    RNAi:
+      - CTNNB1
+      - KRAS
+    Protein:
+      - Claudin-7
+      - E-Cadherin
+      - TIGAR
+      - CDK1
+      - HER2
+    Gene Set:
+      - IPA_ZEB1_DN
+    Methylation:
+      - ZEB1
   F7:
+    CTRP:
+      - necrostatin-1
+    CRISPR:
+      - ABCE1
+      - LCE1F
+    RNAi:
+      - ESM1
+      - SNRPG
+  F8:
+    KRAS Factor:
+      - MYC
+    Binary Information:
+      - (primary_site) soft_tissue
     CTRP:
       - decitabine
       - cytarabine hydrochloride
-      - ruxolitinib
+      - nutlin-3
+    CRISPR:
+      - MDM2
+      - MDM4
+    CTRP:
+      - decitabine
+      - cytarabine hydrochloride
       - nutlin-3
     CRISPR:
       - MDM2
@@ -437,76 +518,45 @@ h_summary:
       - MDM4
     Protein:
       - MDMX_MDM4(BetIHC-00108)_Caution
-      - Bax
-      - p14
     RNA:
-      - CDKN1A
       - MDM2
-    Mutation:
-      - TP53
-  F8:
-    KRAS Factor:
-      - TNF-NFKB-YAP
-    Binary Information:
-      - (primary_site) pancreas
-    CRISPR:
-      - ITGAV
-      - TEAD1
-      - KRAS
-    RNAi:
-      - ITGAV
-      - TP53
-      - KRAS
-    Protein:
-      - Transglutaminase
-    Gene Set:
-      - SENESE_HDAC2_TARGETS_UP
-    RNA:
-      - AXL
-    Copy Number:
-      - KRAS (Gain)
-    Mutation:
-      - KRAS
   F9:
     KRAS Factor:
-      - RAS-WNT-PI3K
+      - BRAF-MAPK
     Binary Information:
-      - (primary_site) large_intestine
+      - (primary_site) soft_tissue
+      - (Primary Disease) Skin Cancer
     CTRP:
-      - ibrutinib
+      - sotrastaurin
     CRISPR:
-      - KRAS
-      - HNF4A
-      - CTNNB1
+      - C1orf109
+      - TAMM41
     RNAi:
-      - MAGEA11
-      - FOXA1
-      - YAP1
-      - PIK3CA
-      - CTNNB1
-    Protein:
-      - Claudin-7
-      - E-Cadherin
-      - TIGAR
-      - CDK1
-      - HER3
-      - HER2
-      - N-Cadherin
-      - PAI-1
-      - Heregulin
-      - TAZ
-    Gene Set:
-      - CHARAFE_BREAST_CANCER_LUMINAL_VS_MESENCHYMAL_UP
-    RNA:
-      - GPX2
-      - IRF6
-    Methylation:
-      - ZEB1
-    Copy Number:
-      - MAPK4 (Loss)
-    Mutation:
-      - KRAS
+      - SOX10
+      - MITF
   F10:
+    KRAS Factor:
+      - EMT
+    Binary Information:
+      - (primary_site) central_nervous_system
+    CTRP:
+      - compound 1B
+      - AZD4547
+      - birinapant
+    CRISPR:
+      - FGFR1
+    RNAi:
+      - FGFR1
+    Protein:
+      - PAI-1
+      - PKC-alpha
+      - E-Cadherin
+      - Claudin-7
+    Gene Set:
+      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
+    RNA:
+      - AXL
+  F11:
     KRAS Factor:
       - HNF1-PAX8
     Binary Information:
@@ -514,151 +564,13 @@ h_summary:
     CTRP:
       - zebularine
     CRISPR:
-      - MDM2
       - HNF1B
       - PAX8
     RNAi:
-      - AR
       - PAX8
       - HNF1B
-    Protein:
-      - PEA15_pS116
     Gene Set:
       - IPA_NR2F2_UP
-      - PID_ATR_PATHWAY
-    Mutation:
-      - VHL
-  F11:
-    CTRP:
-      - necrostatin-1
-    CRISPR:
-      - PEX5
-      - PEX12
-      - ACOX1
-      - PEX6
-  F12:
-    KRAS Factor:
-      - BRAF-MAPK
-    Binary Information:
-      - (Primary Disease) Skin Cancer
-    CTRP:
-      - PLX-4720
-    CRISPR:
-      - MAPK1
-      - ZEB2
-      - BRAF
-      - SOX10
-      - MITF
-    RNAi:
-      - ZEB2
-      - MDM2
-      - MAPK1
-      - NRAS
-      - MITF
-      - BRAF
-      - SOX10
-    Protein:
-      - STAT5-alpha
-      - HER3
-      - ATM
-      - E-Cadherin
-      - Claudin-7
-    RNA:
-      - PMEL
-    Methylation:
-      - SOX10
-    Copy Number:
-      - MITF (Gain)
-    Mutation:
-      - BRAF
-  F13:
-    CTRP:
-      - birinapant
-  F14:
-    KRAS Factor:
-      - MYC
-      - MYC-E2F
-    Binary Information:
-      - (primary_site) autonomic_ganglia
-      - (primary_site) bone
-    CTRP:
-      - alisertib
-      - BI-2536
-      - cytarabine hydrochloride
-      - crizotinib
-      - barasertib
-    CRISPR:
-      - MDM2
-      - MYCN
-      - HDAC2
-    Protein:
-      - SF2
-      - c-Kit
-      - Stathmin
-      - Bcl-2
-      - Smad4
-      - HER2
-      - YAP_pS127_Caution
-      - p62
-    Gene Set:
-      - REACTOME_ACETYLCHOLINE_BINDING_AND_DOWNSTREAM_EVENTS
-      - VERHAAK_GLIOBLASTOMA_PRONEURAL
-    Copy Number:
-      - MYCN (Gain)
-  F15:
-    KRAS Factor:
-      - EMT
-    Binary Information:
-      - (primary_site) central_nervous_system
-    CTRP:
-      - cabozantinib
-      - compound 1B
-      - AZD4547
-    CRISPR:
-      - MET
-      - ITGAV
-      - JUN
-      - FGFR1
-    RNAi:
-      - RAN
-      - FGFR1
-    Protein:
-      - p21
-      - Fibronectin
-      - PAI-1
-      - E-Cadherin
-      - Claudin-7
-    Gene Set:
-      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
-    RNA:
-      - VIM
-    Mutation:
-      - KRAS
-  F16:
-    Binary Information:
-      - (primary_site) endometrium
-    CTRP:
-      - 16-beta-bromoandrosterone
-    CRISPR:
-      - RAN
-    RNAi:
-      - NFKBIE
-      - FOXA1
-      - SOX10
-      - MDM4
-      - BRAF
-      - MITF
-      - MDM2
-  F17:
-    CRISPR:
-      - ADAT3
-  F18:
-    KRAS Factor:
-      - MYC-E2F
-    CRISPR:
-      - MRPS33
-    Protein:
-      - p53_Caution
-
+      
 # ==============================================================================
 h_cluster_summary:
