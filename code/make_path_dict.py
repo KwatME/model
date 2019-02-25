@@ -1,29 +1,33 @@
+from os.path import expanduser
+
 from ccal import establish_path
 
 
 def make_path_dict(setting):
 
+    output_directory_path = expanduser(setting["output_directory_path"])
+
     path_dict = {}
 
     name = "feature_x_sample.processed.tsv"
 
-    path_dict[name] = "{}/{}".format(setting["output_directory_path"], name)
+    path_dict[name] = "{}/{}".format(output_directory_path, name)
 
     for name in ("feature_x_fit_parameter.tsv", "sample_x_fit_parameter.tsv"):
 
-        path_dict[name] = "{}/fit/{}".format(setting["output_directory_path"], name)
+        path_dict[name] = "{}/fit/{}".format(output_directory_path, name)
 
     for name in (
         "feature_x_sample.feature_context.tsv",
         "feature_x_sample.sample_context.tsv",
     ):
 
-        path_dict[name] = "{}/context/{}".format(setting["output_directory_path"], name)
+        path_dict[name] = "{}/context/{}".format(output_directory_path, name)
 
     for name in ("feature_x_sample.signal.tsv", "nmf/"):
 
         path_dict[name] = "{}/signal/{}/{}".format(
-            setting["output_directory_path"], setting["signal_type"], name
+            output_directory_path, setting["signal_type"], name
         )
 
     for w_or_h in ("w", "h"):
@@ -31,10 +35,7 @@ def make_path_dict(setting):
         for name in ("{}.tsv".format(w_or_h), "{}/".format(w_or_h)):
 
             path_dict[name] = "{}/signal/{}/nmf/{}/{}".format(
-                setting["output_directory_path"],
-                setting["signal_type"],
-                setting["nmf_k"],
-                name,
+                output_directory_path, setting["signal_type"], setting["nmf_k"], name
             )
 
         for name in ("match/", "gps_map/", "hcc/", "summary/"):
@@ -42,7 +43,7 @@ def make_path_dict(setting):
             path_dict[
                 "{}|{}".format(w_or_h, name)
             ] = "{}/signal/{}/nmf/{}/{}/{}".format(
-                setting["output_directory_path"],
+                output_directory_path,
                 setting["signal_type"],
                 setting["nmf_k"],
                 w_or_h,
@@ -56,7 +57,7 @@ def make_path_dict(setting):
         path_dict[
             "{}|{}".format(w_or_h, name)
         ] = "{}/signal/{}/nmf/{}/{}/hcc/{}/{}".format(
-            setting["output_directory_path"],
+            output_directory_path,
             setting["signal_type"],
             setting["nmf_k"],
             w_or_h,
@@ -69,7 +70,7 @@ def make_path_dict(setting):
             path_dict[
                 "{}|hcc|{}".format(w_or_h, name)
             ] = "{}/signal/{}/nmf/{}/{}/hcc/{}/{}".format(
-                setting["output_directory_path"],
+                output_directory_path,
                 setting["signal_type"],
                 setting["nmf_k"],
                 w_or_h,
@@ -80,12 +81,12 @@ def make_path_dict(setting):
     name = "gps_map.pickle.gz"
 
     path_dict[name] = "{}/signal/{}/nmf/{}/{}".format(
-        setting["output_directory_path"], setting["signal_type"], setting["nmf_k"], name
+        output_directory_path, setting["signal_type"], setting["nmf_k"], name
     )
 
     for name in ("summary/", "infer/"):
 
-        path_dict[name] = "{}/{}".format(setting["output_directory_path"], name)
+        path_dict[name] = "{}/{}".format(output_directory_path, name)
 
     for name, path in path_dict.items():
 
