@@ -1,1 +1,200 @@
-/media/kwatme/CarrotCake/project/ribosome/model_and_infer.gtex_v7_ribosomal_rna/setting.yaml
+# ==============================================================================
+feature_x_sample_file_path:                           /media/kwatme/CarrotCake/data/medulloblastoma/cho_et_al/gene_x_patient.tsv
+feature_x_sample_alias:                               RNA Medulloblastoma Cho et al (19.01.07)
+feature_x_sample_value_name:                          Expression
+feature_alias:                                        Gene
+sample_alias:                                         Patient
+
+# ==============================================================================
+output_directory_path:                                /media/kwatme/CarrotCake/project/model_and_infer.cho_et_al_rna_medulloblastoma/output
+plotly_directory_path:
+
+# ==============================================================================
+plot_heat_map_max_size:                               640000
+plot_distributions_max_size:                          64000
+plot_rug_max_size:                                    6400
+plot_cluster_max_size:                                3200
+plot_std:                                             3.2
+
+# ==============================================================================
+n_job:                                                6
+
+# ==============================================================================
+features_to_drop:
+samples_to_drop:
+nanize:
+drop_axis:
+max_na:
+min_n_not_na_unique_value:                            1
+shift_as_necessary_to_achieve_min_before_logging:     0<
+log_base:                                             2
+normalization_axis:                                   0
+normalization_method:                                 -0-
+clip_min:
+clip_max:
+
+# ==============================================================================
+select_gene_symbol:                                   yes
+
+# ==============================================================================
+features_to_peek:
+  - SHH
+  - MYC
+  - NOTCH1
+  - F2RL1
+  - ST14
+  - XIST
+
+# ==============================================================================
+samples_to_peek:
+
+# ==============================================================================
+signal_type:                                          context
+
+# ==============================================================================
+select_feature_automatically:                         yes
+select_feature_standard_deviation:                    0.24
+
+# ==============================================================================
+select_sample_automatically:                          no
+select_sample_standard_deviation:
+
+# ==============================================================================
+context_element_types:
+  - feature
+
+# ==============================================================================
+contexts:
+  - negative
+  - positive
+
+# ==============================================================================
+signal_normalization_axis:                            1
+signal_normalization_method:                          0-1
+
+# ==============================================================================
+nmf_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+nmf_n_clustering:                                     10
+nmf_k:                                                10
+
+# ==============================================================================
+hcc_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+hcc_n_clustering:                                     100
+w_hcc_k:                                              10
+h_hcc_k:                                              10
+
+# ==============================================================================
+n_required_for_match_function:                        0.64
+n_extreme:                                            32
+n_sampling:                                           0
+n_permutation:                                        0
+
+# ==============================================================================
+gps_map_caotic_w_element_fraction_to_drop:
+gps_map_caotic_h_element_fraction_to_drop:
+
+# ==============================================================================
+gps_map_w_n_pull:
+gps_map_w_pull_power:                                 2.4
+gps_map_w_element_marker_size:                        8
+gps_map_w_bandwidth_factor:                           6.4
+
+# ==============================================================================
+gps_map_h_n_pull:
+gps_map_h_pull_power:                                 1.6
+gps_map_h_element_marker_size:                        16
+gps_map_h_bandwidth_factor:                           3.2
+
+# ==============================================================================
+feature_data:
+
+# ==============================================================================
+sample_data:
+  RNA:
+    file_path:                                        /media/kwatme/CarrotCake/data/medulloblastoma/cho_et_al/gene_x_patient.log.tsv
+    type:                                             continuous
+    indices:
+      - SHH
+      - MYC
+      - NOTCH1
+      - F2RL1
+      - ST14
+      - XIST
+  Gene Set:
+    file_path:                                        /media/kwatme/CarrotCake/data/medulloblastoma/cho_et_al/gene_set_x_patient.tsv
+    type:                                             continuous
+    indices:
+      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
+      - HALLMARK_TNFA_SIGNALING_VIA_NFKB
+      - HALLMARK_ANGIOGENESIS
+  Subtype:
+    file_path:                                        /media/kwatme/CarrotCake/data/medulloblastoma/cho_et_al/subtype_x_patient.tsv
+    type:                                             binary
+    indices:                                          all
+
+# ==============================================================================
+plot_only_columns_shared_by_target_and_all_data:      no
+
+# ==============================================================================
+h_summary:
+
+# ==============================================================================
+h_cluster_summary:
+
+# ==============================================================================
+new_feature_x_sample_file_path:                       /media/kwatme/CarrotCake/data/medulloblastoma/pdx/rna/gene_x_pdx.tsv
+new_feature_x_sample_alias:                           RNA Medulloblastoma PDX
+new_sample_alias:                                     PDX
+
+# ==============================================================================
+new_inconsistent_feature_fraction_to_drop:
+
+# ==============================================================================
+new_features_to_drop:
+new_samples_to_drop:
+new_nanize:
+new_drop_axis:
+new_max_na:
+new_min_n_not_na_unique_value:                        1
+new_shift_as_necessary_to_achieve_min_before_logging: 0<
+new_log_base:                                         2
+new_normalization_axis:                               0
+new_normalization_method:                             -0-
+new_clip_min:
+new_clip_max:
