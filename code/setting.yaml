@@ -173,6 +173,95 @@ plot_only_columns_shared_by_target_and_all_data:      no
 
 # ==============================================================================
 h_summary:
+  F0:                                                 #SHH A
+    Subtype:
+      - SHH
+    RNA:
+      - FAM46A
+      - EP400
+    Gene Set:
+      - LEE_TARGETS_OF_PTCH1_AND_SUFU_UP
+      - GO_MITOTIC_G2_DNA_DAMAGE_CHECKPOINT
+      - BIOCARTA_SHH_PATHWAY
+  F1:                                                 # Photoreceptor
+    Subtype:
+      - Photoreceptor
+    RNA:
+      - GABRR1
+      - DFNB31
+    Gene Set:
+      - GO_PHOTOTRANSDUCTION_VISIBLE_LIGHT
+      - GO_PHOTORECEPTOR_OUTER_SEGMENT
+      - PID_RHODOPSIN_PATHWAY
+  F2:                                                 # Neuronal
+    Subtype:
+      - Neuronal
+    RNA:
+      - CACNG2
+      - GRM8
+    Gene Set:
+      - GO_DENDRITIC_SPINE_ORGANIZATION
+      - REACTOME_CLASS_C_3_METABOTROPIC_GLUTAMATE_PHEROMONE_RECEPTORS
+  F3:                                                 # WNT
+    Subtype:
+      - WNT
+    RNA:
+      - KIAA1509
+      - FZD10
+      - RNF43
+    Gene Set:
+      - ST_WNT_BETA_CATENIN_PATHWAY
+      - BCAT.100_UP.V1_UP
+      - PID_WNT_SIGNALING_PATHWAY
+  F4:                                                 # Homeobox Activation
+    RNA:
+      - F2RL1
+      - HOXB6
+      - SNTG1
+      - CSF3R
+      - JAK3
+    Gene Set:
+      - NABA_ECM_REGULATORS
+      - CHEN_HOXA5_TARGETS_9HR
+      - KEGG_JAK_STAT_SIGNALING_PATHWAY
+  F5:
+    Subtype:
+      - SHH
+    # RNA:
+    Gene Set:
+      - GO_RNA_PHOSPHODIESTER_BOND_HYDROLYSIS
+  F6:                                                 # MYC
+    Subtype:
+      - MYC
+    RNA:
+      - MYC
+    Gene Set:
+      - POMEROY_MEDULLOBLASTOMA_PROGNOSIS_DN
+      - IRITANI_MAD1_TARGETS_DN
+      - SCHLOSSER_MYC_TARGETS_AND_SERUM_RESPONSE_DN
+  F7:                                                 # Synaptic
+    Subtype:
+      - Mixed
+    RNA:
+      - GLRA2
+    Gene Set:
+      - GO_SYNAPTIC_SIGNALING
+      - REACTOME_TRANSMISSION_ACROSS_CHEMICAL_SYNAPSES
+  F8:
+    RNA:
+      - FGFR3
+      - SERPINI1
+    Gene Set:
+  F9:                                                 # SSH B
+    Subtype:
+      - SHH
+    RNA:
+      - ARHGEF7
+      - GRIA4
+    Gene Set:
+      - GO_CILIARY_TIP
+      - PID_HEDGEHOG_GLI_PATHWAY
+      - GO_CELL_PROJECTION_ASSEMBLY
 
 # ==============================================================================
 h_cluster_summary:
