@@ -173,7 +173,7 @@ plot_only_columns_shared_by_target_and_all_data:      no
 
 # ==============================================================================
 h_summary:
-  F0:                                                 #SHH A
+  F0:                                                 # SHH A
     Subtype:
       - SHH
     RNA:
@@ -193,15 +193,18 @@ h_summary:
       - GO_PHOTOTRANSDUCTION_VISIBLE_LIGHT
       - GO_PHOTORECEPTOR_OUTER_SEGMENT
       - PID_RHODOPSIN_PATHWAY
-  F2:                                                 # Neuronal
+  F2:                                                 # Neuronal MAPK Activation
     Subtype:
       - Neuronal
     RNA:
       - CACNG2
       - GRM8
+      - SNCAIP
+      - KRAS
     Gene Set:
-      - GO_DENDRITIC_SPINE_ORGANIZATION
-      - REACTOME_CLASS_C_3_METABOTROPIC_GLUTAMATE_PHEROMONE_RECEPTORS
+      - RAMJAUN_APOPTOSIS_BY_TGFB1_VIA_MAPK1
+      - REACTOME_SIGNALING_BY_FGFR1_FUSION_MUTANTS
+      - GO_ACTIVATION_OF_MAPKKK_ACTIVITY
   F3:                                                 # WNT
     Subtype:
       - WNT
@@ -227,7 +230,6 @@ h_summary:
   F5:
     Subtype:
       - SHH
-    # RNA:
     Gene Set:
       - GO_RNA_PHOSPHODIESTER_BOND_HYDROLYSIS
   F6:                                                 # MYC
@@ -243,15 +245,21 @@ h_summary:
     Subtype:
       - Mixed
     RNA:
-      - GLRA2
+      - MYCN
+      - CDK6
+      - SEMA3E
     Gene Set:
-      - GO_SYNAPTIC_SIGNALING
-      - REACTOME_TRANSMISSION_ACROSS_CHEMICAL_SYNAPSES
-  F8:
+      - GO_POSITIVE_REGULATION_OF_SYNAPSE_MATURATION
+      - GO_POSITIVE_REGULATION_OF_NEURON_MIGRATION
+  F8:                                                 # Axonal
     RNA:
       - FGFR3
       - SERPINI1
+      - OMG
+      - PLP1
     Gene Set:
+      - KIM_ALL_DISORDERS_OLIGODENDROCYTE_NUMBER_CORR_UP
+      - GO_AXON
   F9:                                                 # SSH B
     Subtype:
       - SHH
