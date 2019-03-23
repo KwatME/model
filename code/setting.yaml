@@ -14,10 +14,10 @@ plot_heat_map_max_size:                               640000
 plot_distributions_max_size:                          64000
 plot_rug_max_size:                                    6400
 plot_cluster_max_size:                                3200
-plot_std:                                             3.2
+plot_std:                                             2.4
 
 # ==============================================================================
-n_job:                                                6
+n_job:                                                1
 
 # ==============================================================================
 features_to_drop:
@@ -173,7 +173,8 @@ plot_only_columns_shared_by_target_and_all_data:      no
 
 # ==============================================================================
 h_summary:
-  F0:                                                 # SHH A
+  F0:
+    alias:                                            SHH A
     Subtype:
       - SHH
     RNA:
@@ -183,7 +184,8 @@ h_summary:
       - LEE_TARGETS_OF_PTCH1_AND_SUFU_UP
       - GO_MITOTIC_G2_DNA_DAMAGE_CHECKPOINT
       - BIOCARTA_SHH_PATHWAY
-  F1:                                                 # Photoreceptor
+  F1:
+    alias:                                            Photoreceptor
     Subtype:
       - Photoreceptor
     RNA:
@@ -193,7 +195,8 @@ h_summary:
       - GO_PHOTOTRANSDUCTION_VISIBLE_LIGHT
       - GO_PHOTORECEPTOR_OUTER_SEGMENT
       - PID_RHODOPSIN_PATHWAY
-  F2:                                                 # Neuronal MAPK Activation
+  F2:
+    alias:                                            Neuronal MAPK Activation
     Subtype:
       - Neuronal
     RNA:
@@ -205,7 +208,8 @@ h_summary:
       - RAMJAUN_APOPTOSIS_BY_TGFB1_VIA_MAPK1
       - REACTOME_SIGNALING_BY_FGFR1_FUSION_MUTANTS
       - GO_ACTIVATION_OF_MAPKKK_ACTIVITY
-  F3:                                                 # WNT
+  F3:
+    alias:                                            WNT
     Subtype:
       - WNT
     RNA:
@@ -216,7 +220,8 @@ h_summary:
       - ST_WNT_BETA_CATENIN_PATHWAY
       - BCAT.100_UP.V1_UP
       - PID_WNT_SIGNALING_PATHWAY
-  F4:                                                 # Homeobox Activation
+  F4:
+    alias:                                            Homeobox Activation
     RNA:
       - F2RL1
       - HOXB6
@@ -228,11 +233,13 @@ h_summary:
       - CHEN_HOXA5_TARGETS_9HR
       - KEGG_JAK_STAT_SIGNALING_PATHWAY
   F5:
+    alias:                                            SHH RNA Processing
     Subtype:
       - SHH
     Gene Set:
       - GO_RNA_PHOSPHODIESTER_BOND_HYDROLYSIS
-  F6:                                                 # MYC
+  F6:
+    alias:                                            MYC
     Subtype:
       - MYC
     RNA:
@@ -241,7 +248,8 @@ h_summary:
       - POMEROY_MEDULLOBLASTOMA_PROGNOSIS_DN
       - IRITANI_MAD1_TARGETS_DN
       - SCHLOSSER_MYC_TARGETS_AND_SERUM_RESPONSE_DN
-  F7:                                                 # Synaptic
+  F7:
+    alias:                                            Synaptic
     Subtype:
       - Mixed
     RNA:
@@ -251,7 +259,8 @@ h_summary:
     Gene Set:
       - GO_POSITIVE_REGULATION_OF_SYNAPSE_MATURATION
       - GO_POSITIVE_REGULATION_OF_NEURON_MIGRATION
-  F8:                                                 # Axonal
+  F8:
+    alias:                                            Axonal
     RNA:
       - FGFR3
       - SERPINI1
@@ -260,7 +269,8 @@ h_summary:
     Gene Set:
       - KIM_ALL_DISORDERS_OLIGODENDROCYTE_NUMBER_CORR_UP
       - GO_AXON
-  F9:                                                 # SSH B
+  F9:
+    alias:                                            SSH B
     Subtype:
       - SHH
     RNA:
@@ -270,9 +280,6 @@ h_summary:
       - GO_CILIARY_TIP
       - PID_HEDGEHOG_GLI_PATHWAY
       - GO_CELL_PROJECTION_ASSEMBLY
-
-# ==============================================================================
-h_cluster_summary:
 
 # ==============================================================================
 new_feature_x_sample_file_path:                       /media/kwatme/CarrotCake/data/medulloblastoma/pdx/rna/gene_x_pdx.tsv
