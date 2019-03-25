@@ -1,0 +1,152 @@
+# ==============================================================================
+max_na:                                           0.16
+
+# ==============================================================================
+features_to_peek:
+  - 1S3R-RSL-3
+  - austocystin D
+  - AZD4547
+  - erastin
+  - ML162
+  - ML210
+  - nintedanib
+  - selumetinib
+  - YM-155
+  - GMX-1778
+  - bortezomib
+
+# ==============================================================================
+context_element_types:
+  - feature
+  - sample
+
+# ==============================================================================
+contexts:
+  - negative
+
+# ==============================================================================
+feature_data:
+  Target:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/gene_symbol_of_protein_target_x_compound.tsv
+    type:                                         binary
+  Activity:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/target_or_activity_of_compound_x_compound.tsv
+    type:                                         binary
+  Status:
+    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/cpd_status_x_compound.tsv
+    type:                                         binary
+    indices:                                      all
+
+# ==============================================================================
+sample_data:
+  KRAS Factor:
+    file_path:         /media/kwatme/CarrotCake/data/nmf_k9_h.tsv
+    type:              continuous
+    indices:           all
+  Growth Mode:
+    file_path:         /media/kwatme/CarrotCake/data/growth_mode_x_cell_line.tsv
+    type:              binary
+    indices:           all
+  Binary Information:
+    file_path:         /media/kwatme/CarrotCake/data/binary_information_x_cell_line.tsv
+    type:              binary
+    indices:
+      - (DepMap) Is Fibroblast
+      - (smoker) y
+  CTRP:
+    file_path:         /media/kwatme/CarrotCake/data/ctrp_2g.compound_x_cell_line.tsv
+    type:              continuous
+    indices:
+      - SB-743921
+      - 1S3R-RSL-3
+      - austocystin D
+      - AZD4547
+      - erastin
+      - ML162
+      - ML210
+      - nintedanib
+      - selumetinib
+      - YM-155
+      - GMX-1778
+      - bortezomib
+  NP24:
+    file_path:         /media/kwatme/CarrotCake/data/np24.compound_x_cell_line.tsv
+    type:              continuous
+  CRISPR:
+    file_path:         /media/kwatme/CarrotCake/data/crispr.gene_x_cell_line.tsv
+    type:              continuous
+  RNAi:
+    file_path:         /media/kwatme/CarrotCake/data/rnai.gene_x_cell_line.tsv
+    type:              continuous
+  Metabolite:
+    file_path:         /media/kwatme/CarrotCake/data/metabolite_x_cell_line.log.tsv
+    type:              continuous
+  Protein:
+    file_path:         /media/kwatme/CarrotCake/data/rppa.protein_x_cell_line.tsv
+    type:              continuous
+  Gene Set:
+    file_path:         /media/kwatme/CarrotCake/data/gene_set_x_cell_line.tsv
+    type:              continuous
+    indices:
+      - HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION
+      - HALLMARK_TNFA_SIGNALING_VIA_NFKB
+      - HALLMARK_ANGIOGENESIS
+      - HALLMARK_ADIPOGENESIS
+  RNA:
+    file_path:         /media/kwatme/CarrotCake/data/rna.gene_x_cell_line.log.tsv
+    type:              continuous
+    indices:
+      - APC
+      - AR
+      - AXL
+      - BRAF
+      - BRCA1
+      - BRCA2
+      - CDK1
+      - CDK2
+      - CDK4
+      - CDK6
+      - CDKN1A
+      - CTNNB1
+      - EGFR
+      - ERBB2
+      - ERBB3
+      - ESR1
+      - F2RL1
+      - FAT1
+      - GNAS
+      - HER2
+      - HER3
+      - HNF4A
+      - IDH1
+      - KRAS
+      - KRT5
+      - MCAM
+      - MICAL2
+      - MTOR
+      - MYC
+      - NOTCH1
+      - NRAS
+      - PAX8
+      - PGR
+      - PIK3CA
+      - POLE
+      - PTEN
+      - SHH
+      - SOX10
+      - SRC
+      - ST14
+      - TERT
+      - TIGAR
+      - TP53
+      - YAP1
+      - ZEB1
+  Methylation:
+    file_path:         /media/kwatme/CarrotCake/data/methylation.gene_x_cell_line.tsv
+    type:              continuous
+  Copy Number:
+    file_path:         /media/kwatme/CarrotCake/data/copy_number.gene_loss_gain_x_cell_line.tsv
+    type:              binary
+  Mutation:
+    file_path:         /media/kwatme/CarrotCake/data/mutation.gene_x_cell_line.binary.tsv
+    type:              binary
