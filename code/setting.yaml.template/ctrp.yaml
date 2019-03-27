@@ -1,5 +1,5 @@
 # ==============================================================================
-max_na:                                           0.16
+max_na:                0.16
 
 # ==============================================================================
 features_to_peek:
@@ -27,15 +27,15 @@ contexts:
 # ==============================================================================
 feature_data:
   Target:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/gene_symbol_of_protein_target_x_compound.tsv
-    type:                                         binary
+    file_path:         /media/kwatme/CarrotCake/data/cell_line/ctrp/gene_symbol_of_protein_target_x_compound.tsv
+    type:              binary
   Activity:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/target_or_activity_of_compound_x_compound.tsv
-    type:                                         binary
+    file_path:         /media/kwatme/CarrotCake/data/cell_line/ctrp/target_or_activity_of_compound_x_compound.tsv
+    type:              binary
   Status:
-    file_path:                                    /media/kwatme/CarrotCake/data/cell_line/ctrp/cpd_status_x_compound.tsv
-    type:                                         binary
-    indices:                                      all
+    file_path:         /media/kwatme/CarrotCake/data/cell_line/ctrp/cpd_status_x_compound.tsv
+    type:              binary
+    indices:           all
 
 # ==============================================================================
 sample_data:

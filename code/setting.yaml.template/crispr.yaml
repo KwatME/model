@@ -346,13 +346,6 @@ h_summary:
     CRISPR:
       - MDM2
       - MDM4
-    CTRP:
-      - decitabine
-      - cytarabine hydrochloride
-      - nutlin-3
-    CRISPR:
-      - MDM2
-      - MDM4
     RNAi:
       - MDM2
       - MDM4
