@@ -1,1 +1,147 @@
-/media/kwatme/CarrotCake/project/ribosomal_rna/model_and_infer.gtex_v7_ribosomal_rna_blood_and_brain/setting.yaml
+# ==============================================================================
+feature_x_sample_file_path:
+feature_x_sample_alias:
+feature_x_sample_value_name:
+feature_alias:
+sample_alias:
+
+# ==============================================================================
+output_directory_path:
+plotly_directory_path:
+
+# ==============================================================================
+plot_heat_map_max_size:                               640000
+plot_distributions_max_size:                          64000
+plot_rug_max_size:                                    6400
+plot_cluster_max_size:                                3200
+plot_std:                                             3.2
+
+# ==============================================================================
+n_job:                                                1
+
+# ==============================================================================
+features_to_drop:
+samples_to_drop:
+nanize:
+drop_axis:
+max_na:
+min_n_not_na_unique_value:
+shift_as_necessary_to_achieve_min_before_logging:
+log_base:
+normalization_axis:
+normalization_method:
+clip_min:
+clip_max:
+
+# ==============================================================================
+select_gene_symbol:
+
+# ==============================================================================
+features_to_peek:
+
+# ==============================================================================
+samples_to_peek:
+
+# ==============================================================================
+signal_type:
+
+# ==============================================================================
+select_feature_automatically:                         no
+select_feature_standard_deviation:
+
+# ==============================================================================
+select_sample_automatically:                          no
+select_sample_standard_deviation:
+
+# ==============================================================================
+context_element_types:
+
+# ==============================================================================
+contexts:
+
+# ==============================================================================
+signal_normalization_axis:
+signal_normalization_method:
+
+# ==============================================================================
+nmf_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+nmf_n_clustering:                                     10
+nmf_k:
+
+# ==============================================================================
+hcc_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+hcc_n_clustering:                                     100
+w_hcc_k:
+h_hcc_k:
+
+# ==============================================================================
+n_required_for_match_function:                        0.64
+n_extreme:                                            32
+n_sampling:                                           0
+n_permutation:                                        0
+
+# ==============================================================================
+gps_map_caotic_w_element_fraction_to_drop:
+gps_map_caotic_h_element_fraction_to_drop:
+
+# ==============================================================================
+gps_map_w_n_pull:
+gps_map_w_pull_power:                                 1
+gps_map_w_element_marker_size:                        16
+gps_map_w_bandwidth_factor:                           1
+
+# ==============================================================================
+gps_map_h_n_pull:
+gps_map_h_pull_power:                                 1
+gps_map_h_element_marker_size:                        16
+gps_map_h_bandwidth_factor:                           1
+
+# ==============================================================================
+feature_data:
+
+# ==============================================================================
+sample_data:
+
+# ==============================================================================
+plot_only_columns_shared_by_target_and_all_data:
+
+# ==============================================================================
+h_summary:
+
+# ==============================================================================
+feature_x_new_sample_file_path:
+feature_x_new_sample_alias:
+new_sample_alias:
+
+# ==============================================================================
+inconsistent_feature_fraction_to_drop:
+
+# ==============================================================================
+new_features_to_drop:
+new_samples_to_drop:
+new_nanize:
+new_drop_axis:
+new_max_na:
+new_min_n_not_na_unique_value:
+new_shift_as_necessary_to_achieve_min_before_logging:
+new_log_base:
+new_normalization_axis:
+new_normalization_method:
+new_clip_min:
+new_clip_max:
