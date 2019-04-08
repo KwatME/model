@@ -40,10 +40,6 @@ def make_path_dict(setting):
 
         for name in ("match/", "gps_map/", "hcc/", "summary/"):
 
-            if w_or_h == "w" and name == "summary/":
-
-                continue
-
             path_dict[
                 "{}|{}".format(w_or_h, name)
             ] = "{}/signal/{}/nmf/{}/{}/{}".format(
