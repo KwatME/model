@@ -24,13 +24,13 @@ def make_path_dict(setting):
 
         path_dict[name] = join(output_directory_path, "context", name)
 
-    for name in ("feature_x_sample.signal.tsv", "nmf/"):
+    for name in ("feature_x_sample.signal.tsv", "mf/"):
 
         path_dict[name] = join(
             output_directory_path, "signal", setting["signal_type"], name
         )
 
-    nmf_k = str(setting["nmf_k"])
+    mf_k = str(setting["mf_k"])
 
     for w_or_h in ("w", "h"):
 
@@ -40,8 +40,8 @@ def make_path_dict(setting):
                 output_directory_path,
                 "signal",
                 setting["signal_type"],
-                "nmf",
-                nmf_k,
+                "mf",
+                mf_k,
                 name,
             )
 
@@ -51,8 +51,8 @@ def make_path_dict(setting):
                 output_directory_path,
                 "signal",
                 setting["signal_type"],
-                "nmf",
-                nmf_k,
+                "mf",
+                mf_k,
                 w_or_h,
                 name,
             )
@@ -65,8 +65,8 @@ def make_path_dict(setting):
             output_directory_path,
             "signal",
             setting["signal_type"],
-            "nmf",
-            nmf_k,
+            "mf",
+            mf_k,
             w_or_h,
             "hcc",
             hcc_k,
@@ -79,8 +79,8 @@ def make_path_dict(setting):
                 output_directory_path,
                 "signal",
                 setting["signal_type"],
-                "nmf",
-                nmf_k,
+                "mf",
+                mf_k,
                 w_or_h,
                 "hcc",
                 hcc_k,
@@ -90,7 +90,7 @@ def make_path_dict(setting):
     name = "gps_map.pickle.gz"
 
     path_dict[name] = join(
-        output_directory_path, "signal", setting["signal_type"], "nmf", nmf_k, name
+        output_directory_path, "signal", setting["signal_type"], "mf", mf_k, name
     )
 
     for name in ("summary/", "infer/"):
@@ -108,40 +108,5 @@ def make_path_dict(setting):
             path_type = "file"
 
         establish_path(path, path_type)
-
-    for w_or_h in ("w", "h"):
-
-        if w_or_h == "w":
-
-            element_type_title = "Feature"
-
-        elif w_or_h == "h":
-
-            element_type_title = "Sample"
-
-        if setting["plotly_directory_path"] is None:
-
-            plotly_w_or_h_match_directory_path = None
-
-            plotly_w_or_h_gps_directory_path = None
-
-        else:
-
-            plotly_w_or_h_match_directory_path = join(
-                setting["plotly_directory_path"], "{} Match".format(element_type_title)
-            )
-
-            plotly_w_or_h_gps_directory_path = join(
-                setting["plotly_directory_path"],
-                "{} GPS Map".format(element_type_title),
-            )
-
-        path_dict[
-            "plotly|{}_match/".format(w_or_h)
-        ] = plotly_w_or_h_match_directory_path
-
-        path_dict[
-            "plotly|{}_gps_map/".format(w_or_h)
-        ] = plotly_w_or_h_gps_directory_path
 
     return path_dict
