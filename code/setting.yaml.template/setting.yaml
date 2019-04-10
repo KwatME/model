@@ -127,12 +127,12 @@ w_summary:
 h_summary:
 
 # ==============================================================================
-feature_x_new_sample_file_path:
-feature_x_new_sample_alias:
+new_feature_x_sample_file_path:
+new_feature_x_sample_alias:
 new_sample_alias:
 
 # ==============================================================================
-inconsistent_feature_fraction_to_drop:
+new_inconsistent_feature_fraction_to_drop:
 
 # ==============================================================================
 new_features_to_drop:
