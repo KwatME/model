@@ -10,7 +10,7 @@ output_directory_path:
 
 # ==============================================================================
 plot_heat_map_max_size:                               640000
-plot_distributions_max_size:                          64000
+plot_histogram_max_size:                              64000
 plot_rug_max_size:                                    6400
 plot_cluster_max_size:                                3200
 plot_std:                                             3.2
