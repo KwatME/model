@@ -1,5 +1,5 @@
-from os.path import join
 from os import mkdir
+from os.path import join
 
 from ccal import normalize_path
 
