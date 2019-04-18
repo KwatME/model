@@ -92,8 +92,8 @@ h_hcc_k:                                              3
 # ==============================================================================
 n_required_for_match_function:                        0.64
 n_extreme:                                            32
-n_sampling:                                           0
-n_permutation:                                        0
+n_sampling:                                           10
+n_permutation:                                        10
 
 # ==============================================================================
 gps_map_caotic_w_element_fraction_to_drop:
