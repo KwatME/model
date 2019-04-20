@@ -118,7 +118,7 @@ feature_data:
 sample_data:
 
 # ==============================================================================
-plot_only_columns_shared_by_target_and_all_data:
+plot_only_shared_by_target_and_data:
 
 # ==============================================================================
 w_summary:

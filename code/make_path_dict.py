@@ -1,7 +1,6 @@
-from os import mkdir
 from os.path import join
 
-from ccal import normalize_path
+from ccal import establish_path, normalize_path
 
 
 def make_path_dict(setting):
@@ -60,7 +59,7 @@ def make_path_dict(setting):
 
         hcc_k = str(setting["{}_hcc_k".format(w_or_h)])
 
-        name = "cluster_x_column.tsv"
+        name = "cluster_x_element.tsv"
 
         path_dict["{}|{}".format(w_or_h, name)] = join(
             output_directory_path,
@@ -102,6 +101,12 @@ def make_path_dict(setting):
 
         if name.endswith("/"):
 
-            mkdir(path)
+            path_type = "directory"
+
+        else:
+
+            path_type = "file"
+
+        establish_path(path, path_type)
 
     return path_dict
