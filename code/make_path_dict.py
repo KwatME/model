@@ -93,7 +93,7 @@ def make_path_dict(setting):
         output_directory_path, "signal", setting["signal_type"], "mf", mf_k, name
     )
 
-    for name in ("summary/", "infer/"):
+    for name in ("infer/",):
 
         path_dict[name] = join(output_directory_path, name)
 
