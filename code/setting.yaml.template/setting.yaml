@@ -1,0 +1,204 @@
+# ==============================================================================
+feature_x_sample_file_path:                           str
+feature_x_sample_alias:                               str
+feature_x_sample_value_name:                          Expression
+feature_alias:                                        Gene
+sample_alias:                                         Patient
+
+# ==============================================================================
+output_directory_path:                                str
+
+# ==============================================================================
+n_job:                                                1
+
+# ==============================================================================
+plot_heat_map_max_size:                               320000
+plot_histogram_max_size:                              32000
+plot_rug_max_size:                                    3200
+plot_cluster_max_size:                                3200
+plot_std:                                             3.2
+
+# ==============================================================================
+features_to_drop:
+samples_to_drop:
+nanize:
+drop_axis:
+max_na:
+min_n_not_na_unique_value:                            1
+shift_as_necessary_to_achieve_min_before_logging:     0<
+log_base:                                             2
+normalization_axis:                                   0
+normalization_method:                                 -0-
+clip_min:
+clip_max:
+
+# ==============================================================================
+select_gene_symbol:                                   no
+
+# ==============================================================================
+features_to_peek:
+  - SHH
+  - MYC
+  - NOTCH1
+  - F2RL1
+  - ST14
+  - XIST
+  - FAM46A
+  - EP400
+  - GABRR1
+  - DFNB31
+  - CACNG2
+  - GRM8
+  - SNCAIP
+  - KRAS
+  - KIAA1509
+  - FZD10
+  - RNF43
+  - HOXB6
+  - SNTG1
+  - CSF3R
+  - JAK3
+  - SEMA3A
+  - SEMA3E
+  - NOV
+  - FGFR3
+  - SERPINI1
+  - OMG
+  - PLP1
+  - ARHGEF7
+  - GRIA4
+
+# ==============================================================================
+samples_to_peek:
+
+# ==============================================================================
+signal_type:                                          context
+
+# ==============================================================================
+select_feature_automatically:                         yes
+select_feature_standard_deviation:                    1
+
+# ==============================================================================
+select_sample_automatically:                          no
+select_sample_standard_deviation:
+
+# ==============================================================================
+context_element_types:
+  - feature
+
+# ==============================================================================
+contexts:
+  - negative
+  - positive
+
+# ==============================================================================
+signal_normalization_axis:                            1
+signal_normalization_method:                          0-1
+
+# ==============================================================================
+mf_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+mf_n_clustering:                                      10
+mf_k:                                                 8
+
+# ==============================================================================
+hcc_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+hcc_n_clustering:                                     100
+w_hcc_k:                                              8
+h_hcc_k:                                              8
+
+# ==============================================================================
+n_required_for_match_function:                        0.64
+n_extreme:                                            32
+n_sampling:                                           10
+n_permutation:                                        10
+plot_only_shared_by_target_and_all_data:              no
+
+# ==============================================================================
+gps_map_caotic_w_element_fraction_to_drop:
+gps_map_w_n_pull:
+gps_map_w_pull_power:                                 2.4
+gps_map_w_element_marker_size:                        8
+gps_map_w_bandwidth_factor:                           1
+
+# ==============================================================================
+gps_map_caotic_h_element_fraction_to_drop:
+gps_map_h_n_pull:
+gps_map_h_pull_power:                                 1.6
+gps_map_h_element_marker_size:                        16
+gps_map_h_bandwidth_factor:                           1
+
+# ==============================================================================
+feature_data:
+
+# ==============================================================================
+sample_data:
+
+# ==============================================================================
+w_summary:
+
+# ==============================================================================
+h_summary:
+
+# ==============================================================================
+factor_alias:
+
+# ==============================================================================
+new_feature_x_sample_file_path:
+new_feature_x_sample_alias:
+new_sample_alias:
+
+# ==============================================================================
+new_inconsistent_feature_fraction_to_drop:
+
+# ==============================================================================
+new_features_to_drop:
+new_samples_to_drop:
+new_nanize:
+new_drop_axis:
+new_max_na:
+new_min_n_not_na_unique_value:
+new_shift_as_necessary_to_achieve_min_before_logging:
+new_log_base:
+new_normalization_axis:
+new_normalization_method:
+new_clip_min:
+new_clip_max:
+
+# ==============================================================================
+new_hcc_ks:
