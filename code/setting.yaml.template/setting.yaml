@@ -1,12 +1,12 @@
 # ==============================================================================
-feature_x_sample_file_path:                           str
-feature_x_sample_alias:                               str
-feature_x_sample_value_name:                          Expression
-feature_alias:                                        Gene
-sample_alias:                                         Patient
+feature_x_sample_file_path:                           ~/feature_x_training_sample.tsv
+feature_x_sample_alias:                               Training Data
+feature_x_sample_value_name:                          Value
+feature_alias:                                        Feature
+sample_alias:                                         Training Sample
 
 # ==============================================================================
-output_directory_path:                                str
+output_directory_path:                                ~
 
 # ==============================================================================
 n_job:                                                1
@@ -152,15 +152,15 @@ plot_only_shared_by_target_and_all_data:              no
 # ==============================================================================
 gps_map_caotic_w_element_fraction_to_drop:
 gps_map_w_n_pull:
-gps_map_w_pull_power:                                 2.4
+gps_map_w_pull_power:                                 1
 gps_map_w_element_marker_size:                        8
 gps_map_w_bandwidth_factor:                           1
 
 # ==============================================================================
 gps_map_caotic_h_element_fraction_to_drop:
 gps_map_h_n_pull:
-gps_map_h_pull_power:                                 1.6
-gps_map_h_element_marker_size:                        16
+gps_map_h_pull_power:                                 1
+gps_map_h_element_marker_size:                        8
 gps_map_h_bandwidth_factor:                           1
 
 # ==============================================================================
@@ -179,9 +179,9 @@ h_summary:
 factor_alias:
 
 # ==============================================================================
-new_feature_x_sample_file_path:
-new_feature_x_sample_alias:
-new_sample_alias:
+new_feature_x_sample_file_path:                       ~/feature_x_testing_sample.tsv
+new_feature_x_sample_alias:                           Testing Data
+new_sample_alias:                                     Testing Sample
 
 # ==============================================================================
 new_inconsistent_feature_fraction_to_drop:
@@ -202,3 +202,12 @@ new_clip_max:
 
 # ==============================================================================
 new_hcc_ks:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
