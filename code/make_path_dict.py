@@ -1,6 +1,6 @@
 from os.path import join
 
-from ccal import establish_path, normalize_path
+from kraft import establish_path, normalize_path
 
 
 def make_path_dict(setting):
