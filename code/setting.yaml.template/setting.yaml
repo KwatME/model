@@ -24,49 +24,19 @@ samples_to_drop:
 nanize:
 drop_axis:
 max_na:
-min_n_not_na_unique_value:                            1
-shift_as_necessary_to_achieve_min_before_logging:     0<
-log_base:                                             2
-normalization_axis:                                   0
-normalization_method:                                 -0-
+min_n_not_na_unique_value:
+shift_as_necessary_to_achieve_min_before_logging:
+log_base:
+normalization_axis:
+normalization_method:
 clip_min:
 clip_max:
 
 # ==============================================================================
-select_gene_symbol:                                   no
+select_gene_symbol:
 
 # ==============================================================================
 features_to_peek:
-  - SHH
-  - MYC
-  - NOTCH1
-  - F2RL1
-  - ST14
-  - XIST
-  - FAM46A
-  - EP400
-  - GABRR1
-  - DFNB31
-  - CACNG2
-  - GRM8
-  - SNCAIP
-  - KRAS
-  - KIAA1509
-  - FZD10
-  - RNF43
-  - HOXB6
-  - SNTG1
-  - CSF3R
-  - JAK3
-  - SEMA3A
-  - SEMA3E
-  - NOV
-  - FGFR3
-  - SERPINI1
-  - OMG
-  - PLP1
-  - ARHGEF7
-  - GRIA4
 
 # ==============================================================================
 samples_to_peek:
@@ -92,8 +62,8 @@ contexts:
   - positive
 
 # ==============================================================================
-signal_normalization_axis:                            1
-signal_normalization_method:                          0-1
+signal_normalization_axis:
+signal_normalization_method:
 
 # ==============================================================================
 mf_ks:
