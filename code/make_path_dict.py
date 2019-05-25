@@ -59,7 +59,21 @@ def make_path_dict(setting):
 
         hcc_k = str(setting[f"{w_or_h}_hcc_k"])
 
-        for name in ("cluster_x_element.tsv", "match/", "gps_map/", "comparison/"):
+        name = "cluster_x_element.tsv"
+
+        path_dict[f"{w_or_h}|{name}"] = join(
+            output_directory_path,
+            "signal",
+            setting["signal_type"],
+            "mf",
+            mf_k,
+            w_or_h,
+            "hcc",
+            hcc_k,
+            name,
+        )
+
+        for name in ("match/", "gps_map/", "comparison/"):
 
             path_dict[f"{w_or_h}|hcc|{name}"] = join(
                 output_directory_path,
