@@ -146,7 +146,7 @@ w_summary:
 h_summary:
 
 # ==============================================================================
-factor_alias:
+factor_name:
 
 # ==============================================================================
 new_feature_x_sample_file_path:                       ~/feature_x_testing_sample.tsv
