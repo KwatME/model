@@ -1,0 +1,300 @@
+{
+  "feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.tsv",
+  "feature_x_sample_alias": "Medulloblastoma Cho et al RNA",
+  "feature_x_sample_value_name": "Expression",
+  "feature_alias": "Gene",
+  "sample_alias": "Sample",
+  "output_directory_path": "/home/kwat/garden/project/model_and_infer.medulloblastoma_cho_et_al_rna/output",
+  "n_job": 8,
+  "plot_heat_map_max_size": 100000,
+  "plot_histogram_max_size": 10000,
+  "plot_rug_max_size": 1000,
+  "plot_cluster_max_size": 2000,
+  "plot_std": 5,
+  "features_to_drop": [],
+  "samples_to_drop": [],
+  "nanize": null,
+  "drop_axis": null,
+  "max_na": null,
+  "min_n_not_na_value": null,
+  "min_n_not_na_unique_value": null,
+  "shift_as_necessary_to_achieve_min_before_logging": null,
+  "log_base": null,
+  "normalization_axis": 0,
+  "normalization_method": "-0-",
+  "clip_min": null,
+  "clip_max": null,
+  "select_gene_symbol": true,
+  "features_to_peek": [
+    "SHH",
+    "MYC",
+    "NOTCH1",
+    "F2RL1",
+    "ST14",
+    "XIST"
+  ],
+  "samples_to_peek": [],
+  "signal_type": "raw",
+  "select_feature_automatically": "yes",
+  "select_feature_standard_deviation": 1,
+  "select_sample_automatically": false,
+  "select_sample_standard_deviation": null,
+  "context_element_types": [],
+  "contexts": [],
+  "signal_normalization_axis": 1,
+  "signal_normalization_method": "0-1",
+  "mf_ks": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "mf_n_clustering": 10,
+  "mf_k": 7,
+  "hcc_ks": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "hcc_n_clustering": 100,
+  "w_hcc_k": 7,
+  "h_hcc_k": 7,
+  "n_required_for_match_function": 0.64,
+  "n_extreme": 32,
+  "n_sampling": 10,
+  "n_permutation": 10,
+  "plot_only_shared_by_target_and_all_data": false,
+  "gps_map_caotic_w_element_fraction_to_drop": null,
+  "gps_map_w_n_pull": null,
+  "gps_map_w_pull_power": 2.4,
+  "gps_map_w_element_marker_size": 8,
+  "gps_map_w_bandwidth_factor": 1,
+  "gps_map_caotic_h_element_fraction_to_drop": null,
+  "gps_map_h_n_pull": null,
+  "gps_map_h_pull_power": 2.4,
+  "gps_map_h_element_marker_size": 16,
+  "gps_map_h_bandwidth_factor": 1,
+  "feature_data": {},
+  "sample_data": {
+    "Information": {
+      "file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/binary_information_x_sample.tsv",
+      "type": "binary",
+      "indices_to_peek": "all"
+    },
+    "RNA": {
+      "file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.log.tsv",
+      "type": "continuous",
+      "indices_to_peek": [
+        "SHH",
+        "MYC",
+        "NOTCH1",
+        "F2RL1",
+        "ST14",
+        "XIST"
+      ]
+    },
+    "Gene Set": {
+      "file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/gene_set_x_sample.tsv",
+      "type": "continuous",
+      "indices_to_peek": [
+        "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+        "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+        "HALLMARK_ANGIOGENESIS"
+      ]
+    }
+  },
+  "w_summary": {},
+  "h_summary": {
+    "Factor0": {
+      "Information": [
+        "SHH"
+      ],
+      "RNA": [
+        "FAM46A",
+        "EP400"
+      ],
+      "Gene Set": [
+        "LEE_TARGETS_OF_PTCH1_AND_SUFU_UP",
+        "GO_MITOTIC_G2_DNA_DAMAGE_CHECKPOINT",
+        "BIOCARTA_SHH_PATHWAY"
+      ]
+    },
+    "Factor1": {
+      "Information": [
+        "Photoreceptor"
+      ],
+      "RNA": [
+        "GABRR1",
+        "DFNB31"
+      ],
+      "Gene Set": [
+        "GO_PHOTOTRANSDUCTION_VISIBLE_LIGHT",
+        "GO_PHOTORECEPTOR_OUTER_SEGMENT",
+        "PID_RHODOPSIN_PATHWAY"
+      ]
+    },
+    "Factor2": {
+      "Information": [
+        "Neuronal"
+      ],
+      "RNA": [
+        "CACNG2",
+        "GRM8",
+        "SNCAIP",
+        "KRAS"
+      ],
+      "Gene Set": [
+        "RAMJAUN_APOPTOSIS_BY_TGFB1_VIA_MAPK1",
+        "REACTOME_SIGNALING_BY_FGFR1_FUSION_MUTANTS",
+        "GO_ACTIVATION_OF_MAPKKK_ACTIVITY"
+      ]
+    },
+    "Factor3": {
+      "Information": [
+        "WNT"
+      ],
+      "RNA": [
+        "KIAA1509",
+        "FZD10",
+        "RNF43"
+      ],
+      "Gene Set": [
+        "ST_WNT_BETA_CATENIN_PATHWAY",
+        "BCAT.100_UP.V1_UP",
+        "PID_WNT_SIGNALING_PATHWAY"
+      ]
+    },
+    "Factor4": {
+      "RNA": [
+        "F2RL1",
+        "HOXB6",
+        "SNTG1",
+        "CSF3R",
+        "JAK3"
+      ],
+      "Gene Set": [
+        "NABA_ECM_REGULATORS",
+        "CHEN_HOXA5_TARGETS_9HR",
+        "KEGG_JAK_STAT_SIGNALING_PATHWAY"
+      ]
+    },
+    "Factor5": {
+      "Information": [
+        "SHH"
+      ],
+      "Gene Set": [
+        "GO_RNA_PHOSPHODIESTER_BOND_HYDROLYSIS"
+      ]
+    },
+    "Factor6": {
+      "Information": [
+        "MYC"
+      ],
+      "RNA": [
+        "MYC"
+      ],
+      "Gene Set": [
+        "POMEROY_MEDULLOBLASTOMA_PROGNOSIS_DN",
+        "IRITANI_MAD1_TARGETS_DN",
+        "SCHLOSSER_MYC_TARGETS_AND_SERUM_RESPONSE_DN"
+      ]
+    },
+    "Factor7": {
+      "Information": [
+        "Mixed"
+      ],
+      "RNA": [
+        "SEMA3A",
+        "SEMA3E",
+        "NOV"
+      ],
+      "Gene Set": [
+        "GO_POSITIVE_REGULATION_OF_SYNAPSE_MATURATION",
+        "GO_SEMAPHORIN_RECEPTOR_BINDING"
+      ]
+    },
+    "Factor8": {
+      "RNA": [
+        "FGFR3",
+        "SERPINI1",
+        "OMG",
+        "PLP1"
+      ],
+      "Gene Set": [
+        "KIM_ALL_DISORDERS_OLIGODENDROCYTE_NUMBER_CORR_UP",
+        "GO_AXON"
+      ]
+    },
+    "Factor9": {
+      "Information": [
+        "SHH"
+      ],
+      "RNA": [
+        "ARHGEF7",
+        "GRIA4"
+      ],
+      "Gene Set": [
+        "GO_CILIARY_TIP",
+        "PID_HEDGEHOG_GLI_PATHWAY",
+        "GO_CELL_PROJECTION_ASSEMBLY"
+      ]
+    }
+  },
+  "factor_name": {
+    "Factor0": "SHH A",
+    "Factor1": "Photoreceptor",
+    "Factor2": "Neuronal MAPK Activation",
+    "Factor3": "WNT",
+    "Factor4": "Homeobox Activation",
+    "Factor5": "SHH RNA Processing",
+    "Factor6": "MYC",
+    "Factor7": "Synaptic",
+    "Factor8": "Axonal",
+    "Factor9": "SSH B"
+  },
+  "new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/pdx/rna/gene_x_pdx.tsv",
+  "new_feature_x_sample_alias": "Medulloblastoma PDX RNA",
+  "new_sample_alias": "PDX",
+  "new_inconsistent_feature_fraction_to_drop": null,
+  "new_features_to_drop": null,
+  "new_samples_to_drop": null,
+  "new_nanize": null,
+  "new_drop_axis": null,
+  "new_max_na": null,
+  "new_min_n_not_na_value": null,
+  "new_min_n_not_na_unique_value": null,
+  "new_shift_as_necessary_to_achieve_min_before_logging": null,
+  "new_log_base": null,
+  "new_normalization_axis": 0,
+  "new_normalization_method": "-0-",
+  "new_clip_min": null,
+  "new_clip_max": null,
+  "new_gps_map_h_element_marker_size": 24,
+  "new_sample_data": {
+    "Compound": {
+      "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/compound/compound_x_pdx.tsv",
+      "type": "continuous"
+    }
+  }
+}
