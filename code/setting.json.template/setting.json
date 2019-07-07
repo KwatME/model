@@ -1,15 +1,15 @@
 {
-  "feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.tsv",
-  "_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.tsv",
-  "_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/rna.gene_x_sample.tsv",
-  "feature_x_sample_alias": "Medulloblastoma Cho et al RNA",
-  "_feature_x_sample_alias": "Medulloblastoma Cavallie et al RNA",
-  "_feature_x_sample_alias": "Medulloblastoma Northcott et al RNA",
+  "feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.log.tsv",
+  "_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.log.tsv",
+  "_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/rna.gene_x_sample.log.tsv",
+  "feature_x_sample_alias": "Medulloblastoma Cho et al",
+  "_feature_x_sample_alias": "Medulloblastoma Cavallie et al",
+  "_feature_x_sample_alias": "Medulloblastoma Northcott et al",
   "feature_x_sample_value_name": "Expression",
   "feature_alias": "Gene",
   "sample_alias": "Sample",
   "output_directory_path": "/home/kwat/garden/project/model_and_infer.medulloblastoma_cho_et_al_rna/output",
-  "_output_directory_path": "/home/kwat/garden/project/model_and_infer.medulloblastoma_cavllie_et_al_rna/output",
+  "_output_directory_path": "/home/kwat/garden/project/model_and_infer.medulloblastoma_cavallie_et_al_rna/output",
   "_output_directory_path": "/home/kwat/garden/project/model_and_infer.medulloblastoma_northcott_et_al_rna/output",
   "n_job": 8,
   "plot_heat_map_max_size": 100000,
@@ -66,7 +66,7 @@
     15
   ],
   "mf_n_clustering": 10,
-  "mf_k": 7,
+  "mf_k": 11,
   "hcc_ks": [
     2,
     3,
@@ -84,8 +84,8 @@
     15
   ],
   "hcc_n_clustering": 100,
-  "w_hcc_k": 7,
-  "h_hcc_k": 7,
+  "w_hcc_k": 8,
+  "h_hcc_k": 8,
   "n_required_for_match_function": 0.64,
   "n_extreme": 32,
   "n_sampling": 10,
@@ -93,13 +93,13 @@
   "plot_only_shared_by_target_and_all_data": false,
   "gps_map_caotic_w_element_fraction_to_drop": null,
   "gps_map_w_n_pull": null,
-  "gps_map_w_pull_power": 2.4,
+  "gps_map_w_pull_power": 3,
   "gps_map_w_element_marker_size": 8,
   "gps_map_w_bandwidth_factor": 1,
   "gps_map_caotic_h_element_fraction_to_drop": null,
   "gps_map_h_n_pull": null,
-  "gps_map_h_pull_power": 2.4,
-  "gps_map_h_element_marker_size": 16,
+  "gps_map_h_pull_power": 3,
+  "gps_map_h_element_marker_size": 12,
   "gps_map_h_bandwidth_factor": 1,
   "feature_data": {},
   "sample_data": {
@@ -122,6 +122,15 @@
         "F2RL1",
         "ST14",
         "XIST"
+      ]
+    },
+    "Gene Set": {
+      "file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/gene_set_x_sample.tsv",
+      "type": "continuous",
+      "indices_to_peek": [
+        "HALLMARK_ANGIOGENESIS",
+        "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+        "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
       ]
     }
   },
@@ -274,14 +283,14 @@
     "Factor8": "Axonal",
     "Factor9": "SSH B"
   },
-  "new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/pdx/rna/gene_x_pdx.tsv",
-  "_new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.tsv",
-  "_new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.tsv",
-  "_new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/rna.gene_x_sample.tsv",
-  "new_feature_x_sample_alias": "PDX RNA",
-  "_new_feature_x_sample_alias": "Medulloblastoma Cho et al RNA",
-  "_new_feature_x_sample_alias": "Medulloblastoma Cavallie et al RNA",
-  "_new_feature_x_sample_alias": "Medulloblastoma Northcott et al RNA",
+  "new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/pdx/rna/rna.gene_x_pdx.log.tsv",
+  "_new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.log.tsv",
+  "_new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.log.tsv",
+  "_new_feature_x_sample_file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/rna.gene_x_sample.log.tsv",
+  "new_feature_x_sample_alias": "PDX",
+  "_new_feature_x_sample_alias": "Medulloblastoma Cho et al",
+  "_new_feature_x_sample_alias": "Medulloblastoma Cavallie et al",
+  "_new_feature_x_sample_alias": "Medulloblastoma Northcott et al",
   "new_sample_alias": "Sample",
   "new_inconsistent_feature_fraction_to_drop": null,
   "new_features_to_drop": null,
@@ -297,18 +306,23 @@
   "new_normalization_method": "-0-",
   "new_clip_min": null,
   "new_clip_max": null,
-  "new_gps_map_h_element_marker_size": 16,
+  "new_gps_map_h_element_marker_size": 32,
   "new_sample_data": {
     "Compound": {
       "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/compound/compound_x_pdx.tsv",
       "type": "continuous"
     },
     "Binary Information": {
-      "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/binary_information_x_sample.tsv",
+      "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/binary_information_x_pdx.tsv",
       "_file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/binary_information_x_sample.tsv",
       "_file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/binary_information_x_sample.tsv",
       "_file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/binary_information_x_sample.tsv",
       "type": "binary",
+      "indices_to_peek": "all"
+    },
+    "Categorical Information": {
+      "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/categorical_information_x_pdx.tsv",
+      "type": "categorical",
       "indices_to_peek": "all"
     }
   }
