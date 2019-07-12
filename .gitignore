@@ -1,33 +1,17 @@
-# See https://git-scm.com/docs/gitignore to learn more about .gitignore file.
-
 # ==============================================================================
-# Track only files transferable with git (smaller files that are <100MB); for
-# larger files, which git cannot transfer, specify their download links in the
-# package.json so spro can get them.
-# ==============================================================================
-data/*
-output/*
-
-# ==============================================================================
-# Do not track environment files because spro manages environment/.
+# Default .gitignore rules for shareable project.
 # ==============================================================================
 environment/*
+input/*
+output/*
 
-# ==============================================================================
-# Git ignores empty folders, so add a hidden file .gitkeep to the default
-# project folders to avoid them from being ignored.
-# ==============================================================================
-!data/.gitkeep
-!environment/.gitkeep
 !code/.gitkeep
+!environment/.gitkeep
+!input/.gitkeep
 !output/.gitkeep
-!media/.gitkeep
+!stuff/.gitkeep
 
-# ==============================================================================
-# Ignore some additional stuff.
-# ==============================================================================
-.DS_Store
-.idea
+!environment/*.yaml
 
 # ==============================================================================
 # Additional rules.
@@ -54,6 +38,8 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -72,6 +58,7 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
@@ -89,6 +76,7 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
+db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -106,8 +94,19 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# IPython
+profile_default/
+ipython_config.py
+
 # pyenv
 .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
 
 # celery beat schedule file
 celerybeat-schedule
@@ -136,3 +135,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
