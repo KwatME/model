@@ -5,6 +5,6 @@
   "keyword": [],
   "download": {},
   "command": {
-    "jupyter_notebook": "jupyter notebook"
+    "notebook": "jupyter notebook"
   }
 }
