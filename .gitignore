@@ -11,7 +11,10 @@ output/*
 !output/.gitkeep
 !stuff/.gitkeep
 
-!environment/*.yaml
+!environment/*.conda.yaml
+
+!environment/Project.toml
+!environment/Manifest.toml
 
 !stuff/guardiome_logo.png
 
