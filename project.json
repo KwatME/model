@@ -179,7 +179,7 @@
   "sample_data": {
     "Information": {
       "file_path": "/Volumes/CarrotCake/garden/data/10x_single_cell_rna_sequencing/5k_pbmc_v3/information_x_cell.tsv",
-      "data_type": "categorical",
+      "data_type": "continuous",
       "indices_to_peek": [
         "Cluster"
       ]
