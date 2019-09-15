@@ -73,7 +73,7 @@ def make_path_dict(setting):
             name,
         )
 
-        for name in ("match/", "gps_map/", "comparison/"):
+        for name in ("match/", "comparison/"):
 
             path_dict["{}|hcc|{}".format(w_or_h, name)] = join(
                 output_directory_path,
