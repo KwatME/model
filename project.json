@@ -1,11 +1,11 @@
 {
-  "name": "Model and Infer",
-  "git_url": "https://github.com/KwatME/model_and_infer",
+  "name": "Model",
+  "git_url": "https://github.com/KwatME/model",
   "version": "0.7.0",
   "keyword": [],
   "download": {},
   "command": {
     "notebook": "jupyter notebook"
   },
-  "project_directory_path": "/home/kwat/garden/project/model_and_infer.medulloblastoma_cavallie_et_al_rna"
+  "project_directory_path": "/Users/kwatme/github/model"
 }

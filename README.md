@@ -1,4 +1,4 @@
-# Model and Infer
+# Model
 
 #
 
