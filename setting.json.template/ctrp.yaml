@@ -40,7 +40,7 @@ feature_data:
 # ==============================================================================
 sample_data:
   KRAS Factor:
-    file_path:         /media/kwatme/CarrotCake/data/nmf_k9_h.tsv
+    file_path:         /media/kwatme/CarrotCake/data/nmf_r9_h.tsv
     type:              continuous
     indices:           all
   Growth Mode:
