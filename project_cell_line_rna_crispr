@@ -1,65 +1,3 @@
-# ==============================================================================
-normalization_axis:    1
-normalization_method:  -0-
-
-# ==============================================================================
-features_to_peek:
-  - APC
-  - AR
-  - AXL
-  - BRAF
-  - BRCA1
-  - BRCA2
-  - CDK1
-  - CDK2
-  - CDK4
-  - CDK6
-  - CDKN1A
-  - CTNNB1
-  - EGFR
-  - ERBB2
-  - ERBB3
-  - ESR1
-  - F2RL1
-  - FAT1
-  - GNAS
-  - HER2
-  - HER3
-  - HNF4A
-  - IDH1
-  - KRAS
-  - KRT5
-  - MCAM
-  - MICAL2
-  - MTOR
-  - MYC
-  - NOTCH1
-  - NRAS
-  - PAX8
-  - PGR
-  - PIK3CA
-  - POLE
-  - PTEN
-  - SHH
-  - SOX10
-  - SRC
-  - ST14
-  - TERT
-  - TIGAR
-  - TP53
-  - YAP1
-  - ZEB1
-
-# ==============================================================================
-context_element_types:
-  - feature
-  - sample
-
-# ==============================================================================
-contexts:
-  - negative
-
-# ==============================================================================
 sample_data:
   KRAS Factor:
     file_path:         /media/kwatme/CarrotCake/data/nmf_r9_h.tsv
@@ -172,8 +110,6 @@ sample_data:
   Mutation:
     file_path:         /media/kwatme/CarrotCake/data/mutation.gene_x_cell_line.binary.tsv
     type:              binary
-
-# ==============================================================================
 h_summary:
   F0:
     KRAS Factor:

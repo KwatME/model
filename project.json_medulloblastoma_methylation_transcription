@@ -1,0 +1,115 @@
+{
+  "model_mode": "deep",
+  "data_dicts_model": [
+    {
+      "name": "Cavallie et al Methylation",
+      "tsv_file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/methylation.gene_x_sample.tsv",
+      "axis0_name": "Gene",
+      "axis1_name": "Primary Sample",
+      "data_type": "continuous",
+      "axis0_elements_to_peek": [
+        "MYC",
+        "MYCN"
+      ],
+      "prepare": {
+        "normalization_axis": 0,
+        "normalization_method": "-0-"
+      },
+      "select_axis0_element": {
+        "standard_deviation": 1
+      },
+      "signal": "signed"
+    },
+    {
+      "name": "Cavallie et al Transcription",
+      "tsv_file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.log.tsv",
+      "axis0_name": "Gene",
+      "axis1_name": "Primary Sample",
+      "data_type": "continuous",
+      "axis0_elements_to_peek": [
+        "MYC",
+        "MYCN"
+      ],
+      "prepare": {
+        "normalization_axis": 0,
+        "normalization_method": "-0-"
+      },
+      "select_axis0_element": {
+        "standard_deviation": 1
+      },
+      "signal": "raw"
+    }
+  ],
+  "data_dicts_annotate": [
+    {
+      "name": "Cavallie et al Information",
+      "tsv_file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/binary_information_x_sample.tsv",
+      "data_type": "binary",
+      "axis0_elements_to_peek": [
+        "(Subtype) Group3_alpha",
+        "(Subtype) Group3_beta",
+        "(Subtype) Group3_gamma",
+        "(Subtype) Group4_alpha",
+        "(Subtype) Group4_beta",
+        "(Subtype) Group4_gamma",
+        "(Subtype) SHH_alpha",
+        "(Subtype) SHH_beta",
+        "(Subtype) SHH_delta",
+        "(Subtype) SHH_gamma",
+        "(Subtype) WNT_alpha",
+        "(Subtype) WNT_beta"
+      ]
+    }
+  ],
+  "n_job": 6,
+  "mf_rs": [
+    2,
+    4,
+    8,
+    16
+  ],
+  "mf_r_range": 100,
+  "w_gps_map_power": 2,
+  "w_gps_map_element": {
+    "marker": {
+      "size": 8
+    }
+  },
+  "h_gps_map_power": 2,
+  "h_gps_map_element": {
+    "marker": {
+      "size": 16
+    }
+  },
+  "new_data_dicts_model": [
+    {
+      "name": "PDX Transcription",
+      "tsv_file_path": "/home/kwat/garden/data/medulloblastoma/pdx/rna/rna.gene_x_pdx.log.tsv",
+      "axis0_name": "Gene",
+      "axis1_name": "PDX Sample",
+      "data_type": "continuous",
+      "axis0_elements_to_peek": [
+        "MYC",
+        "MYCN"
+      ],
+      "prepare": {
+        "normalization_axis": 0,
+        "normalization_method": "-0-"
+      }
+    }
+  ],
+  "new_data_dicts_annotate": [
+    {
+      "name": "PDX Categorical Information",
+      "tsv_file_path": "/home/kwat/garden/data/medulloblastoma/pdx/categorical_information_x_pdx.tsv",
+      "data_type": "categorical",
+      "axis0_elements_to_peek": []
+    },
+    {
+      "name": "PDX Binary Information",
+      "tsv_file_path": "/home/kwat/garden/data/medulloblastoma/pdx/binary_information_x_pdx.tsv",
+      "data_type": "binary",
+      "axis0_elements_to_peek": []
+    }
+  ]
+}

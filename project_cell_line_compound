@@ -1,7 +1,4 @@
-# ==============================================================================
 max_na:                0.16
-
-# ==============================================================================
 features_to_peek:
   - 1S3R-RSL-3
   - austocystin D
@@ -14,17 +11,6 @@ features_to_peek:
   - YM-155
   - GMX-1778
   - bortezomib
-
-# ==============================================================================
-context_element_types:
-  - feature
-  - sample
-
-# ==============================================================================
-contexts:
-  - negative
-
-# ==============================================================================
 feature_data:
   Target:
     file_path:         /media/kwatme/CarrotCake/data/cell_line/ctrp/gene_symbol_of_protein_target_x_compound.tsv
@@ -36,8 +22,6 @@ feature_data:
     file_path:         /media/kwatme/CarrotCake/data/cell_line/ctrp/cpd_status_x_compound.tsv
     type:              binary
     indices:           all
-
-# ==============================================================================
 sample_data:
   KRAS Factor:
     file_path:         /media/kwatme/CarrotCake/data/nmf_r9_h.tsv
