@@ -1,0 +1,140 @@
+{
+    "n_job": 6,
+    "model_mode": "range",
+    "model_data_dicts": [
+        {
+            "name": "Cavallie et al Transcription",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.log.tsv",
+            "axis0_name": "Gene",
+            "axis1_name": "Primary Sample",
+            "data_type": "continuous",
+            "axis0_elements_to_peek": []
+        },
+        {
+            "name": "Cho et al Transcription",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.log.tsv",
+            "axis0_name": "Gene",
+            "axis1_name": "Primary Sample",
+            "data_type": "continuous",
+            "axis0_elements_to_peek": []
+        },
+        {
+            "name": "Northcott et al Transcription",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/rna.gene_x_sample.log.tsv",
+            "axis0_name": "Gene",
+            "axis1_name": "Primary Sample",
+            "data_type": "continuous",
+            "axis0_elements_to_peek": []
+        }
+    ],
+    "model_signal_types": [
+        "raw",
+        "raw",
+        "raw"
+    ],
+    "mf_rs": [
+        2,
+        4,
+        8,
+        16
+    ],
+    "mf_r_range": 100,
+    "annotate_data_dicts": [
+        {
+            "name": "Cavallie et al Methylation",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/methylation.gene_x_sample.tsv",
+            "axis0_name": "Gene",
+            "axis1_name": "Primary Sample",
+            "data_type": "continuous",
+            "axis0_elements_to_peek": []
+        },
+        {
+            "name": "Cavallie et al Information",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/binary_information_x_sample.tsv",
+            "axis0_name": "Binary Information",
+            "axis1_name": "Primary Sample",
+            "data_type": "binary",
+            "axis0_elements_to_peek": [
+                "(Subtype) Group3_alpha",
+                "(Subtype) Group3_beta",
+                "(Subtype) Group3_gamma",
+                "(Subtype) Group4_alpha",
+                "(Subtype) Group4_beta",
+                "(Subtype) Group4_gamma",
+                "(Subtype) SHH_alpha",
+                "(Subtype) SHH_beta",
+                "(Subtype) SHH_delta",
+                "(Subtype) SHH_gamma",
+                "(Subtype) WNT_alpha",
+                "(Subtype) WNT_beta"
+            ]
+        },
+        {
+            "name": "Cho et al Information",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/binary_information_x_sample.tsv",
+            "axis0_name": "Binary Information",
+            "axis1_name": "Primary Sample",
+            "data_type": "binary",
+            "axis0_elements_to_peek": [
+                "MYC",
+                "Mixed",
+                "Neuronal",
+                "Photoreceptor",
+                "SHH",
+                "WNT"
+            ]
+        },
+        {
+            "name": "Northcott et al Information",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/binary_information_x_sample.tsv",
+            "axis0_name": "Binary Information",
+            "axis1_name": "Primary Sample",
+            "data_type": "binary",
+            "axis0_elements_to_peek": [
+                "(subgroup) Group 3",
+                "(subgroup) Group 4",
+                "(subgroup) SHH"
+            ]
+        }
+    ],
+    "w_gps_map_node_power": 6.4,
+    "w_gps_map_element_trace": {
+        "marker": {
+            "size": 10
+        }
+    },
+    "h_gps_map_node_power": 3.2,
+    "h_gps_map_element_trace": {
+        "marker": {
+            "size": 10
+        }
+    },
+    "new_model_data_dicts": [
+        {
+            "name": "PDX Transcription",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/rna/rna.gene_x_pdx.log.tsv",
+            "axis0_name": "Gene",
+            "axis1_name": "PDX Sample",
+            "data_type": "continuous",
+            "axis0_elements_to_peek": []
+        }
+    ],
+    "new_annotate_data_dicts": [
+        {
+            "name": "PDX Categorical Information",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/categorical_information_x_pdx.tsv",
+            "axis0_name": "Categorical Information",
+            "axis1_name": "Primary Sample",
+            "data_type": "categorical",
+            "axis0_elements_to_peek": []
+        },
+        {
+            "name": "PDX Binary Information",
+            "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/binary_information_x_pdx.tsv",
+            "axis0_name": "Binary Information",
+            "axis1_name": "Primary Sample",
+            "data_type": "binary",
+            "axis0_elements_to_peek": []
+        }
+    ]
+}
