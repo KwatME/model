@@ -1,5 +1,5 @@
 {
-    "output_directory_path": "/home/kwat/Downloads/model_output",
+    "output_directory_path": "/home/kwat/Downloads/medulloblastoma_transcription",
     "n_job": 10,
     "model_mode": "range",
     "model_data_dicts": [
@@ -21,11 +21,6 @@
             "axis1_name": "Sample",
             "data_type": "continuous"
         }
-    ],
-    "model_signal_types": [
-        null,
-        null,
-        null
     ],
     "mf_rs": [
         2,

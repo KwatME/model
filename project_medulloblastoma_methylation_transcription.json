@@ -1,5 +1,5 @@
 {
-    "output_directory_path": "/home/kwat/Downloads/model_output",
+    "output_directory_path": "/home/kwat/Downloads/medulloblastoma_methylation_transcription",
     "n_job": 10,
     "model_mode": "deep",
     "model_data_dicts": [
@@ -57,7 +57,7 @@
         "(subgroup) SHH"
     ],
     "axis1_elements_to_peek": [],
-    "w_gps_map_node_power": 3.2,
+    "w_gps_map_node_power": 6.4,
     "w_gps_map_element_trace": {
         "marker": {
             "size": 8
