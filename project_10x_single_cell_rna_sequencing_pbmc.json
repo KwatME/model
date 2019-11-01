@@ -1,6 +1,6 @@
 {
     "output_directory_path": "/home/kwat/Downloads/10x_single_cell_rna_sequencing_pbmc",
-    "n_job": 10,
+    "n_job": 8,
     "model_mode": "range",
     "model_data_dicts": [
         {
@@ -13,8 +13,7 @@
     "mf_rs": [
         2,
         4,
-        8,
-        16
+        8
     ],
     "mf_r_range": 100,
     "annotate_data_dicts": [
