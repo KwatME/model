@@ -1,23 +1,23 @@
 {
-    "output_directory_path": "/home/kwat/Downloads/medulloblastoma_transcription",
+    "output_directory_path": "/home/kwat/medulloblastoma_transcription/",
     "n_job": 10,
     "model_mode": "range",
     "model_data_dicts": [
         {
             "name": "Cavallie et al Transcription",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.log.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.log.tsv",
             "axis1_name": "Sample",
             "data_type": "continuous"
         },
         {
             "name": "Cho et al Transcription",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.log.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/cho_et_al/rna.gene_x_sample.log.tsv",
             "axis1_name": "Sample",
             "data_type": "continuous"
         },
         {
             "name": "Northcott et al Transcription",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/rna.gene_x_sample.log.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/northcott_et_al/rna.gene_x_sample.log.tsv",
             "axis1_name": "Sample",
             "data_type": "continuous"
         }
@@ -32,25 +32,25 @@
     "annotate_data_dicts": [
         {
             "name": "Cavallie et al Methylation",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/methylation.gene_x_sample.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/cavallie_et_al/methylation.gene_x_sample.tsv",
             "axis1_name": "Sample",
             "data_type": "continuous"
         },
         {
             "name": "Cavallie et al Information",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/binary_information_x_sample.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/cavallie_et_al/binary_information_x_sample.tsv",
             "axis1_name": "Sample",
             "data_type": "binary"
         },
         {
             "name": "Cho et al Information",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/cho_et_al/binary_information_x_sample.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/cho_et_al/binary_information_x_sample.tsv",
             "axis1_name": "Sample",
             "data_type": "binary"
         },
         {
             "name": "Northcott et al Information",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/northcott_et_al/binary_information_x_sample.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/northcott_et_al/binary_information_x_sample.tsv",
             "axis1_name": "Sample",
             "data_type": "binary"
         }
@@ -96,7 +96,7 @@
     "new_model_data_dicts": [
         {
             "name": "PDX Transcription",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/rna/rna.gene_x_pdx.log.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/pdx/rna/rna.gene_x_pdx.log.tsv",
             "axis1_name": "Sample",
             "data_type": "continuous"
         }
@@ -104,13 +104,13 @@
     "new_annotate_data_dicts": [
         {
             "name": "PDX Information",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/categorical_information_x_pdx.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/pdx/categorical_information_x_pdx.tsv",
             "axis1_name": "Sample",
             "data_type": "categorical"
         },
         {
             "name": "PDX Information",
-            "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/binary_information_x_pdx.tsv",
+            "file_path": "/media/kwat/CarrotCake/garden/data/medulloblastoma/pdx/binary_information_x_pdx.tsv",
             "axis1_name": "Sample",
             "data_type": "binary"
         }
