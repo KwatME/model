@@ -5,7 +5,7 @@
     {
       "name": "GSE128078 Transcription",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_gene_x_sample.tsv",
-      "axis1_name": "Sample",
+      "axis_1_name": "Sample",
       "data_type": "continuous"
     }
   ],
@@ -15,12 +15,12 @@
     {
       "name": "GSE128078 Binary Feature",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_binary_feature_x_sample.tsv",
-      "axis1_name": "Sample",
+      "axis_1_name": "Sample",
       "data_type": "continuous"
     }
   ],
-  "axis0_elements_to_peek": ["XIST"],
-  "axis1_elements_to_peek": [],
+  "axis_0_elements_to_peek": ["XIST"],
+  "axis_1_elements_to_peek": [],
   "w_gps_map_node_power": 1,
   "w_gps_map_element_trace": {
     "marker": {
