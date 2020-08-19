@@ -1,6 +1,6 @@
-# Bai
+# Model
 
-Program for .
+Program for modeling.
 
 ## Get
 
