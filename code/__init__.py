@@ -8,4 +8,4 @@ import plotly as pl
 import kraft
 from read_ws_hs import read_ws_hs
 
-SETTING = kraft.read_json("../project.json")
+SETTING = kraft.json.read("../project.json")

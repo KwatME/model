@@ -1,0 +1,38 @@
+{
+  "n_job": 8,
+  "model_mode": "range",
+  "model_data_dicts": [
+    {
+      "name": "GSE128078 Transcription",
+      "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_gene_x_sample.tsv",
+      "axis1_name": "Sample",
+      "data_type": "continuous"
+    }
+  ],
+  "mf_rs": [2, 4, 8, 16],
+  "mf_r_range": 100,
+  "annotate_data_dicts": [
+    {
+      "name": "GSE128078 Binary Feature",
+      "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_binary_feature_x_sample.tsv",
+      "axis1_name": "Sample",
+      "data_type": "continuous"
+    }
+  ],
+  "axis0_elements_to_peek": ["XIST"],
+  "axis1_elements_to_peek": [],
+  "w_gps_map_node_power": 1,
+  "w_gps_map_element_trace": {
+    "marker": {
+      "size": 16
+    }
+  },
+  "h_gps_map_node_power": 1,
+  "h_gps_map_element_trace": {
+    "marker": {
+      "size": 16
+    }
+  },
+  "new_model_data_dicts": [],
+  "new_annotate_data_dicts": []
+}
