@@ -19,16 +19,16 @@
       "data_type": "continuous"
     }
   ],
-  "axis_0_elements_to_peek": ["XIST"],
-  "axis_1_elements_to_peek": [],
+  "axis_0_points_to_peek": ["XIST"],
+  "axis_1_points_to_peek": [],
   "w_gps_map_node_power": 1,
-  "w_gps_map_element_trace": {
+  "w_gps_map_point_trace": {
     "marker": {
       "size": 16
     }
   },
   "h_gps_map_node_power": 1,
-  "h_gps_map_element_trace": {
+  "h_gps_map_point_trace": {
     "marker": {
       "size": 16
     }
