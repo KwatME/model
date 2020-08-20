@@ -18,8 +18,8 @@
       "data_type": "continuous"
     }
   ],
-  "axis_0_points_to_peek": ["XIST"],
-  "axis_1_points_to_peek": [],
+  "axis_0_to_peek": ["XIST"],
+  "axis_1_to_peek": [],
   "w_gps_map_node_power": 2,
   "w_gps_map_point_trace": {
     "marker": {
