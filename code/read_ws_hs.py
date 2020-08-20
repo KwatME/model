@@ -18,12 +18,12 @@ def read_ws_hs(directory_path, model_mode, model_data_dicts):
         n_h = 1
 
     ws = tuple(
-        read_csv("{}/w_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
+        read_csv("{}w_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
         for i in range(n_h)
     )
 
     hs = tuple(
-        read_csv("{}/h_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
+        read_csv("{}h_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
         for i in range(n_w)
     )
 
