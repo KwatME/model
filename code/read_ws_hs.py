@@ -17,28 +17,24 @@ def read_ws_hs(directory_path, model_mode, model_data_dicts):
 
         n_h = 1
 
-    ws = []
+    ws = tuple(
+        read_csv("{}/w_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
+        for i in range(n_h)
+    )
 
-    for w_i in range(n_w):
+    hs = tuple(
+        read_csv("{}/h_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
+        for i in range(n_w)
+    )
 
-        w = read_csv("{}/w_{}.tsv".format(directory_path, w_i), sep="\t", index_col=0)
-
-        ws.append(w)
-
-    hs = []
-
-    for h_i in range(n_h):
-
-        h = read_csv("{}/h_{}.tsv".format(directory_path, h_i), sep="\t", index_col=0)
-
-        name = h.index.name
-
-        h.columns.name = model_data_dicts[h_i]["axis_1_name"]
-
-        hs.append(h)
+    factor_name = hs[0].index.name
 
     for w in ws:
 
-        w.columns.name = name
+        w.columns.name = factor_name
+
+    for dict_, h in zip(model_data_dicts, hs):
+
+        h.columns.name = dict_["axis_1_name"]
 
     return ws, hs
