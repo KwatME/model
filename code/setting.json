@@ -9,7 +9,7 @@
       "data_type": "continuous"
     }
   ],
-  "mf_rs": [8],
+  "mf_rs": [2, 4, 8],
   "annotation_data_dicts": [
     {
       "name": "GSE128078 Binary Feature",
