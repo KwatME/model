@@ -20,13 +20,13 @@
   ],
   "axis_0_to_peek": ["XIST"],
   "axis_1_to_peek": [],
-  "w_gps_map_node_power": 2,
+  "w_gps_map_node_power": 1,
   "w_gps_map_point_trace": {
     "marker": {
       "size": 8
     }
   },
-  "h_gps_map_node_power": 2,
+  "h_gps_map_node_power": 1,
   "h_gps_map_point_trace": {
     "marker": {
       "size": 16
