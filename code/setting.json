@@ -8,7 +8,7 @@
       "name": "GSE128078 Transcription",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_gene_x_sample.tsv",
       "axis_1_name": "Sample",
-      "data_type": "continuous"
+      "type": "continuous"
     }
   ],
 
@@ -21,7 +21,7 @@
       "name": "GSE128078 Binary Feature",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_binary_feature_x_sample.tsv",
       "axis_1_name": "Sample",
-      "data_type": "binary"
+      "type": "binary"
     }
   ],
 

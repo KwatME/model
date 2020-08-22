@@ -1,40 +1,40 @@
 from pandas import read_csv
 
 
-def read_ws_hs(directory_path, model_mode, model_data_dicts):
+def read_ws_hs(directory_path, model_mode, model_data_):
 
-    n_data_dict = len(model_data_dicts)
+    n_data = len(model_data_)
 
     if model_mode == "range":
 
         n_w = 1
 
-        n_h = n_data_dict
+        n_h = n_data
 
     elif model_mode == "deep":
 
-        n_w = n_data_dict
+        n_w = n_data
 
         n_h = 1
 
-    ws = tuple(
+    w_ = tuple(
         read_csv("{}w_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
         for i in range(n_h)
     )
 
-    hs = tuple(
+    h_ = tuple(
         read_csv("{}h_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
         for i in range(n_w)
     )
 
-    factor_name = hs[0].index.name
+    factor_name = h_[0].index.name
 
-    for w in ws:
+    for w in w_:
 
         w.columns.name = factor_name
 
-    for dict_, h in zip(model_data_dicts, hs):
+    for data, h in zip(model_data_, h_):
 
-        h.columns.name = dict_["axis_1_name"]
+        h.columns.name = data["axis_1_name"]
 
-    return ws, hs
+    return w_, h_
