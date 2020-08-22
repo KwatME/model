@@ -1,24 +1,31 @@
 {
-  "n_job": 8,
+  "n_job": 4,
+
   "model_mode": "range",
-  "model_data_dicts": [
+
+  "model_data_": [
     {
       "name": "GSE128078 Transcription",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_gene_x_sample.tsv",
-      "axis_1_name": "Person",
+      "axis_1_name": "Sample",
       "data_type": "continuous"
     }
   ],
-  "mf_rs": [2, 4, 8],
-  "annotation_data_dicts": [
+
+  "signal": "+",
+
+  "resolution_": [2, 4, 8],
+
+  "annotation_data_": [
     {
       "name": "GSE128078 Binary Feature",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_binary_feature_x_sample.tsv",
-      "axis_1_name": "Person",
+      "axis_1_name": "Sample",
       "data_type": "binary"
     }
   ],
-  "axis_0_to_peek": [
+
+  "peek_axis_0_label_": [
     "XIST",
     "disease_state.me_cfs",
     "disease_state.control",
@@ -52,17 +59,11 @@
     "individual_identifier.t6",
     "individual_identifier.t9"
   ],
-  "axis_1_to_peek": [],
+  "peek_axis_1_label_": [],
+
   "w_gps_map_node_power": 2,
-  "w_gps_map_point_trace": {
-    "marker": {
-      "size": 8
-    }
-  },
   "h_gps_map_node_power": 2,
-  "h_gps_map_point_trace": {
-    "marker": {
-      "size": 16
-    }
-  }
+
+  "w_gps_map_point_size": 8,
+  "h_gps_map_point_size": 16
 }
