@@ -27,11 +27,9 @@ def read_ws_hs(directory_path, model_mode, model_data_):
         for i in range(n_w)
     )
 
-    factor_name = h_[0].index.name
-
     for w in w_:
 
-        w.columns.name = factor_name
+        w.columns.name = "Factor"
 
     for data, h in zip(model_data_, h_):
 
