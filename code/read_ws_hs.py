@@ -17,22 +17,22 @@ def read_ws_hs(directory_path, model_mode, model_data_):
 
         n_h = 1
 
-    w_ = tuple(
-        read_csv("{}w_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
-        for i in range(n_h)
+    w_table_ = tuple(
+        read_csv("{}w_{}.tsv".format(directory_path, w_index), sep="\t", index_col=0)
+        for w_index in range(n_w)
     )
 
-    h_ = tuple(
-        read_csv("{}h_{}.tsv".format(directory_path, i), sep="\t", index_col=0)
-        for i in range(n_w)
+    h_table_ = tuple(
+        read_csv("{}h_{}.tsv".format(directory_path, h_index), sep="\t", index_col=0)
+        for h_index in range(n_h)
     )
 
-    for w in w_:
+    for w_table in w_table_:
 
-        w.columns.name = "Factor"
+        w_table.columns.name = "Factor"
 
-    for data, h in zip(model_data_, h_):
+    for h_table, data in zip(h_table_, model_data_):
 
-        h.columns.name = data["axis_1_name"]
+        h_table.columns.name = data["axis_1_name"]
 
-    return w_, h_
+    return w_table_, h_table_
