@@ -24,7 +24,7 @@
     }
   ],
 
-  "peek_axis_0_label_": [
+  "axis_0_peek_label_": [
     "XIST",
     "disease_state.me_cfs",
     "disease_state.control",
@@ -58,7 +58,7 @@
     "individual_identifier.t6",
     "individual_identifier.t9"
   ],
-  "peek_axis_1_label_": [],
+  "axis_1_peek_label_": [],
 
   "w_gps_map_node_power": 2,
   "h_gps_map_node_power": 2,
