@@ -3,36 +3,36 @@ from pandas import read_csv
 
 def read_ws_hs(directory_path, model_mode, model_data_):
 
-    n_data = len(model_data_)
+    data_number = len(model_data_)
 
     if model_mode == "range":
 
-        n_w = 1
+        w_number = 1
 
-        n_h = n_data
+        h_number = data_number
 
     elif model_mode == "deep":
 
-        n_w = n_data
+        w_number = data_number
 
-        n_h = 1
+        h_number = 1
 
-    w_table_ = tuple(
+    w_dataframe_ = tuple(
         read_csv("{}w_{}.tsv".format(directory_path, w_index), sep="\t", index_col=0)
-        for w_index in range(n_w)
+        for w_index in range(w_number)
     )
 
-    h_table_ = tuple(
+    h_dataframe_ = tuple(
         read_csv("{}h_{}.tsv".format(directory_path, h_index), sep="\t", index_col=0)
-        for h_index in range(n_h)
+        for h_index in range(h_number)
     )
 
-    for w_table in w_table_:
+    for w_dataframe in w_dataframe_:
 
-        w_table.columns.name = "Factor"
+        w_dataframe.columns.name = "Factor"
 
-    for h_table, data in zip(h_table_, model_data_):
+    for h_dataframe, data in zip(h_dataframe_, model_data_):
 
-        h_table.columns.name = data["axis_1_name"]
+        h_dataframe.columns.name = data["axis_1_name"]
 
-    return w_table_, h_table_
+    return w_dataframe_, h_dataframe_

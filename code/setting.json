@@ -1,5 +1,5 @@
 {
-  "n_job": 4,
+  "job_number": 4,
 
   "model_mode": "range",
 
@@ -8,7 +8,7 @@
       "name": "GSE128078 Transcription",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_gene_x_sample.tsv",
       "axis_1_name": "Sample",
-      "type": "continuous"
+      "data_type": "continuous"
     }
   ],
 
@@ -20,7 +20,7 @@
       "name": "GSE128078 Binary Feature",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_binary_feature_x_sample.tsv",
       "axis_1_name": "Sample",
-      "type": "binary"
+      "data_type": "binary"
     }
   ],
 
