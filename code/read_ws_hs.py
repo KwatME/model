@@ -1,38 +1,40 @@
 from pandas import read_csv
 
 
-def read_ws_hs(directory_path, model_mode, model_data_):
+def read_factorization(directory_path, model_mode, model_data_):
 
-    data_number = len(model_data_)
+    data_n = len(model_data_)
 
     if model_mode == "range":
 
-        w_number = 1
+        w_n = 1
 
-        h_number = data_number
+        h_n = data_n
 
     elif model_mode == "deep":
 
-        w_number = data_number
+        w_n = data_n
 
-        h_number = 1
+        h_n = 1
 
-    w_dataframe_ = tuple(
-        read_csv("{}w_{}.tsv".format(directory_path, w_index), sep="\t", index_col=0)
-        for w_index in range(w_number)
+    path_template = "{}{{}}_{{}}.tsv".format(directory_path)
+
+    w_df_ = tuple(
+        read_csv(path_template.format("w", index), sep="\t", index_col=0)
+        for index in range(w_n)
     )
 
-    h_dataframe_ = tuple(
-        read_csv("{}h_{}.tsv".format(directory_path, h_index), sep="\t", index_col=0)
-        for h_index in range(h_number)
+    h_df_ = tuple(
+        read_csv(path_template.format("h", index), sep="\t", index_col=0)
+        for index in range(h_n)
     )
 
-    for w_dataframe in w_dataframe_:
+    for w_df in w_df_:
 
-        w_dataframe.columns.name = "Factor"
+        w_df.columns.name = "Factor"
 
-    for h_dataframe, data in zip(h_dataframe_, model_data_):
+    for h_df, data in zip(h_df_, model_data_):
 
-        h_dataframe.columns.name = data["axis_1_name"]
+        h_df.columns.name = data["axis_1_name"]
 
-    return w_dataframe_, h_dataframe_
+    return w_df_, h_df_
