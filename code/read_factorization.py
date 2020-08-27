@@ -5,17 +5,17 @@ def read_factorization(directory_path, model_mode, model_data_):
 
     data_n = len(model_data_)
 
-    if model_mode == "range":
-
-        w_n = 1
-
-        h_n = data_n
-
-    elif model_mode == "deep":
+    if model_mode == "deep":
 
         w_n = data_n
 
         h_n = 1
+
+    elif model_mode == "range":
+
+        w_n = 1
+
+        h_n = data_n
 
     path_template = "{}{{}}_{{}}.tsv".format(directory_path)
 
@@ -29,12 +29,12 @@ def read_factorization(directory_path, model_mode, model_data_):
         for index in range(h_n)
     )
 
-    for w_df in w_df_:
+    for df in w_df_:
 
-        w_df.columns.name = "Factor"
+        df.columns.name = "Factor"
 
-    for h_df, data in zip(h_df_, model_data_):
+    for df, data in zip(h_df_, model_data_):
 
-        h_df.columns.name = data["axis_1_name"]
+        df.columns.name = data["axis_1_name"]
 
     return w_df_, h_df_
