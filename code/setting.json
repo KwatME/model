@@ -7,19 +7,19 @@
     {
       "name": "GSE128078 Transcription",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_gene_x_sample.tsv",
-      "axis_1_name": "Sample",
+      "axis_1_name": "Person",
       "data_type": "continuous"
     }
   ],
 
-  "signal": "+",
-  "resolution_": [2, 4, 8],
+  "signal": "-+",
+  "resolution_": [2, 4],
 
   "annotation_data_": [
     {
-      "name": "GSE128078 Binary Feature",
+      "name": "GSE128078 Annotation",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_binary_feature_x_sample.tsv",
-      "axis_1_name": "Sample",
+      "axis_1_name": "Person",
       "data_type": "binary"
     }
   ],
@@ -33,30 +33,30 @@
     "timepoint__day_.3.0",
     "timepoint__day_.7.0",
     "individual_identifier.g1",
-    "individual_identifier.g12",
-    "individual_identifier.g13",
     "individual_identifier.g2",
     "individual_identifier.g4",
     "individual_identifier.g9",
+    "individual_identifier.g12",
+    "individual_identifier.g13",
     "individual_identifier.k1",
-    "individual_identifier.k12",
     "individual_identifier.k2",
     "individual_identifier.k4",
     "individual_identifier.k7",
-    "individual_identifier.p10",
-    "individual_identifier.p11",
-    "individual_identifier.p14",
+    "individual_identifier.k12",
     "individual_identifier.p3",
     "individual_identifier.p5",
     "individual_identifier.p6",
     "individual_identifier.p7",
     "individual_identifier.p8",
+    "individual_identifier.p10",
+    "individual_identifier.p11",
+    "individual_identifier.p14",
     "individual_identifier.t10",
+    "individual_identifier.t6",
+    "individual_identifier.t9",
     "individual_identifier.t11",
     "individual_identifier.t13",
-    "individual_identifier.t14",
-    "individual_identifier.t6",
-    "individual_identifier.t9"
+    "individual_identifier.t14"
   ],
   "axis_1_peek_label_": [],
 
