@@ -5,12 +5,6 @@
 
   "model_data_": [
     {
-      "name": "GSE16059 Transcription",
-      "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE16059_gene_x_sample.tsv",
-      "axis_1_name": "Person",
-      "data_type": "continuous"
-    },
-    {
       "name": "GSE128078 Transcription",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_gene_x_sample.tsv",
       "axis_1_name": "Person",
@@ -23,12 +17,6 @@
 
   "annotation_data_": [
     {
-      "name": "GSE16059 Annotation",
-      "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE16059_binary_feature_x_sample.tsv",
-      "axis_1_name": "Person",
-      "data_type": "binary"
-    },
-    {
       "name": "GSE128078 Annotation",
       "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_binary_feature_x_sample.tsv",
       "axis_1_name": "Person",
@@ -37,57 +25,11 @@
   ],
 
   "axis_0_peek_label_": [
-    "IDO2",
     "XIST",
-    "sex.female",
-    "sex.male",
-    "diagnonsis.unaffected",
-    "diagnonsis.CFS",
-    "diagnonsis.ICF",
-    "twins.228340",
-    "twins.220263",
-    "twins.235495",
-    "twins.227565",
-    "twins.232496",
-    "twins.230813",
-    "twins.234559",
-    "twins.239415",
-    "twins.220062",
-    "twins.244431",
-    "twins.244484",
-    "twins.240094",
-    "twins.239142",
-    "twins.229213",
-    "twins.212940",
-    "twins.228030",
-    "twins.217666",
-    "twins.233889",
-    "twins.228991",
-    "twins.232629",
-    "twins.235566",
-    "twins.244184",
-    "twins.222171",
-    "twins.246138",
-    "twins.247956",
-    "twins.248659",
-    "twins.4122",
-    "twins.4334",
-    "twins.44110",
-    "twins.253224",
-    "twins.31657",
-    "twins.31885",
-    "twins.32691",
-    "twins.246763",
-    "twins.31148",
-    "twins.3384",
-    "twins.249806",
-    "twins.226594",
-    "twins.42935",
-    "twins.218156",
-    "twins.33004",
-    "twins.253644",
-    "twins.236175",
-    "twins.48695",
+    "IDO1",
+    "IDO2",
+    "DMRT1",
+    "MIR6869",
     "disease_state.me_cfs",
     "disease_state.control",
     "timepoint__day_.1.0",
@@ -125,6 +67,6 @@
   "w_gps_map_node_power": 2,
   "h_gps_map_node_power": 1,
 
-  "w_gps_map_point_size": 16,
+  "w_gps_map_point_size": 8,
   "h_gps_map_point_size": 16
 }

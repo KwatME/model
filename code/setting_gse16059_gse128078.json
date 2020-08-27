@@ -1,0 +1,47 @@
+{
+  "job_n": 4,
+
+  "model_mode": "range",
+
+  "model_data_": [
+    {
+      "name": "GSE16059 Transcription",
+      "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE16059_gene_x_sample.tsv",
+      "axis_1_name": "Person",
+      "data_type": "continuous"
+    },
+    {
+      "name": "GSE128078 Transcription",
+      "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_gene_x_sample.tsv",
+      "axis_1_name": "Person",
+      "data_type": "continuous"
+    }
+  ],
+
+  "signal": "-+",
+  "resolution_": [2, 4],
+
+  "annotation_data_": [
+    {
+      "name": "GSE16059 Annotation",
+      "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE16059_binary_feature_x_sample.tsv",
+      "axis_1_name": "Person",
+      "data_type": "binary"
+    },
+    {
+      "name": "GSE128078 Annotation",
+      "file_path": "/media/kwat/CarrotCake/garden/data/chronic_fatigue_syndrome/GSE128078_binary_feature_x_sample.tsv",
+      "axis_1_name": "Person",
+      "data_type": "binary"
+    }
+  ],
+
+  "axis_0_peek_label_": ["XIST", "IDO1", "IDO2", "DMRT1", "MIR6869"],
+  "axis_1_peek_label_": [],
+
+  "w_gps_map_node_power": 2,
+  "h_gps_map_node_power": 1,
+
+  "w_gps_map_point_size": 16,
+  "h_gps_map_point_size": 16
+}
