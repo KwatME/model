@@ -61,7 +61,7 @@
   "axis_1_peek_label_": [],
 
   "w_gps_map_node_power": 2,
-  "h_gps_map_node_power": 2,
+  "h_gps_map_node_power": 1,
 
   "w_gps_map_point_size": 8,
   "h_gps_map_point_size": 16
