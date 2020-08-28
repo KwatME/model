@@ -1,26 +1,9 @@
 # ==============================================================================
-# Rule for Shareable Project
+# Rule for project
 # ==============================================================================
-environment/*
 input/*
 output/*
 
-!code/.gitkeep
-!environment/.gitkeep
-!input/.gitkeep
-!output/.gitkeep
-!stuff/.gitkeep
-
-!environment/*.conda.yaml
-
-!environment/Project.toml
-!environment/Manifest.toml
-
-!stuff/guardiome_logo.png
-
-# ==============================================================================
-# Rule for Kraft Project
-# ==============================================================================
 
 # ==============================================================================
 # Rule for Julia
@@ -50,8 +33,6 @@ docs/site/
 # environment.
 Manifest.toml
 
-# Jupyter Notebook
-.ipynb_checkpoints
 
 # ==============================================================================
 # Rule for Python 

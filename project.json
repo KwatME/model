@@ -1,8 +1,0 @@
-{
-  "git_url": "https://github.com/kwatme/model",
-  "version": "0.0.1",
-  "download": {},
-  "command": {
-    "notebook": "jupyter lab"
-  }
-}
