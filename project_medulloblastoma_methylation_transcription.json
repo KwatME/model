@@ -1,0 +1,89 @@
+{
+  "output_directory_path": "/home/kwat/Downloads/medulloblastoma_methylation_transcription",
+  "n_job": 10,
+  "model_mode": "deep",
+  "model_data_dicts": [
+    {
+      "name": "Cavallie et al Methylation",
+      "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/methylation.gene_x_sample.tsv",
+      "axis1_name": "Sample",
+      "data_type": "continuous"
+    },
+    {
+      "name": "Cavallie et al Transcription",
+      "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/rna.gene_x_sample.log.tsv",
+      "axis1_name": "Sample",
+      "data_type": "continuous"
+    }
+  ],
+  "mf_rs": [2, 4, 8, 16],
+  "mf_r_range": 100,
+  "annotate_data_dicts": [
+    {
+      "name": "Cavallie et al Information",
+      "file_path": "/home/kwat/garden/data/medulloblastoma/cavallie_et_al/binary_information_x_sample.tsv",
+      "axis1_name": "Sample",
+      "data_type": "binary"
+    }
+  ],
+  "axis0_elements_to_peek": [
+    "MYC",
+    "MYCN",
+    "(Subtype) Group3_alpha",
+    "(Subtype) Group3_beta",
+    "(Subtype) Group3_gamma",
+    "(Subtype) Group4_alpha",
+    "(Subtype) Group4_beta",
+    "(Subtype) Group4_gamma",
+    "(Subtype) SHH_alpha",
+    "(Subtype) SHH_beta",
+    "(Subtype) SHH_delta",
+    "(Subtype) SHH_gamma",
+    "(Subtype) WNT_alpha",
+    "(Subtype) WNT_beta",
+    "MYC",
+    "Mixed",
+    "Neuronal",
+    "Photoreceptor",
+    "SHH",
+    "WNT",
+    "(subgroup) Group 3",
+    "(subgroup) Group 4",
+    "(subgroup) SHH"
+  ],
+  "axis1_elements_to_peek": [],
+  "w_gps_map_node_power": 6.4,
+  "w_gps_map_element_trace": {
+    "marker": {
+      "size": 8
+    }
+  },
+  "h_gps_map_node_power": 3.2,
+  "h_gps_map_element_trace": {
+    "marker": {
+      "size": 10
+    }
+  },
+  "new_model_data_dicts": [
+    {
+      "name": "PDX Transcription",
+      "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/rna/rna.gene_x_pdx.log.tsv",
+      "axis1_name": "Sample",
+      "data_type": "continuous"
+    }
+  ],
+  "new_annotate_data_dicts": [
+    {
+      "name": "PDX Information",
+      "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/categorical_information_x_pdx.tsv",
+      "axis1_name": "Sample",
+      "data_type": "categorical"
+    },
+    {
+      "name": "PDX Information",
+      "file_path": "/home/kwat/garden/data/medulloblastoma/pdx/binary_information_x_pdx.tsv",
+      "axis1_name": "Sample",
+      "data_type": "binary"
+    }
+  ]
+}
